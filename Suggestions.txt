@@ -1,7 +1,10 @@
+Done 6 oct, 2021
+
 Textarea & issue. (fixed)
+First feedback: Keyword based selection of groups. (done)
 
 
-First Feedback: Keyword based selection of groups.
+Remaining 
 
 Second feedback: a pause button will be very appreciated! Sometimes users need to pause sharing to hit only the better hours.
 
