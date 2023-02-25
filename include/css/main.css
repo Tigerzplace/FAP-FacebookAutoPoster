@@ -56,6 +56,7 @@ position: absolute;
   border-style: solid;
   border-color: transparent black transparent transparent;
 }
+
 .tooltip:hover .tooltiptext {
   visibility: visible;    
   opacity: 1;
@@ -63,24 +64,128 @@ position: absolute;
   }
   
   
+#profile-picture-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+
+}
+
+#profile-picture {
+  width: 100%;
+  height: auto;
+}
+
+#profile-picture.show {
+  display: block;
+  animation: bounceIn 0.5s ease-out;
+}
+
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
   
+
+
+#license {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+#license h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+#license h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 10px;
+}
+
+
+
+#license button {
+  background-color: #32b348;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#license button:hover {
+  background-color: #28a745;
+}
+
+#license a {
+  text-decoration: none;
+}
+
+#license a:hover {
+  text-decoration: underline;
+}
+
+#license #purchase-license {
+  display: none;
+}
+
+#license #check-license,
+#license #check-updates {
+  display: block;
+}
+
+#license #loader {
+  animation: spin 1s linear infinite;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #32b348;
+  border-radius: 50%;
+  height: 50px;
+  margin: 20px auto;
+  width: 50px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  @import 'https://fonts.googleapis.com/css?family=Ubuntu:300, 400, 500, 700';
+ @import 'https://fonts.googleapis.com/css?family=Ubuntu:300, 400, 500, 700';
 
 *, *:after, *:before {
   margin: 0;
@@ -304,12 +409,7 @@ box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
 
 
-
-  
-  
-  
-  
-  .search1 {
+.search1 {
 
 background-color: black; /* Green */
   
