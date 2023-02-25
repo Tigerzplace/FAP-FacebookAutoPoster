@@ -1,0 +1,77 @@
+.card {
+
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
+#loader {
+ /* border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+#groupsLoading {
+  /* border: 16px solid #f3f3f3; /* Light grey */
+   border-top: 16px solid #3498db; /* Blue */
+   border-radius: 50%;
+   width: 70px;
+   height: 51px;
+   animation: spin 2s linear infinite;
+ }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.circ{
+  opacity: 0;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.tick{
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  -webkit-transition: stroke-dashoffset 1s 0.5s ease-out;
+  -moz-transition: stroke-dashoffset 1s 0.5s ease-out;
+  -ms-transition: stroke-dashoffset 1s 0.5s ease-out;
+  -o-transition: stroke-dashoffset 1s 0.5s ease-out;
+  transition: stroke-dashoffset 1s 0.5s ease-out;
+}
+.drawn + svg .path{
+  opacity: 1;
+  stroke-dashoffset: 0;
+}

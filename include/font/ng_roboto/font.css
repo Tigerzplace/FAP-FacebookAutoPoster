@@ -1,0 +1,72 @@
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		local('Roboto Light'),
+		local('Roboto-Light'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2 */
+		url('Roboto_300.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc-.woff */
+		url('Roboto_300.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc8.eot */
+		url('Roboto_300.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/l/font?kit=KFOlCnqEu92Fr1MmSU5fBBc_&skey=11ce8ad5f54705ca&v=v18#Roboto */
+		url('Roboto_300.svg#Roboto') format('svg'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc9.ttf */
+		url('Roboto_300.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('Roboto'),
+		local('Roboto-Regular'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2 */
+		url('Roboto_400.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxM.woff */
+		url('Roboto_400.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxO.eot */
+		url('Roboto_400.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/l/font?kit=KFOmCnqEu92Fr1Mu4mxN&skey=a0a0114a1dcab3ac&v=v18#Roboto */
+		url('Roboto_400.svg#Roboto') format('svg'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf */
+		url('Roboto_400.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		local('Roboto Medium'),
+		local('Roboto-Medium'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4.woff2 */
+		url('Roboto_500.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc-.woff */
+		url('Roboto_500.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc8.eot */
+		url('Roboto_500.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/l/font?kit=KFOlCnqEu92Fr1MmEU9fBBc_&skey=ee881451c540fdec&v=v18#Roboto */
+		url('Roboto_500.svg#Roboto') format('svg'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc9.ttf */
+		url('Roboto_500.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		local('Roboto Bold'),
+		local('Roboto-Bold'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.woff2 */
+		url('Roboto_700.woff2') format('woff2'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc-.woff */
+		url('Roboto_700.woff') format('woff'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc8.eot */
+		url('Roboto_700.eot?#iefix') format('embedded-opentype'),
+		/* from https://fonts.gstatic.com/l/font?kit=KFOlCnqEu92Fr1MmWUlfBBc_&skey=c06e7213f788649e&v=v18#Roboto */
+		url('Roboto_700.svg#Roboto') format('svg'),
+		/* from https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf */
+		url('Roboto_700.ttf') format('truetype');
+}
