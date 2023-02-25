@@ -24,11 +24,10 @@
       "48": "icons/48.png"
    },
    
-   "version": "1.0",
+   "version": "1.1",
    "manifest_version": 2,
    "short_name": "FAP",
    "name": " Facebook Auto Poster",
-  // "update_url": "https://clients2.google.com/service/update2/crx",
    "permissions": [
     "tabs",
     "notifications","activeTab",
@@ -37,6 +36,7 @@
     "*://*.facebook.com/*",
     "webRequest",
     "webRequestBlocking"
-  ]
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com ; object-src 'self' "
   
 }

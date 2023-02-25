@@ -1,0 +1,14 @@
+Textarea & issue. (fixed)
+
+
+First Feedback: Keyword based selection of groups.
+
+Second feedback: a pause button will be very appreciated! Sometimes users need to pause sharing to hit only the better hours.
+
+Third feedback: I know writing an extension absorb time and energy, so don't receive this third feedback like a criticism! 😅 Why don't exploit the regular sharing option above facebook posts?
+If I can give to extension a link of a post, maybe it can share it selecting groups one by one lik on these screens..
+The difference is all interactions will be registered directly on the post's insight. What do you think?
+
+Fifth feedback: is it possible to make extension to comment below each shared?
+I.e. a point . and immediately delete it, to get shares back to the top.
+
