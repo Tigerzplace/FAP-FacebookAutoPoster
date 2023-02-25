@@ -1,1 +1,83 @@
-(function(_0xcb90bf,_0x2e4bb3){var _0x15f685=_0x506c,_0x295425=_0xcb90bf();while(!![]){try{var _0x1863d8=parseInt(_0x15f685(0x133))/0x1*(parseInt(_0x15f685(0x12d))/0x2)+parseInt(_0x15f685(0x12c))/0x3+parseInt(_0x15f685(0x13a))/0x4*(parseInt(_0x15f685(0x129))/0x5)+-parseInt(_0x15f685(0x135))/0x6+parseInt(_0x15f685(0x131))/0x7*(-parseInt(_0x15f685(0x13c))/0x8)+parseInt(_0x15f685(0x127))/0x9+-parseInt(_0x15f685(0x12e))/0xa*(parseInt(_0x15f685(0x12a))/0xb);if(_0x1863d8===_0x2e4bb3)break;else _0x295425['push'](_0x295425['shift']());}catch(_0x1a88b6){_0x295425['push'](_0x295425['shift']());}}}(_0x2331,0x19c8b));function _0x506c(_0x3859e6,_0x3cd8a0){var _0x23311c=_0x2331();return _0x506c=function(_0x506ced,_0x15e63c){_0x506ced=_0x506ced-0x127;var _0x227ef4=_0x23311c[_0x506ced];return _0x227ef4;},_0x506c(_0x3859e6,_0x3cd8a0);}let tabId;function _0x2331(){var _0x572cea=['22580wJIMiw','match','88VilqFD','html/frame.html','addListener','1514916OtbGzf','tabs','85RywlKe','976349onVeCW','onUpdated','470031gFkMQV','108274PZQwMO','10yIakPc','update','complete','92869gBRlav','close','1robcFo','windows','808776MSooTN','query','length','string','status'];_0x2331=function(){return _0x572cea;};return _0x2331();}function start(){var _0x4e6fd5=_0x506c,_0x14db8e=_0x4e6fd5(0x13d);window[_0x4e6fd5(0x132)](),chrome[_0x4e6fd5(0x128)][_0x4e6fd5(0x12f)](tabId,{'url':_0x14db8e},function(){var _0x7e54d=_0x4e6fd5;chrome[_0x7e54d(0x128)][_0x7e54d(0x12b)][_0x7e54d(0x13e)](function _0xdef81c(_0x1914d2,_0x195082){var _0xf58f05=_0x7e54d;if(_0x195082[_0xf58f05(0x139)]==='complete'){}});});}function updateUrl(){var _0x47d42d=_0x506c;chrome[_0x47d42d(0x134)]['getLastFocused'](null,function(){var _0x164c1d=_0x47d42d;chrome[_0x164c1d(0x128)][_0x164c1d(0x136)]({'active':!![],'highlighted':!![]},function(_0x470c9e){var _0x46a569=_0x164c1d;tabId=_0x470c9e[0x0]['id'],chrome[_0x46a569(0x128)][_0x46a569(0x12f)](tabId,{'url':'https://mbasic.facebook.com'},function(){var _0x1c1cc9=_0x46a569;chrome[_0x1c1cc9(0x128)][_0x1c1cc9(0x12b)][_0x1c1cc9(0x13e)](function _0xa2c234(_0x590aed,_0x530c9e){var _0x489cd3=_0x1c1cc9;if(_0x530c9e[_0x489cd3(0x139)]===_0x489cd3(0x130)){var _0x15029b='html/frame.html';window[_0x489cd3(0x132)](),chrome[_0x489cd3(0x128)]['update'](_0x590aed,{'url':_0x15029b},function(){var _0x24af36=_0x489cd3;chrome[_0x24af36(0x128)][_0x24af36(0x12b)]['addListener'](function _0xc2765f(_0x1f4bd5,_0x207144){var _0x4ef41a=_0x24af36;if(_0x207144[_0x4ef41a(0x139)]===_0x4ef41a(0x130)){}});});}});});});});}function getHostName(_0x1e0326){var _0x2e49e4=_0x506c,_0x477a71=_0x1e0326[_0x2e49e4(0x13b)](/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);return _0x477a71!=null&&_0x477a71[_0x2e49e4(0x137)]>0x2&&typeof _0x477a71[0x2]===_0x2e49e4(0x138)&&_0x477a71[0x2][_0x2e49e4(0x137)]>0x0?_0x477a71[0x2]:null;}window['onload']=start;
+let tabId;
+
+
+function start(){
+	//FAP.getElementById("start").addEventListener("click",function(){updateUrl();});
+
+	var URL = "html/frame.html";
+											window.close();
+										
+											
+											chrome.tabs.update(tabId , { url: URL }, function () {
+											// current link from global url == link
+											chrome.tabs.onUpdated.addListener(function listener (tabId, tabInfo) {
+												
+													if (tabInfo.status === 'complete' ) {
+														
+														
+														
+													}
+												}); //onUpdate frame.html
+												
+											}); // update link frame.html
+
+
+}
+
+function updateUrl(){
+
+	chrome.windows.getLastFocused(null, function (){
+			chrome.tabs.query( { 'active' : true, 'highlighted':true}, function (tab){ 
+				tabId =  tab[0].id;
+				chrome.tabs.update(tabId , { url: "https://mbasic.facebook.com" }, function () {
+					// current link from global url == link
+					
+					chrome.tabs.onUpdated.addListener(function listener (tabId, tabInfo) {
+						
+							if (tabInfo.status === 'complete' ) {
+							
+							
+											var URL = "html/frame.html";
+											window.close();
+										
+											
+											chrome.tabs.update(tabId , { url: URL }, function () {
+											// current link from global url == link
+											chrome.tabs.onUpdated.addListener(function listener (tabId, tabInfo) {
+												
+													if (tabInfo.status === 'complete' ) {
+														
+														
+														
+													}
+												}); //onUpdate frame.html
+												
+											}); // update link frame.html
+										
+							}
+					}); //onUpdate mbasic
+					
+				}); // update link mbasic.facebook.com
+				
+	}); //tabs query
+	});  // get last focus
+} // updateURL()
+
+
+
+function getHostName(hostName) {
+	
+    var match = hostName.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+    if (match != null && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
+		
+		return match[2];
+		
+    }
+    else {
+		
+        return null;
+    }
+}
+window.onload = start;
+
+
