@@ -24,7 +24,7 @@
       "48": "icons/48.png"
    },
    
-   "version": "1.4",
+   "version": "1.4.3",
    "manifest_version": 2,
    "short_name": "FAP",
    "name": " Facebook Auto Poster",
