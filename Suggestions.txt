@@ -1,8 +1,27 @@
 v1.4 included - Fixed
 
-Loading groups issue - fixed
+* Loading groups issue - fixed
 
-Detect if you are logged in with page:
+* Detect if you are logged in with page:
+
+28 Feb 2023
+* While posting in group, the post is encoded to avoid any errors because of special characters.
+
+
+> It is also selecting the select all, 
+NodeList(29) [input#selectGroups.search1, input#444418819673850, input#228659283957916, input#267009367051644, input#531484477025726, input#341476385953717, input#300205173657386, input#1637061376567076, input#394834760691062, input#1659720070954713, input#266729253505737, input#799484016812561, input#770123863033974, input#690659134377110, input#1441343226186339, input#523751534325048, input#1530962900474118, input#623041727765578, input#641730039234996, input#733209546723960, input#178787222325437, input#198309947040120, input#454434151267007, input#636460203072624, input#2204719170, input#145896182152471, input#145172698919052, input#290736210943133, input#331950883560781]
+In the selectedGroups array, it is including selectGroups.search1
+
+> Once groups are searched and select all is checked, all groups get selected which is searched, but when I search for other groups,
+it list many other groups for that keyword but the select all is already checked as we have selected it for the prevoius keywords. 
+
+
+anychance we can have it save our groups too so I don't have to go through a list of 400 to post in the ones I want?
+
+
+bro, facebook group poster by page, any idea or tool? please let me know.
+
+
 
 =====================================================================
 
