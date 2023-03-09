@@ -1,42 +1,56 @@
 {
    "author": "Ñasir Ali",
-  
-   "background": {
-    "page": "/html/background.html"
-  },
-
-   "browser_action": {
-      "default_icon": "icons/128.png",
-      "default_popup": "html/popup.html",
-      "default_title": "Facebook Auto Poster"
-   },
-   "content_scripts": [ {
-      "js": ["js/content.js"],
-      "matches": [  "*://*.facebook.com/*"  ],
-	  "run_at": "document_end"
-   } ],
-
-   "description": " Auto poster for FB that can be used to post in multiple Facebook groups automatically.",
+   "manifest_version": 3,
+   "name": "Facebook Auto Poster",
+   "short_name": "FAP",
+   "description": "Auto poster for FB that can be used to post in multiple Facebook groups automatically.",
+   "version": "1.4.5",
+   "minimum_chrome_version": "88",
+   
    "icons": {
       "128": "icons/128.png",
       "16": "icons/16.png",
       "32": "icons/32.png",
       "48": "icons/48.png"
    },
-   
-   "version": "1.4.4",
-   "manifest_version": 2,
-   "short_name": "FAP",
-   "name": " Facebook Auto Poster",
+
+   "background": {
+      "service_worker": "/js/background/background.js",
+
+      "type": "module"
+   },
+
+   "action": {
+      "default_icon": "icons/128.png",
+      "default_popup": "html/popup.html",
+      "default_title": "Facebook Auto Poster"
+   },
+
+   "content_scripts": [
+      {
+         "matches": [
+            "*://*.facebook.com/*"
+         ],
+         "js": [
+            "js/content.js"
+         ],
+         "run_at": "document_end"
+      }
+   ],
+
    "permissions": [
-    "tabs",
-    "notifications","activeTab",
-    "storage",
-    "contextMenus",
-    "*://*.facebook.com/*",
-    "webRequest",
-    "webRequestBlocking"
-  ],
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com ; object-src 'self' "
-  
+      "tabs",
+      "storage",
+      "activeTab",
+      "webRequest",
+      "contextMenus",
+      "notifications",
+      "declarativeNetRequest"
+   ],
+
+   "host_permissions": [
+      
+      "*://*.facebook.com/*"
+   ]
+
 }

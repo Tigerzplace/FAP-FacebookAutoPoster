@@ -1,8 +1,12 @@
-v1.4 included - Fixed
+v1.4.5 included - Fixed
 
 * Loading groups issue - fixed
 
 * Detect if you are logged in with page:
+
+* Updated to manifest 3
+
+
 
 28 Feb 2023
 * While posting in group, the post is encoded to avoid any errors because of special characters.
