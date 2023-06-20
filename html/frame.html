@@ -13,8 +13,10 @@
 
 	<link rel="stylesheet" type="text/css" href="/global/css/bootstrap-theme.css">
 
+	<script type="text/javascript" src="/global/js/purify.js"></script>
 	<script type="text/javascript" src="/global/js/jquery.js"></script>
 	<script type="text/javascript" src="/global/js/bootstrap.js"></script>
+
 	<script type="text/javascript" src="/include/toastr/toastr.min.js"></script>
 
 
@@ -142,33 +144,38 @@
 								</material-dropdown-select>
 							</delay-range-selection>
 						</div>
-						<div class="show-shadow margin-bottom-10 _ngcontent-tml-0">
+						<div class="show-shadow margin-bottom-10">
 							<div id="wrapper">
-								<!-- Msg Box -->
-								<form id="paper" method="get" action="">
-									<textarea id="post_msg" placeholder="What's on your mind" name="post_msg" style="
-											width:100%;
-											display:block;
-											max-width:100%;
-											line-height:1.5;
-											padding:15px 15px 30px;
-											border-radius:3px;
-											border:1px solid #c8d9ff ;
-											font:13px Tahoma, cursive;
-											transition:box-shadow 0.5s ease;
-											box-shadow:0 4px 6px rgba(0,0,0,0.1);
-											font-smoothing:subpixel-antialiased;" rows="4" cols="50"></textarea>
-								</form>
+							  <!-- Msg Box -->
+							  <form id="paper" method="get" action="">
+								<div id="textareas">
+									<div class="slider-container">
+										<div class="text-area-wrapper active">
+										<textarea id="post_msg1" placeholder="Write someting to post in multiple Facebook groups." name="post_msg1" class="post-msg-textarea" rows="4" cols="50"></textarea>
+										</div>
+									</div>
+									<div class="slider-controls">
+										
+									</div>
+								</div>
+
+								<br> Multiple Posts |
+								<select id="random_post">
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								  <option value="5">5</option>
+								  <option value="6">6</option>
+								  <option value="7">7</option>
+								  <option value="8">8</option>
+								</select>
+								| 
+								<span data-toggle="tooltip"  class="question-mark-logo"  title="Get Multiple Post Areas: If selected, you can have multiple text areas where you can compose multiple posts. Each text area represents a separate post.">?</span>
+								<pre></pre>
+							  </form>
 							</div>
-							<br /> Randomize Post:
-							<select id="random_post">
-								<option value="1">Yes</option>
-								<option value="0">No</option>
-							</select>
-							<span data-toggle='tooltip'
-								title='If yes, then your post will contain a random string in the end to randomize your post which could be helpful to reduce the spam factor by making each post different.'>?</span>
-							<pre></pre>
-						</div>
+						  </div>
 						<!-- Group  List-->
 						<div class="show-shadow " style="max-height:350px;overflow-y:scroll;">
 							<table id="groupsTable" class="display" style="width:100%;border-bottom: 1pt solid black;">

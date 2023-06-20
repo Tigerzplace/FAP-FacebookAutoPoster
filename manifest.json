@@ -4,7 +4,7 @@
    "name": "Facebook Auto Poster",
    "short_name": "FAP",
    "description": "Auto poster for FB that can be used to post in multiple Facebook groups automatically.",
-   "version": "1.4.5",
+   "version": "1.4.6",
    "minimum_chrome_version": "88",
    
    "icons": {
