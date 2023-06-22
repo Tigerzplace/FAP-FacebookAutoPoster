@@ -1,8 +1,17 @@
+------------------------------------------------------------
+
+v1.4.7
+
+DynamicRules in background.js -- issue fixed. 
+-- When the extension is installed or updated, remove all existing rules and add a new one, this will make sure not to act upon old rules. 
+-- Also,  urlFilter: "*://www.facebook.com/*", is added so that only set origin value for requests made to above url.
+
+------------------------------------------------------------
+
 v1.4.6 
 
-Multiple posts feature included. This can help post multiple posts in multiple groups. 
-It can avoid blocking by posting one post in one group, then selecting another random post to post in another group and so on. 
-
+-- Multiple posts feature included. This can help post multiple posts in multiple groups. 
+-- It can avoid blocking by posting one post in one group, then selecting another random post to post in another group and so on. 
 
 
 
