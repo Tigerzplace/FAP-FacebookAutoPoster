@@ -1,5 +1,12 @@
 ------------------------------------------------------------
 
+v1.4.8
+
+-- Type something to post bug fixed
+-- Group posting wasn't working as expected due to FB new changes, it's now fixed.
+
+------------------------------------------------------------
+
 v1.4.7
 
 DynamicRules in background.js -- issue fixed. 

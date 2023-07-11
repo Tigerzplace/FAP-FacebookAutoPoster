@@ -31,7 +31,7 @@ chrome.runtime.onInstalled.addListener(function () {
               ],
             },
             condition: {
-              urlFilter: "*://www.facebook.com/*",
+              urlFilter: "*://*.facebook.com/*",
               resourceTypes: [
                 "main_frame",
                 "sub_frame",
