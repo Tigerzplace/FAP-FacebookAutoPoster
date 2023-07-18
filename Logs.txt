@@ -1,5 +1,13 @@
 ------------------------------------------------------------
 
+v1.4.8.1
+
+-- Fixed some typos in frame.js
+-- Replacing of & with and is now fixed, instead it will encode the msg and will send it.
+
+
+------------------------------------------------------------
+
 v1.4.8
 
 -- Type something to post bug fixed
