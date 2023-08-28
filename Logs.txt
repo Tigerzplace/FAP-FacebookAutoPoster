@@ -1,3 +1,9 @@
+
+v1.4.9
+
+-- Now select wait time as range, and it will randomly wait before posting within that range.
+-- This version will now support posting via Page. (Tested) -- 28 Aug, 2023
+
 ------------------------------------------------------------
 
 v1.4.8.1
@@ -33,6 +39,10 @@ v1.4.6
 =====================================================================
 
 Suggestions (future)
+
+
+can you make save selection function for groups. so we can quickly select which batch of groups to post to.
+
 
 A pause button will be very appreciated! Sometimes users need to pause sharing to hit only the better hours.
 
