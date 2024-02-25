@@ -1,4 +1,9 @@
 
+v1.4.9.7
+
+-- user not logged in issue fixed.
+------------------------------------------------------------
+
 v1.4.9
 
 -- Now select wait time as range, and it will randomly wait before posting within that range.
