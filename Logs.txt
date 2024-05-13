@@ -1,4 +1,14 @@
 
+
+--------------------
+
+v1.4.9.8
+
+-- Minor bugs fixed.
+-- All links updated for help recourses.
+-- Checking license from active source without delay.
+
+--------------------
 v1.4.9.7
 
 -- user not logged in issue fixed.
@@ -6,9 +16,8 @@ v1.4.9.7
 
 v1.4.9
 
--- Now select wait time as range, and it will randomly wait before posting within that range.
+-- Now can select wait time as range, and it will randomly wait before posting within that range.
 -- This version will now support posting via Page. (Tested) -- 28 Aug, 2023
-
 ------------------------------------------------------------
 
 v1.4.8.1
@@ -43,8 +52,22 @@ v1.4.6
 
 =====================================================================
 
+
+
+
 Suggestions (future)
 
+
+-- Fix login issue, profile without username.
+This & is causing some issue, I'll fix this in new update. The rest is all ok, let me do it again and see the status.
+
+
+Ok, and I also think "'" single apostrope is causing similar issues too, and "<" and may other similar special characterS, as I had to replace them earlier to get the post succesful
+
+--------------
+
+just a suggestion if i may... It would be nice if you can shoe members number in groups list. Sometimes i feel like i want to post only to larger ones...
+maybe some otehr people can find that useful, if is possible to be done
 
 can you make save selection function for groups. so we can quickly select which batch of groups to post to.
 
