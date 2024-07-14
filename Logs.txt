@@ -1,4 +1,14 @@
+v1.5
 
+-- Will introduce new feature of saving groups.
+
+
+--------------------
+
+v1.4.9.9
+
+-- Addressed login issue for profiles without usernames
+-- Resolved issue with special characters in messages (Messages including &, <, >, and others are now correctly posted)
 
 --------------------
 
@@ -57,12 +67,6 @@ v1.4.6
 
 Suggestions (future)
 
-
--- Fix login issue, profile without username.
-This & is causing some issue, I'll fix this in new update. The rest is all ok, let me do it again and see the status.
-
-
-Ok, and I also think "'" single apostrope is causing similar issues too, and "<" and may other similar special characterS, as I had to replace them earlier to get the post succesful
 
 --------------
 
