@@ -1,6 +1,8 @@
 v1.5
 
--- Will introduce new feature of saving groups.
+-- Implemented functionality to save selected groups as a saved list
+-- Added ability to load groups directly from the saved list
+-- Included option to delete existing saved lists
 
 
 --------------------
@@ -61,44 +63,3 @@ v1.4.6
 
 
 =====================================================================
-
-
-
-
-Suggestions (future)
-
-
---------------
-
-just a suggestion if i may... It would be nice if you can shoe members number in groups list. Sometimes i feel like i want to post only to larger ones...
-maybe some otehr people can find that useful, if is possible to be done
-
-can you make save selection function for groups. so we can quickly select which batch of groups to post to.
-
-
-A pause button will be very appreciated! Sometimes users need to pause sharing to hit only the better hours.
-
-I know writing an extension absorb time and energy, so don't receive this third feedback like a criticism! 😅 
-Why don't exploit the regular sharing option above facebook posts?
-If I can give to extension a link of a post, maybe it can share it selecting groups one by one lik on these screens..
-The difference is all interactions will be registered directly on the post's insight. What do you think?
-
-Is it possible to make extension to comment below each shared?
-I.e. a point . and immediately delete it, to get shares back to the top.
-
-
-that's the site, in Hebrew..
-https://fbzipper.com/he/home
-
-
-User's feedback
-
-The first one is simple, when I press on "Select all", the AutoPoster treat the option like a group.
-The second and third ones are more important. The second one is a Pause button or a Schedule operative option to freeze the bot in some hours.
-The third one is that sometime Facebook block my account for souspicious activity, nothing serious, but AutoPoster don't respect the load order of groups, so is impossible to know on which groups it worked but manually. It's very annoying... 😕
-
-
-Repeating option for group posting, until you stop it.
-
-
-

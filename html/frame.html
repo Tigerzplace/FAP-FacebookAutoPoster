@@ -2,7 +2,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>AutoPoster v1.4 ~ by Tigerzplace</title>
+	<title>AutoPoster v1.5 ~ by Tigerzplace</title>
 	<link rel="shortcut icon" href="../icons/32.png">
 	<link rel="stylesheet" type="text/css" href="../include/css/lic.css">
 	<link rel="stylesheet" type="text/css" href="../include/css/app.scss.css">
@@ -30,25 +30,42 @@
 	<script src='/js/functions.js'></script>
 	<script src='/js/Terms.js'></script>
 
-
-
-
 </head>
 
 <body>
+	<div id="loading-container">
+		<div id="progress-bar"></div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<div class="svg-container">
 		<svg viewbox="0 0 800 400" class="svg">
 			<path id="curve" fill="#50c6d8" d="M 800 150 Q 500 350 0 58 L 0 0 L 800 0 L 800 300 Z"></path>
 		</svg>
 	</div>
-	<header>
+	<header id="coverImg">
 		<!--<div class="show-shadow" style="background-color:#FFC300;">-->
-		<div class="show-shadow" style="background-color:#38332c;   ">
+		<div class="show-shadow" style="background-color:#38332ce5; z-index:1 ;">
 			<h1 class="logo">
 				<span class="word2">&nbsp;Facebook</span>
 				<span class="word1">Auto&nbsp;&nbsp;&nbsp;</span>
 				<span class="word2">Poster</span>
-				<span id="version" style="font-size: 40px;"></span>
+				<span id="version" style="font-size: 40px;  letter-spacing: -2px;"></span>
 			</h1>
 
 			<br>
@@ -58,7 +75,8 @@
 			<center>
 				<ul id="menu">
 					<li>
-						<a href="https://tigerzplace.com/terms-of-service-for-tigerzplace/" target="_blank" rel="nofollow">
+						<a href="https://tigerzplace.com/terms-of-service-for-tigerzplace/" target="_blank"
+							rel="nofollow">
 							<span>Terms</span>
 						</a>
 					</li>
@@ -78,6 +96,10 @@
 	</header>
 	<main>
 
+
+
+
+
 		<!-- User Profile -->
 		<a id='profile-link' href="https://www.facebook.com/tigerzplace" target="_blank">
 			<div id="profile-picture-container" style="display: none;">
@@ -88,218 +110,426 @@
 
 		<div class="material-content _ngcontent-tml-0">
 			<div class="container _ngcontent-tml-0">
-				<div class="pad-me max-width  center-me " style="background-color:white; padding-top:0px;">
+				<div class="pad-me max-width  center-me " style="background-color: #f6f9ff; padding-top:0px;">
 					<!-- first page code start-->
-					<div id='first'>
-						<div class="nobuttom-show-shadow  _ngcontent-tml-0" style="
-					border-radius: 20px 20px 0px 0px; padding:10px;border:0px solid;
-					border-bottom:white;
-					">
-							<h3 class="form-label _ngcontent-tml-0" style="color:#581845">
-								<b>How to use
-									<b>
-							</h3>
-						</div>
-						<div class="show-shadow  _ngcontent-tml-0" style="margin:0px;border-top-style: none ">
-							<ul style="list-style: none">
-								<li>This tool also works with new version of Facebook.</li>
-								<li>It is not recommended to post more than 60 requests per posting with less wait time.
-								</li>
 
-							</ul>
+					<div id='first' class="">
+						<div class="nobuttom-show-shadow  " style=" 
+						padding:0px;border:0px solid;
+					   border-bottom:white; border:1px solid #999 
+					   ">
+							<div class="nobuttom-show-shadow  _ngcontent-tml-0" style="
+			 padding:10px;border:0px solid;
+			border-bottom:white;
+			">
+								<h3 class="form-label _ngcontent-tml-0 " style="color:#581845">
+									<b>What is Facebook Auto Poster?
+										<b>
+								</h3>
+							</div>
+
+							<div class="show-shadow  _ngcontent-tml-0 " style="margin:0px;border-top-style: none ">
+
+
+
+								<span class="styled-text" style="font-size:larger;">
+									Facebook Auto Poster is a Chrome extension that automates posting to multiple Facebook groups with one click, helping you save time and improve engagement.
+									<br />
+									<br />
+
+									<sub style="color:#999" id="targetText">
+										This tool also works with new version of Facebook.<br />
+										It is not recommended to post more than 60 requests per posting with less wait
+										time.
+
+									</sub>
+
+								</span>
+
+								</ul>
+							</div>
 						</div>
-						<div class="show-shadow margin-bottom-10 _ngcontent-tml-0">
-							<h4 class="form-label _ngcontent-tml-0">Select a time interval between requests</h4>
-							<br/>
-							<delay-range-selection class="margin-top-br _ngcontent-tml-0 _nghost-tml-2">
-								<material-dropdown-select class="_ngcontent-tml-2 _nghost-tml-3">
-									<dropdown-button initpopupariaattributes="false" popupsource="" popuptype="listbox"
-										class="_ngcontent-tml-3 _nghost-tml-4">
-										<div buttondecorator="" class="button _ngcontent-tml-4 border"
-											keyboardonlyfocusindicator="" id="1F634176-3A85-4C40-9B52-1B4B58842C4D--0"
-											aria-haspopup="listbox" aria-expanded="false" tabindex="0" role="button"
-											aria-disabled="false">
+						<br />
+						<div class="nobuttom-show-shadow  " style=" 
+						padding:0px;border:0px solid;
+					   border-bottom:white; border:1px solid #999 
+					   ">
+							<div class="show-shadow  _ngcontent-tml-0">
+								<h4 class="form-label _ngcontent-tml-0">Select a time interval between requests</h4>
+								<br />
+								<delay-range-selection class="margin-top-br _ngcontent-tml-0 _nghost-tml-2">
+									<material-dropdown-select class="_ngcontent-tml-2 _nghost-tml-3">
+										<dropdown-button initpopupariaattributes="false" popupsource=""
+											popuptype="listbox" class="_ngcontent-tml-3 _nghost-tml-4">
+											<div buttondecorator="" class="button _ngcontent-tml-4 border"
+												keyboardonlyfocusindicator=""
+												id="1F634176-3A85-4C40-9B52-1B4B58842C4D--0" aria-haspopup="listbox"
+												aria-expanded="false" tabindex="0" role="button" aria-disabled="false">
+												<!---->
+												<span class="button-text _ngcontent-tml-4">
+
+
+													<select id="waitTimeSelectRange" class="pader">
+														<option value="20">01 - 20 Sec</option>
+														<option value="60">20 - 60 Sec</option>
+														<option value="180">1 - 3 Minutes</option>
+														<option value="1200">3 - 20 Minutes</option>
+														<option value="1800">20 - 30 Minutes</option>
+														<option value="3600">30 -- 60 Minutes</option>
+														<!-- Add other range delay options here -->
+													</select>
+
+													<select id="waitTimeSelectFixed" style="display: none;"
+														class="pader">
+														<option value="1">01 Second</option>
+														<option value="15">15 Seconds</option>
+														<option value="30">30 Seconds</option>
+														<option value="45">45 Seconds</option>
+														<option value="60">60 Seconds</option>
+														<option value="90">1.5 Minutes</option>
+														<option value="120">2.0 Mintues</option>
+														<option value="150">2.5 Mintues</option>
+														<option value="180">3.0 Mintues</option>
+														<option value="240">4.0 Minutes</option>
+														<option value="600">10 Minutes</option>
+														<option value="1200">20 Minutes</option>
+														<option value="1800">30 Minutes</option>
+														<option value="3600">60 Minutes</option>
+													</select>
+
+												</span>
+
+											</div>
+											<br /><br />
+											<div>
+
+												<label>
+													<input type="radio" name="delayType" value="rangeButtonTime"
+														checked>
+													Range
+												</label>
+												|
+												<label>
+													<input type="radio" name="delayType" value="fixedButtonTime"> Fixed
+												</label>
+
+											</div>
 											<!---->
-											<span class="button-text _ngcontent-tml-4">
-
-
-												<select id="waitTimeSelectRange" >
-													<option value="20">01 - 20 Sec</option>
-													<option value="60">20 - 60 Sec</option>
-													<option value="180">1 - 3 Minutes</option>
-													<option value="1200">3 - 20 Minutes</option>
-													<option value="1800">20 - 30 Minutes</option>
-													<option value="3600">30 -- 60 Minutes</option>
-													<!-- Add other range delay options here -->
-												  </select>
-
-												<select id="waitTimeSelectFixed" style="display: none;">
-													<option value="1">01 Second</option>
-													<option value="15">15 Seconds</option>
-													<option value="30">30 Seconds</option>
-													<option value="45">45 Seconds</option>
-													<option value="60">60 Seconds</option>
-													<option value="90">1.5 Minutes</option>
-													<option value="120">2.0 Mintues</option>
-													<option value="150">2.5 Mintues</option>
-													<option value="180">3.0 Mintues</option>
-													<option value="240">4.0 Minutes</option>
-													<option value="600">10 Minutes</option>
-													<option value="1200">20 Minutes</option>
-													<option value="1800">30 Minutes</option>
-													<option value="3600">60 Minutes</option>
-												</select>
-
-											</span>
-
-										</div>
-										<br/><br/>
-										<div>
-
-											<label>
-												<input type="radio" name="delayType" value="rangeButtonTime" checked> Range
-											  </label>
-											   | 
-											  <label>
-												<input type="radio" name="delayType" value="fixedButtonTime" > Fixed
-											  </label>
-											  
-										</div>
-										<!---->
-									</dropdown-button>
-								</material-dropdown-select>
-							</delay-range-selection>
+										</dropdown-button>
+									</material-dropdown-select>
+								</delay-range-selection>
+							</div>
 						</div>
-						<div class="show-shadow margin-bottom-10">
-							<div id="wrapper">
-							  <!-- Msg Box -->
-							  <form id="paper" method="get" action="">
-								<div id="textareas">
-									<div class="slider-container">
-										<div class="text-area-wrapper active">
-										<textarea id="post_msg1" placeholder="Write someting to post in multiple Facebook groups." name="post_msg1" class="post-msg-textarea" rows="4" cols="50"></textarea>
+
+						<br />
+
+						<div class="nobuttom-show-shadow  " style=" 
+						padding:0px;border:0px solid;
+					   border-bottom:white; border:1px solid #999 
+					   ">
+
+							<div class="show-shadow ">
+								<div id="wrapper">
+
+									<h4 class="form-label _ngcontent-tml-0" id="empty_message_error">Post Text</h4>
+
+
+									<!-- Msg Box -->
+									<form id="paper" method="get" action="">
+										<div id="textareas">
+											<div class="slider-container">
+												<div class="text-area-wrapper active">
+													<textarea id="post_msg1"
+														placeholder="Write someting to post in multiple Facebook groups."
+														name="post_msg1" class="post-msg-textarea" rows="4"
+														cols="50"></textarea>
+												</div>
+											</div>
+											<div class="slider-controls">
+
+											</div>
 										</div>
-									</div>
-									<div class="slider-controls">
-										
-									</div>
+
+										<br> Multiple Posts &nbsp;
+										<select id="random_post" class="pader" style="text-align: center;">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+										</select>&nbsp;
+
+										<span data-toggle="tooltip" class="question-mark-logo"
+											title="Get Multiple Post Areas: If selected, you can have multiple text areas where you can compose multiple posts. Each text area represents a separate post.">?</span>
+										<pre></pre>
+									</form>
+								</div>
+							</div>
+						</div>
+						<!-- Group  List-->
+
+
+
+						<br />
+						<div class="max-width center-me " id="group_table">
+							<div class="nobuttom-show-shadow  " style=" 
+				 padding:10px;border:0px solid;
+				border-bottom:white; border:1px solid #999 
+				">
+								<div class="form-label _ngcontent-tml-0" style="color:#581845; ">
+
+
+
+									<div class="custom-select" style="display:none;">
+										<button id="list_group" class="select-selected pader"
+											style="width: 25%;height: 30px;margin-top: 6px;background-color:white; border:1px solid #999 ">
+											Group Lists</button>
+										<div class="select-items" id="select-items">
+											<!-- Options will be added here dynamically -->
+										</div>
+									</div> &nbsp;&nbsp;&nbsp;
+
+
+									<button id="saveSelectedGroup" value="Save selected Group" class="pader"
+										style="width: 25%;height: 30px;margin-top: 6px;display:none;background-color:white; border:1px solid #999 ">
+										Save Selection (Group List)</button>&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+									<br />
+									<br />
 								</div>
 
-								<br> Multiple Posts |
-								<select id="random_post">
-								  <option value="1">1</option>
-								  <option value="2">2</option>
-								  <option value="3">3</option>
-								  <option value="4">4</option>
-								  <option value="5">5</option>
-								  <option value="6">6</option>
-								  <option value="7">7</option>
-								  <option value="8">8</option>
-								</select>
-								| 
-								<span data-toggle="tooltip"  class="question-mark-logo"  title="Get Multiple Post Areas: If selected, you can have multiple text areas where you can compose multiple posts. Each text area represents a separate post.">?</span>
-								<pre></pre>
-							  </form>
-							</div>
-						  </div>
-						<!-- Group  List-->
-						<div class="show-shadow " style="max-height:350px;overflow-y:scroll;">
-							<table id="groupsTable" class="display" style="width:100%;border-bottom: 1pt solid black;">
-								<thead>
-									<tr>
-										<th style="padding-bottom: 10px;">
-											Id<br /><br />
-										</th>
-										<th style="padding-bottom: 10px;">
-											<center id="select"> Select&nbsp; </center>
-											<input class='search1' type="checkbox" id="selectGroups" name="selectall"
-												value="">
 
-										</th>
-										<!--<th>
-												Group ID
-													<br/>
-													<button class="button button5">Export to CSV</button>
-												
-											</th>
-											-->
-										<th style="text-align: left;">
-											Group Name
-											<br />
-											<input type="text" class='search1' id="searchGroups" name="search"
-												placeholder="search.....">
-										</th>
-									</tr>
-								</thead>
+
+
+
+
+
+
+								<div class="show-shadow " style="max-height:350px;overflow-y:scroll;margin-top:0px;">
+
+									<div style="overflow-x: auto;">
+										<table id="groupsTable" class="display" style="width: 100%; ">
+											<thead>
+												<tr>
+													<th style="padding-bottom: 10px;">
+														Id<br /><br />
+													</th>
+													<th style="padding-bottom: 10px;">
+														<div style="text-align: center;">
+															Select<br />
+															<input class='search1' type="checkbox" id="selectGroups"
+																name="selectall" value="">
+														</div>
+													</th>
+													<th style="text-align: left;">
+														Group Name
+														<br />
+														<input type="text" class='search1 pader' id="searchGroups"
+															name="search" placeholder="Search....."
+															style="max-width: 90%; ">
+
+
+
+													</th>
+												</tr>
+											</thead>
+											<tbody id="groupsTableBody">
+												<!-- Table body content goes here -->
+											</tbody>
+											<tfoot></tfoot>
+										</table>
+									</div>
+									<br />
+									<br />
+								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 								<br />
-								<tbody id="groupsTable">
+								<br />
+								<center>
 
-								</tbody>
-								<tfoot></tfoot>
-							</table>
+									<p id="groupsCount" style="display:none"> Selected: 0</p>
+								</center>
+								<br />
+							</div>
+
 						</div>
 						<!-- Group  List End-->
 						<br>
 						<div>
 
 							<center>
-								<p id="groupsCount" style="display: none;"> Selected: 0</p>
-								<button id="loadGroups"
-									style="border-radius: 20px;width: 25%;height: 30px;margin: 5px;display:none;"> Load
-									Groups</button>
+
+								<!-- <button id="loadGroups"
+							style="border-radius: 20px;width: 25%;height: 30px;margin: 5px;display:none;">
+							Load Groups</button> -->
+
+
+
+
+
+
+								<center>
+									<div id="loadGroups_center">
+										<ul id="menu" style="border: 0px; " class="loadGroup">
+											<div class="loader" id="loader" style="display: none;">
+											</div>
+
+											
+											<li>
+												<a style="display:none;"
+													id="loadGroups">
+													<button id="loadGroups"
+														style="cursor:pointer;width:100%;border:0px; height:25px;  font-weight: bold; ">Load
+														Groups</button>
+												</a>
+
+												<a style="display:none;"
+													id="loadGroups" class="start_posting">
+													<button id="startPosting"
+														style="cursor:pointer;width:100%;border:0px; height:25px;  font-weight: bold; ">Start
+														Posting</button>
+												</a>
+
+											</li>
+
+
+
+
+
+
+										</ul>
+									</div>
+
+
+
+
+
+									<div id="postingStatus" style="display:block;"></div>
+
+
+
+
+
+
+									<!-- <div id="groupsLoading" style="display:none;margin-top:-60px;">Loading</div> -->
+								</center>
+
+
+
+
+
 								<button id="loadMembers"
 									style="border-radius: 20px;width: 25%;height: 30px;margin: 5px;display:none;"> Load
 									Group Members</button>
-								<button id="startPosting"
-									style="border-radius: 20px;width: 25%;height: 30px;margin: 5px;display:none;"> Start
-									Posting </button>
-								<div id="postingStatus" style="display:block;"></div>
-								<div id="groupsLoading" style="display:none;">Loading</div>
-								<br />
+
+
+
+								<!-- <button id="startPosting"
+							style="border-radius: 20px;width: 25%;height: 30px;margin: 5px;display:none;"> Start
+							Posting </button> -->
+
+
+
+
+
+
+
+
 								<div class="progress" id="loadingProgress" style="display:none">
 									<div id="innerProgressBar" class="progress-bar progress-bar-success"
 										role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-										style="width:0%">
+										style="width:0%; white-space: nowrap;">
 										Completed (0%)
 									</div>
 								</div>
 							</center>
 
 						</div>
-						<br><br>
+						<br>
+						<br>
 						<!---->
-						<div class="max-width center-me  ">
-							<div class="nobuttom-show-shadow  " style=" 
-											border-radius: 20px 20px 0px 0px; padding:10px;border:0px solid;
-											border-bottom:white;
-											">
-								<h3 class="form-label _ngcontent-tml-0" style="color:#581845">
-									<b>Event Logs
-										<b>
-								</h3>
-							</div>
-							<div class="show-shadow" style="margin:0px;border-top-style: none ;">
-								<center>
-									<ul style="list-style: none; color: #737270;">
-										<li style="border-bottom:1px dotted;padding:10px;">
-											<div style="font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
-																	overflow: auto; height: 200px;" id="logs">
-												<p id='logBody'>
 
-													<br />
-												</p>
-											</div>
-										</li>
-									</ul>
-								</center>
+
+						<div class="nobuttom-show-shadow  " style=" 
+						padding:0px;border:0px solid;
+					   border-bottom:white; border:1px solid #999 
+					   ">
+
+							<div class="max-width center-me ">
+
+
+
+
+
+
+
+								<div class="nobuttom-show-shadow  " style=" 
+									 padding:10px;border:0px solid;
+									border-bottom:white;
+									">
+									<h3 class="form-label _ngcontent-tml-0" style="color:#581845">
+										<b>Event Logs
+											<b>
+									</h3>
+								</div>
+
+								<div class="show-shadow" style="margin:0px;border-top-style: none ;">
+									<center>
+										<ul style="list-style: none; color: #737270;">
+											<li style="border-bottom:1px dotted;padding:10px;">
+												<div style="font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
+															overflow: auto; height: 200px;" id="logs">
+													<p id='logBody'>
+
+														<br />
+													</p>
+												</div>
+											</li>
+										</ul>
+									</center>
+								</div>
+
+
+
+
+
+
+
+
+
 							</div>
+
+
+
 						</div>
+
 					</div>
 
-					<button title="Home" type="button" id="home" class="button _ngcontent-tml-4 border"
-						style="border-radius: 20px;">
-						<h5>Home</h5>
-					</button>
+
 
 					<!--Checking License -->
 					<div id='license' style="display:none" class="show-shadow margin-bottom-10 _ngcontent-tml-0">
@@ -307,6 +537,12 @@
 
 							<div class="tab-pane" id="license">
 								<center>
+
+									<button title="Home" type="button" id="home" class="button _ngcontent-tml-4 border"
+										style="border-radius: 20px;">
+										<h5>Home</h5>
+									</button>
+
 
 									<div id="check-license">
 										<button title="Check License" type="button"
@@ -323,7 +559,7 @@
 											id="check_updates_button">
 											<h4>Check Updates</h4>
 										</button>
-										<div id="loader" style="display:none;"></div>
+										<div id="statusLoader" style="display:none;"></div>
 										<div id="trigger"></div>
 										<svg style="width:100px;" version="1.1" id="tick"
 											xmlns="http://www.w3.org/2000/svg"
@@ -333,11 +569,11 @@
 											<path class="circ path"
 												style="fill:none;stroke:#32b348;stroke-linejoin:round;stroke-miterlimit:10;"
 												d="
-																													M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z" />
+																											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z" />
 											<polyline class="tick path"
 												style="fill:none;stroke:#32b348;stroke-linejoin:round;stroke-miterlimit:10;"
 												points="
-																													11.6,20 15.9,24.2 26.4,13.8 " />
+																											11.6,20 15.9,24.2 26.4,13.8 " />
 										</svg>
 
 										<div id="license-info"> License Status</div>
@@ -350,7 +586,8 @@
 										<button title="Purchase License" class="btn btn-success"
 											style="border-radius: 20px;margin: 5px;">
 
-											<a href="#" id="purcahse_link" target="_blank" style="color:#c8d9ff">Buy License</a>
+											<a href="#" id="purcahse_link" target="_blank" style="color:#c8d9ff">Buy
+												License</a>
 											<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
 
 										</button>
@@ -383,6 +620,20 @@
 	</main>
 	<footer>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<div class="section" id="footer-col-1-section" name="Footer Column 1">
 			<div class="widget Image no-title" data-version="1" id="Image2" style="opacity: 1;">
 				<a href="https://www.tigerzplace.com" target="_blank" rel="nofollow"><img alt="Tigerzplace" height="27"
@@ -392,9 +643,9 @@
 		</div>
 		<div class="footer-copyright">
 
-			<div class="copyright-line-2">
+			<div class="copyright-line-2" style="color: #e5e8f0;">
 				<span data-l10n="All rights reserved">All rights reserved.</span> © <span
-					class="copyright-year">2021</span>
+					class="copyright-year">2024</span>
 			</div>
 		</div>
 

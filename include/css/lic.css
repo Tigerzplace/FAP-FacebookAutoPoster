@@ -1,3 +1,5 @@
+
+
 .card {
 
   cursor: pointer;
@@ -21,38 +23,43 @@
   backface-visibility: hidden;
 }
 
-.card__face--front {
-
-}
+.card__face--front {}
 
 .card__face--back {
   transform: rotateY(180deg);
 }
 
 #loader {
- /* border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  /* border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 3px solid #3498db;
+  /* Blue */
   border-radius: 50%;
   width: 50px;
   height: 50px;
   animation: spin 2s linear infinite;
 }
 
-#groupsLoading {
+.groupsLoading {
   /* border: 16px solid #f3f3f3; /* Light grey */
-   border-top: 16px solid #3498db; /* Blue */
-   border-radius: 50%;
-   width: 70px;
-   height: 51px;
-   animation: spin 2s linear infinite;
- }
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 70px;
+  height: 51px;
+  animation: spin 2s linear infinite;
 }
 
-.circ{
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circ {
   opacity: 0;
   stroke-dasharray: 130;
   stroke-dashoffset: 130;
@@ -62,7 +69,8 @@
   -o-transition: all 1s;
   transition: all 1s;
 }
-.tick{
+
+.tick {
   stroke-dasharray: 50;
   stroke-dashoffset: 50;
   -webkit-transition: stroke-dashoffset 1s 0.5s ease-out;
@@ -71,7 +79,11 @@
   -o-transition: stroke-dashoffset 1s 0.5s ease-out;
   transition: stroke-dashoffset 1s 0.5s ease-out;
 }
-.drawn + svg .path{
+
+.drawn+svg .path {
   opacity: 1;
   stroke-dashoffset: 0;
 }
+
+
+

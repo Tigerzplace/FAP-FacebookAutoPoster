@@ -117,16 +117,43 @@
 }
 
 
+
+
+
 #post_msg {
   border: 1px solid #666;
   border-radius: 5px;
   padding: 3px;
 }
 
-textarea:focus {
+/* textarea:focus {
   outline: none !important;
   border: 1px solid #C6EEF9 !important;
   box-shadow: 0 0 5px #DDF4FA !important;
+} */
+
+
+.post-msg-textarea:focus {
+
+
+
+/* Base border color */
+border: 2px solid transparent; /* Transparent border */
+
+/* Use border-image to create a net-like pattern */
+border-image: linear-gradient(45deg, 
+              rgba(255, 255, 255, 0) 30%, 
+              rgba(255, 255, 255, 0) 70%, 
+              rgba(255, 255, 255, 1) 70%, 
+              rgba(255, 255, 255, 1) 80%, 
+              rgba(255, 255, 255, 0) 80%, 
+              rgba(255, 255, 255, 0) 100%) 1;
+
+/* Optional: Add box-shadow for depth */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for depth effect */
+
+
+
 }
 
 
@@ -297,6 +324,18 @@ input[type=text]:focus {
   width: 50px;
 }
 
+
+#license #statusLoader {
+  animation: spin 1s linear infinite;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #32b348;
+  border-radius: 50%;
+  height: 50px;
+  margin: 20px auto;
+  width: 50px;
+}
+
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -339,21 +378,25 @@ h3 {
 }
 
 header {
+  background-color:rgb(80,198,216); 
+ 
   color: #fff;
-  padding-top: 1vw;
-  padding-bottom: 30vw;
+  padding-top: 0.2px;
+  padding-bottom: 14vw;
   text-align: center;
   height: 10px !important;
+  
 }
 
 main {
-  background: linear-gradient(to bottom, #ffffff 0%, #dddee1 610%);
+ background-color: #f6f9ff;
   border-bottom: 1px solid rgba(0, 0, 0, .3);
-  padding: 5vh 0 5vh;
+  padding: 5vh 0 10vh;
   position: relative;
   text-align: center;
   overflow: hidden;
   margin-top: 0px;
+
 
   &::after {
     border-right: 2px dashed #eee;
@@ -363,6 +406,7 @@ main {
 
     left: 50%;
     width: 2px;
+
   }
 }
 
@@ -559,4 +603,173 @@ a {
   font-size: 16px;
   margin: 4px 2px;
   transition-duration: 0.4s;
+}
+
+
+
+
+svg {
+  position: relative;
+  bottom: 0px;
+  left: 8%;
+  transform: translate(-50%);
+}
+
+
+
+
+.pader {
+  padding: 2px;
+}
+
+.styled-text {
+  font-family: Arial, sans-serif;
+  /* Readable font family */
+  font-size: 16px;
+  /* Comfortable font size */
+  font-weight: normal;
+  /* Normal font weight */
+  line-height: 1.5;
+  /* Increased line height for readability */
+  color: #333;
+  /* Dark gray color for less strain on eyes */
+  background-color: #f9f9f9;
+  /* Light background color */
+  padding: 15px;
+  /* Padding around the text */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  border-left: 4px solid rgb(80, 198, 216);
+  /* Left border for emphasis */
+  margin: 10px 0;
+  /* Margin for spacing */
+  display: block;
+  /* Ensures it behaves like a block element for spacing */
+}
+
+.custom-select {
+  position: relative;
+
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.select-selected {
+  /*padding: 12px 16px;*/
+  cursor: pointer;
+  width: 100%;
+  /* Set to 100% to match parent width */
+}
+
+.select-items {
+  display: none;
+  position: absolute;
+  left: 0;
+  /* Align with the left of select-selected */
+  background-color: #f9f9f9;
+  width: 100%;
+  /* Match width of select-selected */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  /* Ensure dropdown is on top */
+  border-radius: 4px;
+  overflow: hidden;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.select-items div {
+  color: black;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.select-items div:hover {
+  background-color: #ddd;
+}
+
+.delete-button {
+  margin-left: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: red;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+
+.delete-button:focus {
+  outline: none;
+}
+
+.loader {
+  border: 1px solid #f3f3f3;
+  border-top: 1px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 45%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(100%) scale(1);
+    opacity: 0;
+  }
+}
+
+
+
+#loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  /* Thin progress bar */
+  background-color: #e0e0e0;
+  z-index: 1000;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #4caf50;
+  /* Green color */
+  transition: width 10s linear;
+  /* Smooth transition over 10 seconds */
 }
