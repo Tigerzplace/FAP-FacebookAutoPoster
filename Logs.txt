@@ -1,3 +1,15 @@
+
+
+
+
+v1.5.1
+
+-- Fixed detection of logged user or page issue.
+-- It won't trigger double posting if groups are loaded from saved list.
+-- selected groups issue is now fixed, it will post in the selected groups if selected automatically.
+
+--------------------
+
 v1.5
 
 -- Implemented functionality to save selected groups as a saved list
