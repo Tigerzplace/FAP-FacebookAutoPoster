@@ -1,6 +1,16 @@
 
 
 
+--------------------
+
+v1.5.2
+
+-- Updated regex to detect links starting with http, https, or www
+-- Improved error handling and response logging for debugging purposes
+-- Implemented functionality to detect both Facebook and external links in posts when posting via Page.
+-- Ensured accurate construction of JSON payloads to match Facebook's requirements for both types of links
+
+--------------------
 
 v1.5.1
 
