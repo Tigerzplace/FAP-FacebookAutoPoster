@@ -1,13 +1,24 @@
 
+--------------------
 
+v1.5.2.1
+
+- fix: Handle multiple JSON responses and error handling in PreviewData
+
+-- Updated PreviewData function to handle cases where multiple JSON responses are returned
+-- Modified function to parse each JSON separately and pick the one containing 'data'
+-- Enhanced error handling to ensure a valid response is found, returning false if no valid response
+-- Ensured accurate construction of JSON payloads for both Facebook and external links
 
 --------------------
 
 v1.5.2
 
+Enhance Facebook auto-poster to handle link previews for Facebook and external links when posting via Page.
+
 -- Updated regex to detect links starting with http, https, or www
 -- Improved error handling and response logging for debugging purposes
--- Implemented functionality to detect both Facebook and external links in posts when posting via Page.
+-- Implemented functionality to detect both Facebook and external links in posts when posting.
 -- Ensured accurate construction of JSON payloads to match Facebook's requirements for both types of links
 
 --------------------
