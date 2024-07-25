@@ -1,4 +1,14 @@
 
+
+
+--------------------
+
+v1.5.2.2
+
+- Enhance Link Detection in Facebook Auto-Poster
+-- Now can post fb.watch links as well with preview.
+
+
 --------------------
 
 v1.5.2.1
