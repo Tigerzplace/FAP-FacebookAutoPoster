@@ -1,4 +1,16 @@
 
+--------------------
+
+v1.5.3
+
+- Performance Optimization:
+   - Optimized `loginCheck` function for faster profile handling, enhancing overall efficiency.
+
+- License Module Update:
+   - Updated license module for better reliability and integration with the automatic buying method.
+
+- CORS Issue Fix:
+   - Resolved CORS issue with media uploads by updating request headers and modifying the background script.
 
 
 --------------------
