@@ -1,4 +1,11 @@
 
+
+--------------------
+v1.5.3.1
+
+- Group loading issue fixed.
+- Posting for user is now done using latest API.
+
 --------------------
 
 v1.5.3
