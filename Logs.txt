@@ -1,4 +1,11 @@
 
+v1.5.3.2
+
+-   Updated API  : Enhanced reliability with Facebook's latest API for user posts.
+-   Link Previews  : Clean posts with automatic link previews; link text is removed if preview is generated.
+-   Faster Posting  : Wait time only applies between posts, making the final post faster.
+-   Real-Time Progress  : Progress bar now updates instantly with each group post.
+-   Smart Link Handling  : Single links at the end of a message are removed; multiple or embedded links stay intact.
 
 --------------------
 v1.5.3.1
