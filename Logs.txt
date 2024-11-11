@@ -1,4 +1,17 @@
 
+--------------------
+v1.5.3.3
+
+
+Add logic to detect user or page type based on JSON data
+
+- Implemented regex to extract JSON containing ACCOUNT_ID, USER_ID, and NAME from the page content.
+- Added logic to check for PAGE_MESSAGING_MAILBOX_ID in the JSON data.
+- If PAGE_MESSAGING_MAILBOX_ID is found, set `user type` to 'page'.
+- Default detection to 'user' if no PAGE_MESSAGING_MAILBOX_ID is present.
+
+
+--------------------
 v1.5.3.2
 
 -   Updated API  : Enhanced reliability with Facebook's latest API for user posts.
@@ -14,17 +27,28 @@ v1.5.3.1
 - Posting for user is now done using latest API.
 
 --------------------
-
 v1.5.3
 
-- Performance Optimization:
-   - Optimized `loginCheck` function for faster profile handling, enhancing overall efficiency.
+- Integrity Check for Code Protection:
+   - Added an integrity check function to ensure code authenticity. The extension verifies SHA-256 hashes of core JavaScript files in the `js` folder.
+   - If any file is tampered with, the extension automatically reloads, disabling itself to prevent unauthorized modifications.
+
+- Debug Mode Control:
+   - Implemented a debug mode flag (`DEBUG_MODE`). When debug mode is off, all `console` outputs are disabled to ensure sensitive information is not exposed in production.
 
 - License Module Update:
    - Updated license module for better reliability and integration with the automatic buying method.
 
 - CORS Issue Fix:
    - Resolved CORS issue with media uploads by updating request headers and modifying the background script.
+
+- Background Script Improvements:
+   - Added dynamic retrieval of extension ID.
+   - Configured rules to set the `Origin` header to `https://www.facebook.com` for extension-initiated requests.
+   - Restricted rules to only apply to requests containing the extension ID.
+
+- Performance Optimization:
+   - Optimized `loginCheck` function for faster profile handling, enhancing overall efficiency.
 
 
 --------------------
