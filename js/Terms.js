@@ -1,1 +1,626 @@
-const _0x2ca529=_0x1490;(function(_0x514032,_0x3a29a5){const _0x4c7f47=_0x1490,_0x35a6ad=_0x514032();while(!![]){try{const _0x56b42a=parseInt(_0x4c7f47(0x198))/0x1+parseInt(_0x4c7f47(0x18b))/0x2+-parseInt(_0x4c7f47(0x13d))/0x3+-parseInt(_0x4c7f47(0x172))/0x4+-parseInt(_0x4c7f47(0x109))/0x5+parseInt(_0x4c7f47(0x130))/0x6+-parseInt(_0x4c7f47(0x163))/0x7*(-parseInt(_0x4c7f47(0x119))/0x8);if(_0x56b42a===_0x3a29a5)break;else _0x35a6ad['push'](_0x35a6ad['shift']());}catch(_0x54a5aa){_0x35a6ad['push'](_0x35a6ad['shift']());}}}(_0x3e50,0x52926));const maKwa={'tikDayBas':0x0,'raka':self[_0x2ca529(0x169)][_0x2ca529(0x196)]['id'],'expire':'Your\x20license\x20is\x20expired.','sahida':atob(ultaKa(_0x2ca529(0x111))),'ogora':'raka\x20+\x20atob(ultaKa(\x27==gO\x27))\x20+\x20sahida','nshta':atob(ultaKa(_0x2ca529(0x118))),'walakna':atob(ultaKa(_0x2ca529(0x17d))),'walaLink':atob(ultaKa('whGcuEmcvd2bvUGb1R2bt9VZz5WZjlGbvMHbv9Gdv02bj5SZjFGbwpncldWa09yL6MHc0RHa')),'tazaLink':atob(ultaKa(_0x2ca529(0x183))),'chrtaWalam':atob(ultaKa(_0x2ca529(0x185)))};karKom&&(console[_0x2ca529(0x10b)]=()=>{},console[_0x2ca529(0x116)]=()=>{},console[_0x2ca529(0x190)]=()=>{},console[_0x2ca529(0x189)]=()=>{},console[_0x2ca529(0x167)]=()=>{});function activateLicenseUI(_0x77a0d3){const _0xe7726a=_0x2ca529;hideElement(_0xe7726a(0xfd)),document[_0xe7726a(0x112)]('trigger')[_0xe7726a(0x106)][_0xe7726a(0x110)]('drawn'),setElementHTML(_0xe7726a(0x11b),_0xe7726a(0x192)+DOMPurify[_0xe7726a(0x124)](_0x77a0d3)+_0xe7726a(0xfb));}function handleLicenseNotActivated(_0x453efd){const _0x41b5ca=_0x2ca529;hideElement('statusLoader'),toastr[_0x41b5ca(0x116)](_0x453efd),setElementHTML(_0x41b5ca(0x11b),'<h3\x20style=\x22color:red\x22>'+DOMPurify[_0x41b5ca(0x124)](_0x453efd)+_0x41b5ca(0xfb)),document[_0x41b5ca(0x112)](_0x41b5ca(0x136))[_0x41b5ca(0x12e)]=extension_id,setTimeout(showPurchase,0x1388);}function handleError(_0x36a779){const _0x36b027=_0x2ca529;toastr[_0x36b027(0x116)](_0x36a779),setElementHTML(_0x36b027(0x11b),_0x36b027(0x144)+DOMPurify[_0x36b027(0x124)](_0x36a779)+_0x36b027(0xfb));}function handleXHRError(_0x408164){const _0x4279fb=_0x2ca529;toastr['error'](_0x408164),log(_0x4279fb(0x116),'XHR\x20request\x20error:\x20'+_0x408164,null,_0x4279fb(0x14b)),setElementHTML(_0x4279fb(0x11b),_0x4279fb(0x144)+DOMPurify[_0x4279fb(0x124)](_0x408164)+_0x4279fb(0xfb));}function showPurchase(){const _0x318c46=_0x2ca529;showElement(_0x318c46(0xfe)),hideElement(_0x318c46(0x11e)),hideElement(_0x318c46(0x11b));const _0x40f826=document[_0x318c46(0x112)](_0x318c46(0x134));_0x40f826?(_0x40f826['href']=maKwa['chrtaWalam'],log(_0x318c46(0x189),_0x318c46(0x19a),_0x40f826[_0x318c46(0x18a)],_0x318c46(0x11d))):log('error',_0x318c46(0x123),null,_0x318c46(0x11d));}async function getHash(){const _0x1d8a1e=_0x2ca529,_0x43c042=await fetch(chrome[_0x1d8a1e(0x196)][_0x1d8a1e(0x14e)](_0x1d8a1e(0x199))),_0x3582a1=await _0x43c042[_0x1d8a1e(0x11c)](),_0x867e25=await crypto[_0x1d8a1e(0x15d)][_0x1d8a1e(0x194)]('SHA-256',new TextEncoder()[_0x1d8a1e(0x18c)](_0x3582a1)),_0xb5b0f5=Array[_0x1d8a1e(0x131)](new Uint8Array(_0x867e25)),_0x1ac36a=_0xb5b0f5['map'](_0x1f9919=>_0x1f9919['toString'](0x10)[_0x1d8a1e(0x15a)](0x2,'0'))['join']('');console[_0x1d8a1e(0x10b)](_0x1ac36a);}async function checkYeKa(){const _0x4f0541=_0x2ca529;if(!karKom)return;const _0x1e92da=_0x4f0541(0x143),_0x5d441d=await fetch(chrome['runtime'][_0x4f0541(0x14e)]('../js/frame.js')),_0x1f42c8=await _0x5d441d['text'](),_0x1a4c60=await crypto[_0x4f0541(0x15d)]['digest'](_0x4f0541(0x168),new TextEncoder()[_0x4f0541(0x18c)](_0x1f42c8)),_0x2ff720=Array[_0x4f0541(0x131)](new Uint8Array(_0x1a4c60)),_0x533bb6=_0x2ff720[_0x4f0541(0x162)](_0x155750=>_0x155750['toString'](0x10)[_0x4f0541(0x15a)](0x2,'0'))[_0x4f0541(0x182)]('');_0x533bb6!==_0x1e92da&&chrome[_0x4f0541(0x196)][_0x4f0541(0x175)]();}function _0x1490(_0x19b75c,_0x2cd8ae){const _0x310f23=_0x3e50();return _0x1490=function(_0xf496f2,_0x5423f8){_0xf496f2=_0xf496f2-0xf9;let _0x2bd121=_0x310f23[_0xf496f2];return _0x2bd121;},_0x1490(_0x19b75c,_0x2cd8ae);}checkYeKa();function ultaKa(_0x4da59c){const _0x3de5ee=_0x2ca529,_0x3a466c=(function(){let _0x499a14=!![];return function(_0x316453,_0x3633df){const _0x2575cf=_0x499a14?function(){const _0x52e631=_0x1490;if(_0x3633df){const _0x45b69d=_0x3633df[_0x52e631(0x11a)](_0x316453,arguments);return _0x3633df=null,_0x45b69d;}}:function(){};return _0x499a14=![],_0x2575cf;};}()),_0x248b34=_0x3a466c(this,function(){const _0x40adaf=_0x1490;return _0x248b34[_0x40adaf(0x15c)]()[_0x40adaf(0x165)](_0x40adaf(0x17c))[_0x40adaf(0x15c)]()[_0x40adaf(0xfc)](_0x248b34)['search'](_0x40adaf(0x17c));});_0x248b34();const _0x493404=(function(){let _0x3600b7=!![];return function(_0x3ef5c2,_0x471921){const _0x5def27=_0x3600b7?function(){const _0x25a5ee=_0x1490;if(_0x471921){const _0x44aa7d=_0x471921[_0x25a5ee(0x11a)](_0x3ef5c2,arguments);return _0x471921=null,_0x44aa7d;}}:function(){};return _0x3600b7=![],_0x5def27;};}());(function(){_0x493404(this,function(){const _0x1403a6=_0x1490,_0x5aceac=new RegExp(_0x1403a6(0x10f)),_0x404060=new RegExp(_0x1403a6(0x1a3),'i'),_0x57e5bd=_0x43e893(_0x1403a6(0x177));!_0x5aceac[_0x1403a6(0x160)](_0x57e5bd+_0x1403a6(0x176))||!_0x404060[_0x1403a6(0x160)](_0x57e5bd+'input')?_0x57e5bd('0'):_0x43e893();})();}());const _0x3236a6=(function(){let _0x4233a9=!![];return function(_0x4bdcb7,_0x1added){const _0x1c556e=_0x4233a9?function(){const _0xd8b761=_0x1490;if(_0x1added){const _0x5df7df=_0x1added[_0xd8b761(0x11a)](_0x4bdcb7,arguments);return _0x1added=null,_0x5df7df;}}:function(){};return _0x4233a9=![],_0x1c556e;};}()),_0x2df123=_0x3236a6(this,function(){const _0x5ce726=_0x1490;let _0x2d1695;try{const _0x352f68=Function('return\x20(function()\x20'+_0x5ce726(0xfa)+');');_0x2d1695=_0x352f68();}catch(_0xc45667){_0x2d1695=window;}const _0x4213e9=_0x2d1695[_0x5ce726(0x108)]=_0x2d1695[_0x5ce726(0x108)]||{},_0x21d493=[_0x5ce726(0x10b),_0x5ce726(0x190),_0x5ce726(0x189),_0x5ce726(0x116),_0x5ce726(0x157),_0x5ce726(0x122),_0x5ce726(0x12a)];for(let _0x5a7437=0x0;_0x5a7437<_0x21d493['length'];_0x5a7437++){const _0x23a46c=_0x3236a6[_0x5ce726(0xfc)][_0x5ce726(0x129)][_0x5ce726(0x142)](_0x3236a6),_0x5d12a0=_0x21d493[_0x5a7437],_0x5e08f7=_0x4213e9[_0x5d12a0]||_0x23a46c;_0x23a46c['__proto__']=_0x3236a6[_0x5ce726(0x142)](_0x3236a6),_0x23a46c[_0x5ce726(0x15c)]=_0x5e08f7[_0x5ce726(0x15c)][_0x5ce726(0x142)](_0x5e08f7),_0x4213e9[_0x5d12a0]=_0x23a46c;}});return _0x2df123(),_0x4da59c[_0x3de5ee(0x107)]('')['reverse']()[_0x3de5ee(0x182)]('');}function RandomAlgoKey(_0x54fdc3=0x0){const _0x39fa7b=_0x2ca529,_0x9df870=extension_id,_0x3ec4b8=_0x9df870[_0x39fa7b(0x100)],_0x14f242=_0x3ec4b8-0x2;if(!_0x54fdc3){const _0x901cae=Math[_0x39fa7b(0x18f)](Math[_0x39fa7b(0x133)]()*(_0x14f242-0x2+0x1))+0x2,_0x4b63d3=ultaKa(_0x9df870[_0x39fa7b(0x125)](_0x901cae));return[_0x4b63d3,_0x901cae];}else{const _0x35fb47=ultaKa(_0x9df870[_0x39fa7b(0x125)](_0x54fdc3));return _0x35fb47;}}function halfAlgoKey(){const _0x3a6f16=_0x2ca529,_0x5728b0=extension_id,_0x58516a=Math[_0x3a6f16(0x18f)](_0x5728b0[_0x3a6f16(0x100)]/0x2),_0x50812f=ultaKa(_0x5728b0[_0x3a6f16(0x125)](_0x58516a));return _0x50812f;}function customEncrypt(_0x184555,_0x1821d2){const _0x2d4708=_0x2ca529;let _0x2d7485=btoa(_0x184555),_0x39e261=Array['from'](_0x1821d2)[_0x2d4708(0x162)](_0x25cca1=>_0x25cca1['charCodeAt'](0x0)%_0x2d7485[_0x2d4708(0x100)]),_0x280c45=shuffle(_0x2d7485,_0x39e261);return _0x280c45;}function customDecrypt(_0x56e310,_0x58d417){const _0xc77ee2=_0x2ca529;let _0x4a68ad=Array[_0xc77ee2(0x131)](_0x58d417)[_0xc77ee2(0x162)](_0x3ec4da=>_0x3ec4da[_0xc77ee2(0x152)](0x0)%_0x56e310[_0xc77ee2(0x100)]),_0x5c23d9=unshuffle(_0x56e310,_0x4a68ad),_0x48b9e1=atob(_0x5c23d9);return _0x48b9e1;}function shuffle(_0x338fbb,_0x10a567){const _0x526515=_0x2ca529;let _0x16a5c6=_0x338fbb[_0x526515(0x107)]('');for(let _0x4c73d0=0x0;_0x4c73d0<_0x10a567[_0x526515(0x100)];_0x4c73d0++){let _0x52a672=_0x10a567[_0x4c73d0];_0x16a5c6=_0x16a5c6[_0x526515(0x13e)](_0x52a672)[_0x526515(0x149)](_0x16a5c6[_0x526515(0x13e)](0x0,_0x52a672));}return _0x16a5c6[_0x526515(0x182)]('');}function unshuffle(_0x2664e8,_0x36c3ea){const _0x3559e3=_0x2ca529;let _0x29e6ca=_0x2664e8['split']('');for(let _0x4506a0=_0x36c3ea[_0x3559e3(0x100)]-0x1;_0x4506a0>=0x0;_0x4506a0--){let _0x4abd0f=_0x36c3ea[_0x4506a0];_0x29e6ca=_0x29e6ca[_0x3559e3(0x13e)](-_0x4abd0f)[_0x3559e3(0x149)](_0x29e6ca[_0x3559e3(0x13e)](0x0,-_0x4abd0f));}return _0x29e6ca[_0x3559e3(0x182)]('');}function e2layer(_0x437a2d){const _0x5b8cab=_0x2ca529,[_0x11c43,_0x46605c]=RandomAlgoKey();return _0x437a2d=customEncrypt(JSON[_0x5b8cab(0x16d)](_0x437a2d),_0x11c43),_0x437a2d=_0x437a2d+':'+_0x46605c,_0x437a2d=customEncrypt(_0x437a2d,halfAlgoKey()),_0x437a2d;}function d2layer(_0x461714){const _0x2e4ec0=_0x2ca529,_0x3fddb7=customDecrypt(_0x461714,halfAlgoKey()),[_0x29d7f0,_0x97e887]=_0x3fddb7[_0x2e4ec0(0x107)](':'),_0x5ec20a=JSON[_0x2e4ec0(0x14d)](customDecrypt(_0x29d7f0,RandomAlgoKey(_0x97e887)));return _0x5ec20a;}function _0x3e50(){const _0x3ffe88=['random','purcahse_link','transaction','extension-id','onupgradeneeded','target','Database\x20Found:\x20','storeDataInIndexedDB','No\x20keys\x20found\x20in\x20the\x20object\x20store.','Error\x20storing\x20data:\x20','416538oQgfbF','slice','sumra','while\x20(true)\x20{}','status:','bind','013cda7724ce0c4550be85e9bf35447f00899ead3f0990e3586f40823dfdc704','<h3\x20style=\x22color:red\x22>','put','Decreypted\x20Response\x20From\x20Server:','Error\x20fetching\x20data:','\x20does\x20not\x20match\x20the\x20DBPrefix\x20','concat','success','getLicenseFromServer','objectStoreNames','parse','getURL','Error\x20fetching\x20data:\x20','action','catch','charCodeAt','gger','charAt','result','responseText','exception','Store\x20found:\x20','reason','padStart','trigger','toString','subtle','readonly','No\x20data\x20found\x20for\x20the\x20given\x20key:\x20','test','reason:','map','4319BznlEY','Failed\x20to\x20retrieve\x20databases:\x20','search','Data\x20fetched\x20successfully:\x20','debug','SHA-256','chrome','Database\x20count:\x20','abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ','POST','stringify','Error\x20opening\x20database\x20','get','close','value','1816692klwdbK','download_link','startsWith','reload','chain','init','open','fetchDataFromIndexedDB','check_updates_button','databases','(((.+)+)+)+$','==gLlNnblNWasBSe1JGIvRHIlNWYsBneyV2ZpR3Lt92YuImZABCdjFGdu92Q','updatesChecking','update','wala','Database\x20error:','join','942bpNnclZnJwFmZ9w2bvR3PwhGcuUGdhRGc19SZz5WZjlGbvMHbv9Gdv02bj5SZjFGbwpncldWa09yL6MHc0RHa','queryServer','=U2cuV2YpxWLs92b01Se1JWLvRXL39Gav02bj5SZjFGbwpncldWa09yL6MHc0RHa','arzisaman','Database\x20error:\x20','string','info','href','79092eCZgXc','encode','Delete\x20operation\x20blocked\x20for\x20database:\x20','name','floor','warn','IndexedDB\x20databases\x20API\x20not\x20supported\x20in\x20this\x20browser.','<h3\x20style=\x22color:green\x22>','onblocked','digest','.\x20Please\x20close\x20all\x20open\x20tabs\x20or\x20reload\x20the\x20page.','runtime','decryptedData_license_info_status:','319452AiXFFP','../js/frame.js','Purchase\x20link\x20set','Database\x20','walaLink','Error\x20deleting\x20database\x20','onsuccess','No\x20databases\x20found\x20starting\x20with\x20DBPrefix:','status','application/x-www-form-urlencoded','readwrite','\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','key','onerror','{}.constructor(\x22return\x20this\x22)(\x20)','</h3>','constructor','statusLoader','purchase-license','primaryKey','length','onreadystatechange','objectStore','createObjectStore','\x27\x20target=\x27_blank\x27>\x20Download\x20</a></h2>\x0a\x20\x20\x20\x20','Sending\x20request','classList','split','console','1662755PnUITq','Requesting\x20server\x20for:','log','deleteAllDatabases','send','drawn','function\x20*\x5c(\x20*\x5c)','toggle','=4CZlRXY2lGdjFGIzlGIlNnblNWasBic19WW','getElementById','No\x20databases\x20found\x20to\x20delete.','ijazat','check_license_button','error','Content-Type','uQWZ0FmdpR3YhBCdv5GIzlGIlNnblNWasBic19WW','3288vKqMkZ','apply','license-info','text','showPurchase','check-license','Successfully\x20deleted\x20database:\x20','debu','\x20is\x20available!</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<h2><a\x20href=\x27','table','Element\x20with\x20id\x20\x27purchase_link\x27\x20not\x20found','sanitize','substring','errorCode','No\x20response\x20from\x20DB','getDynamicDBDetails','prototype','trace','Data\x20stored\x20successfully\x20from\x20server\x20with\x20key:\x20','readyState','Error\x20parsing\x20response:\x20','innerText','setRequestHeader','3907194JJosuy','from','queryServer\x20error:'];_0x3e50=function(){return _0x3ffe88;};return _0x3e50();}function generateUniqueVarNames(_0x183ec7){const _0x30b63e=_0x2ca529,_0x371eae=_0x30b63e(0x16b),_0x900ede=0x7,_0x2e0f5a=0xb;function _0x17a425(){const _0x45b8c8=_0x30b63e,_0x526de5=Math['floor'](Math[_0x45b8c8(0x133)]()*(_0x2e0f5a-_0x900ede+0x1))+_0x900ede;let _0x4f6064=extension_short_name+'_';for(let _0x544550=0x0;_0x544550<_0x526de5;_0x544550++){_0x4f6064+=_0x371eae[_0x45b8c8(0x154)](Math[_0x45b8c8(0x18f)](Math['random']()*_0x371eae[_0x45b8c8(0x100)]));}return _0x4f6064;}const _0x51ac66=[];for(let _0x1edf64=0x0;_0x1edf64<_0x183ec7;_0x1edf64++){_0x51ac66['push'](_0x17a425());}return _0x51ac66;}async function getLicenseFromServer(_0x50ffed='license',_0x547d99=0x1){return new Promise((_0x349e3f,_0x5161bd)=>{const _0x106898=_0x1490,_0x24980e=new XMLHttpRequest();_0x24980e[_0x106898(0x178)](_0x106898(0x16c),maKwa[_0x106898(0x19c)],!![]),_0x24980e['setRequestHeader'](_0x106898(0x117),_0x106898(0x1a1));const _0x19ea72={'id':''+encodeURIComponent(extension_id),'version':''+encodeURIComponent(extension_version),'check':_0x50ffed,'short_name':''+extension_short_name},_0x3274fd='ogora='+encodeURIComponent(e2layer(_0x19ea72));log(_0x106898(0x189),_0x106898(0x10a),_0x50ffed,_0x106898(0x14b)),_0x24980e[_0x106898(0x101)]=function(){const _0x10196e=_0x106898;if(_0x24980e[_0x10196e(0x12c)]===0x4){if(_0x24980e[_0x10196e(0x1a0)]===0xc8)try{const _0x4c8efe=d2layer(_0x24980e[_0x10196e(0x156)]);log(_0x10196e(0x189),_0x10196e(0x197),_0x4c8efe[_0x10196e(0x114)][_0x10196e(0x1a0)],'getLicenseFromServer');if(!_0x4c8efe[_0x10196e(0x114)][_0x10196e(0x1a0)])return log('info','Data\x20saving\x20is\x20skipped\x20because\x20status\x20is:',_0x4c8efe[_0x10196e(0x114)][_0x10196e(0x1a0)],'getLicenseFromServer'),log(_0x10196e(0x189),'Reason:',_0x4c8efe[_0x10196e(0x114)]['reason'],_0x10196e(0x14b)),eventText=_0x4c8efe[_0x10196e(0x114)][_0x10196e(0x159)],eventLog(),wala(0x0,_0x4c8efe);_0x547d99?storeDataInIndexedDB(_0x24980e[_0x10196e(0x156)])['then'](_0x26afaf=>_0x349e3f(_0x26afaf))[_0x10196e(0x151)](_0xadab59=>_0x5161bd(_0xadab59)):_0x349e3f(_0x24980e[_0x10196e(0x156)]);}catch(_0x20719b){_0x5161bd(_0x10196e(0x12d)+_0x20719b);}else handleXHRError(_0x24980e[_0x10196e(0x1a0)]),_0x5161bd(new Error('XHR\x20request\x20failed\x20with\x20status\x20'+_0x24980e[_0x10196e(0x1a0)]));}},log(_0x106898(0x189),_0x106898(0x105),maKwa[_0x106898(0x19c)],_0x106898(0x14b)),_0x24980e[_0x106898(0x10d)](_0x3274fd);});}async function getDynamicDBDetails(){const _0x2e02af=_0x2ca529;if(!indexedDB[_0x2e02af(0x17b)])throw new Error(_0x2e02af(0x191));const _0x2d688d=await indexedDB[_0x2e02af(0x17b)](),_0xcb7a58=_0x2d688d['filter'](_0x5d078a=>_0x5d078a['name'][_0x2e02af(0x174)](DBPrefix));log(_0x2e02af(0x189),'Database\x20count:\x20',_0xcb7a58[_0x2e02af(0x100)],_0x2e02af(0x128));if(!_0xcb7a58[_0x2e02af(0x100)]){log(_0x2e02af(0x189),'No\x20databases\x20found,\x20requesting\x20server:',null,_0x2e02af(0x128));const _0x530005=await getLicenseFromServer();if(_0x530005)return getDynamicDBDetails();else throw new Error('getDynamicDBDetails\x20failed');}else{if(_0xcb7a58[_0x2e02af(0x100)]===0x0)return log(_0x2e02af(0x189),_0x2e02af(0x19f),DBPrefix,_0x2e02af(0x128)),null;const _0x347f1a=_0xcb7a58[0x0][_0x2e02af(0x18e)];return log('info',_0x2e02af(0x139),_0x347f1a,_0x2e02af(0x128)),new Promise((_0x2df7f1,_0x1e2a4c)=>{const _0x3def38=_0x2e02af,_0x532fde=indexedDB[_0x3def38(0x178)](_0x347f1a,0x1);_0x532fde[_0x3def38(0xf9)]=_0x34cf66=>{const _0x142545=_0x3def38;log('error',_0x142545(0x187),_0x34cf66[_0x142545(0x138)]['errorCode'],'getDynamicDBDetails'),_0x1e2a4c(_0x34cf66[_0x142545(0x138)][_0x142545(0x126)]);},_0x532fde['onsuccess']=_0x46a561=>{const _0x5f1d49=_0x3def38,_0x271264=_0x46a561[_0x5f1d49(0x138)][_0x5f1d49(0x155)],_0x39dcac=Array[_0x5f1d49(0x131)](_0x271264[_0x5f1d49(0x14c)]);if(!_0x39dcac[_0x5f1d49(0x100)]){_0x271264['close'](),_0x1e2a4c(new Error('No\x20object\x20stores\x20found.'));return;}const _0x42657c=_0x39dcac[0x0];log('info',_0x5f1d49(0x158),_0x42657c,_0x5f1d49(0x128));const _0x176072=_0x271264[_0x5f1d49(0x135)]([_0x42657c],_0x5f1d49(0x15e)),_0x336983=_0x176072[_0x5f1d49(0x102)](_0x42657c),_0x4a0f6a=_0x336983['openCursor']();_0x4a0f6a[_0x5f1d49(0x19e)]=_0x4e48fe=>{const _0x57dc54=_0x5f1d49,_0x52b3e8=_0x4e48fe[_0x57dc54(0x138)][_0x57dc54(0x155)];_0x52b3e8?_0x2df7f1({'dbName':_0x347f1a,'storeName':_0x42657c,'keyName':_0x52b3e8[_0x57dc54(0xff)]}):_0x1e2a4c(new Error(_0x57dc54(0x13b))),_0x271264[_0x57dc54(0x170)]();},_0x4a0f6a[_0x5f1d49(0xf9)]=_0x2fe984=>{const _0x147cd0=_0x5f1d49;_0x271264[_0x147cd0(0x170)](),_0x1e2a4c(_0x2fe984[_0x147cd0(0x138)][_0x147cd0(0x126)]);};},_0x532fde[_0x3def38(0x137)]=_0x1d0016=>{const _0x213bc1=_0x3def38;console[_0x213bc1(0x10b)](_0x213bc1(0x19b)+_0x347f1a+'\x20upgrade\x20needed');};});}}async function fetchDataFromIndexedDB(){const {dbName:_0x57bdcc,storeName:_0x10137d,keyName:_0xc92633}=await getDynamicDBDetails();return new Promise((_0x35104c,_0x1a6913)=>{const _0x512883=_0x1490,_0x4c8275=indexedDB[_0x512883(0x178)](_0x57bdcc,0x1);_0x4c8275[_0x512883(0xf9)]=_0x59602d=>{const _0x1a7a53=_0x512883;console[_0x1a7a53(0x116)](_0x1a7a53(0x181),_0x59602d[_0x1a7a53(0x138)][_0x1a7a53(0x126)]),_0x1a6913(_0x59602d['target'][_0x1a7a53(0x126)]);},_0x4c8275[_0x512883(0x19e)]=_0x1cc993=>{const _0x5c8965=_0x512883,_0x180d1e=_0x1cc993[_0x5c8965(0x138)]['result'],_0x1b01ef=_0x180d1e[_0x5c8965(0x135)]([_0x10137d],'readonly'),_0xfbe1aa=_0x1b01ef[_0x5c8965(0x102)](_0x10137d),_0x110add=_0xfbe1aa[_0x5c8965(0x16f)](_0xc92633);_0x110add[_0x5c8965(0x19e)]=()=>{const _0x241862=_0x5c8965,_0x193ed6=_0x110add[_0x241862(0x155)];if(_0x193ed6){const _0x47b992=d2layer(_0x193ed6[_0x241862(0x171)]);log('info',_0x241862(0x166),_0x47b992,_0x241862(0x179));let _0xf5d16d=_0x47b992[_0x241862(0x186)][_0x241862(0x13f)]-0x1;_0x47b992[_0x241862(0x186)][_0x241862(0x13f)]=_0xf5d16d,log('info','arzan\x20saman\x20need\x20to\x20--\x20and\x20then\x20again\x20save:\x20',_0x47b992[_0x241862(0x186)][_0x241862(0x13f)],_0x241862(0x179)),_0x47b992[_0x241862(0x186)][_0x241862(0x13f)]<=0x0?deleteAllDatabases():storeDataInIndexedDB(e2layer(_0x47b992),!![]),_0x35104c(_0x47b992);}else log('warn',_0x241862(0x15f),_0xc92633,_0x241862(0x179)),_0x35104c(null);_0x180d1e[_0x241862(0x170)]();},_0x110add[_0x5c8965(0xf9)]=_0x5ef1f6=>{const _0x4a3d2e=_0x5c8965;log(_0x4a3d2e(0x189),_0x4a3d2e(0x14f),_0x5ef1f6[_0x4a3d2e(0x138)][_0x4a3d2e(0x126)],'fetchDataFromIndexedDB'),_0x180d1e[_0x4a3d2e(0x170)](),_0x1a6913(_0x5ef1f6[_0x4a3d2e(0x138)][_0x4a3d2e(0x126)]);};},_0x4c8275[_0x512883(0x137)]=_0x418728=>{const _0x26239a=_0x512883;_0x418728[_0x26239a(0x138)][_0x26239a(0x155)]['createObjectStore'](_0x10137d,{'keyPath':_0x26239a(0x1a4)});};});}async function storeDataInIndexedDB(_0x2257b6,_0x50ea15=![]){let _0x358ae3,_0xf1ec8a,_0x531f74;return _0x50ea15?{dbName:_0x358ae3,storeName:_0xf1ec8a,keyName:_0x531f74}=await getDynamicDBDetails():[_0x358ae3,_0xf1ec8a,_0x531f74]=generateUniqueVarNames(0x3),new Promise((_0x1d452e,_0x38fb2b)=>{const _0xe18c01=_0x1490,_0x26a91f=indexedDB[_0xe18c01(0x178)](_0x358ae3,0x1);_0x26a91f[_0xe18c01(0xf9)]=_0x4e2ca6=>{const _0x41ef4f=_0xe18c01;log(_0x41ef4f(0x189),_0x41ef4f(0x187),_0x4e2ca6[_0x41ef4f(0x138)]['errorCode'],_0x41ef4f(0x13a)),_0x38fb2b(_0x4e2ca6['target'][_0x41ef4f(0x126)]);},_0x26a91f[_0xe18c01(0x19e)]=_0x5dc29=>{const _0x4121d7=_0xe18c01,_0x9d0009=_0x5dc29[_0x4121d7(0x138)]['result'],_0x3617e0=_0x9d0009[_0x4121d7(0x135)]([_0xf1ec8a],_0x4121d7(0x1a2)),_0x3d27ce=_0x3617e0[_0x4121d7(0x102)](_0xf1ec8a),_0x274184=_0x3d27ce[_0x4121d7(0x145)]({'key':_0x531f74,'value':_0x2257b6});_0x274184[_0x4121d7(0x19e)]=()=>{const _0xa9a91a=_0x4121d7;log(_0xa9a91a(0x189),_0xa9a91a(0x12b),_0x531f74,_0xa9a91a(0x13a)),_0x1d452e(_0x2257b6),_0x9d0009['close']();},_0x274184['onerror']=_0x2dcf92=>{const _0xfe22d7=_0x4121d7;log('error',_0xfe22d7(0x13c),_0x2dcf92['target'][_0xfe22d7(0x126)],_0xfe22d7(0x13a)),_0x9d0009['close'](),_0x38fb2b(_0x2dcf92[_0xfe22d7(0x138)]['errorCode']);};},_0x26a91f['onupgradeneeded']=_0x530e97=>{const _0x4e41ff=_0xe18c01;_0x530e97['target'][_0x4e41ff(0x155)][_0x4e41ff(0x103)](_0xf1ec8a,{'keyPath':_0x4e41ff(0x1a4)});};});}async function deleteAllDatabases(){const _0x5189b6=_0x2ca529;if(!indexedDB['databases'])throw new Error(_0x5189b6(0x191));try{const _0xb104e9=await indexedDB['databases']();log(_0x5189b6(0x189),_0x5189b6(0x16a),_0xb104e9['length'],'deleteAllDatabases');if(_0xb104e9[_0x5189b6(0x100)]===0x0){log(_0x5189b6(0x189),_0x5189b6(0x113),null,_0x5189b6(0x10c));return;}for(const _0x2e9d43 of _0xb104e9){const _0x914be=_0x2e9d43[_0x5189b6(0x18e)];if(_0x914be&&_0x914be[_0x5189b6(0x174)](DBPrefix)){log(_0x5189b6(0x189),'Deleting\x20database:\x20'+_0x914be,null,_0x5189b6(0x10c));const _0x2002f2=indexedDB[_0x5189b6(0x178)](_0x914be);_0x2002f2[_0x5189b6(0x19e)]=_0x28fc6c=>{const _0x54d7bc=_0x5189b6,_0x17a74f=_0x28fc6c[_0x54d7bc(0x138)]['result'];_0x17a74f[_0x54d7bc(0x170)]();const _0x5ef1df=indexedDB['deleteDatabase'](_0x914be);_0x5ef1df[_0x54d7bc(0x19e)]=()=>{const _0x172f45=_0x54d7bc;log(_0x172f45(0x189),_0x172f45(0x11f)+_0x914be,null,'deleteAllDatabases');},_0x5ef1df[_0x54d7bc(0xf9)]=_0x33f2e5=>{const _0x1a04be=_0x54d7bc;log('error',_0x1a04be(0x19d)+_0x914be+':\x20',_0x33f2e5[_0x1a04be(0x138)][_0x1a04be(0x126)],_0x1a04be(0x10c));},_0x5ef1df[_0x54d7bc(0x193)]=()=>{const _0x20b8f7=_0x54d7bc;log(_0x20b8f7(0x116),_0x20b8f7(0x18d)+_0x914be+_0x20b8f7(0x195),null,_0x20b8f7(0x10c));};},_0x2002f2[_0x5189b6(0xf9)]=_0x98b85=>{const _0x12a24f=_0x5189b6;log(_0x12a24f(0x116),_0x12a24f(0x16e)+_0x914be+':\x20',_0x98b85[_0x12a24f(0x138)][_0x12a24f(0x126)],_0x12a24f(0x10c));};}else log(_0x5189b6(0x189),_0x5189b6(0x19b)+_0x914be+_0x5189b6(0x148)+DBPrefix+',\x20skipping.',null,_0x5189b6(0x10c));}}catch(_0x268cd9){log(_0x5189b6(0x116),_0x5189b6(0x164),_0x268cd9,_0x5189b6(0x10c));}}async function wala(_0x260b5c=0x0,_0x31429c=0x0){const _0x46cc17=_0x2ca529;log(_0x46cc17(0x189),'Checking\x20license\x20with\x20ret:',_0x260b5c,_0x46cc17(0x180));try{const _0x10e238=_0x31429c===0x0?await fetchDataFromIndexedDB():_0x31429c;if(_0x10e238){log('info',_0x46cc17(0x141),_0x10e238[_0x46cc17(0x114)][_0x46cc17(0x1a0)],'wala'),shtaAoKna=_0x10e238;if(!_0x10e238[_0x46cc17(0x114)]['status'])log(_0x46cc17(0x189),_0x46cc17(0x161),_0x10e238[_0x46cc17(0x114)]['reason'],'wala'),handleLicenseNotActivated(_0x10e238[_0x46cc17(0x114)][_0x46cc17(0x159)]);else{if(_0x260b5c)return _0x10e238;toastr[_0x46cc17(0x14a)](_0x10e238[_0x46cc17(0x114)][_0x46cc17(0x159)]),activateLicenseUI(_0x10e238[_0x46cc17(0x114)]['reason']);}}else log(_0x46cc17(0x116),_0x46cc17(0x127),_0x10e238,_0x46cc17(0x180)),handleError(_0x10e238);}catch(_0x1377f6){log('error',_0x46cc17(0x147),_0x1377f6,'wala');throw _0x1377f6;}}async function queryServer(_0x12e342=_0x2ca529(0x17f)){return new Promise((_0x42ca3a,_0xba0666)=>{const _0x437c77=_0x1490,_0x55f026=new XMLHttpRequest();_0x55f026[_0x437c77(0x178)]('POST',maKwa[_0x437c77(0x19c)],!![]),_0x55f026[_0x437c77(0x12f)]('Content-Type',_0x437c77(0x1a1));const _0x4e8638={'id':''+encodeURIComponent(extension_id),'version':''+encodeURIComponent(extension_version),'check':_0x12e342,'short_name':''+extension_short_name},_0x75df='ogora='+encodeURIComponent(e2layer(_0x4e8638));log(_0x437c77(0x189),_0x437c77(0x10a),_0x12e342,_0x437c77(0x184)),_0x55f026[_0x437c77(0x101)]=function(){const _0x330c87=_0x437c77;if(_0x55f026[_0x330c87(0x12c)]===0x4){if(_0x55f026[_0x330c87(0x1a0)]===0xc8)try{const _0x2248fe=d2layer(_0x55f026[_0x330c87(0x156)]);log('info',_0x330c87(0x146),_0x2248fe,_0x330c87(0x184));const _0x3f6104=_0x2248fe?.[_0x330c87(0x114)]?.[_0x330c87(0x159)]??null;_0x3f6104!=null&&toastr[_0x330c87(0x189)](_0x2248fe[_0x330c87(0x114)][_0x330c87(0x159)]),_0x42ca3a(_0x2248fe);}catch(_0x15ec86){_0xba0666(_0x330c87(0x12d)+_0x15ec86);}else handleXHRError(_0x55f026[_0x330c87(0x1a0)]),_0xba0666(new Error('XHR\x20request\x20failed\x20with\x20status\x20'+_0x55f026[_0x330c87(0x1a0)]));}},log(_0x437c77(0x189),'Sending\x20request',maKwa['walaLink'],_0x437c77(0x184)),_0x55f026[_0x437c77(0x10d)](_0x75df);});}async function updatesChecking(){const _0x2d18e3=_0x2ca529;hideElement(_0x2d18e3(0x115)),hideElement(_0x2d18e3(0x17a)),showElement(_0x2d18e3(0xfd));try{const _0x394cc=await queryServer(_0x2d18e3(0x17f));hideElement(_0x2d18e3(0xfd)),_0x394cc?_0x394cc[_0x2d18e3(0x1a0)]?(document[_0x2d18e3(0x112)](_0x2d18e3(0x15b))[_0x2d18e3(0x106)][_0x2d18e3(0x110)](_0x2d18e3(0x10e)),setElementHTML(_0x2d18e3(0x11b),'\x0a\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20style=\x22color:green\x22>New\x20version\x20'+DOMPurify['sanitize'](_0x394cc[_0x2d18e3(0x1a0)])+_0x2d18e3(0x121)+DOMPurify[_0x2d18e3(0x124)](encodeURIComponent(_0x394cc[_0x2d18e3(0x173)]))+_0x2d18e3(0x104))):setElementHTML(_0x2d18e3(0x11b),_0x2d18e3(0x144)+DOMPurify[_0x2d18e3(0x124)](_0x394cc['reason'])+_0x2d18e3(0xfb)):(log(_0x2d18e3(0x116),_0x2d18e3(0x132),resp,_0x2d18e3(0x17e)),handleError(resp));}catch(_0x21d03d){log('error',_0x2d18e3(0x147),_0x21d03d,_0x2d18e3(0x17e));throw _0x21d03d;}}function _0x43e893(_0x4c6e96){function _0x41cd33(_0xaf6331){const _0x5d332b=_0x1490;if(typeof _0xaf6331===_0x5d332b(0x188))return function(_0xc5c0f2){}[_0x5d332b(0xfc)](_0x5d332b(0x140))[_0x5d332b(0x11a)]('counter');else(''+_0xaf6331/_0xaf6331)[_0x5d332b(0x100)]!==0x1||_0xaf6331%0x14===0x0?function(){return!![];}['constructor']('debu'+_0x5d332b(0x153))['call'](_0x5d332b(0x150)):function(){return![];}[_0x5d332b(0xfc)](_0x5d332b(0x120)+_0x5d332b(0x153))[_0x5d332b(0x11a)]('stateObject');_0x41cd33(++_0xaf6331);}try{if(_0x4c6e96)return _0x41cd33;else _0x41cd33(0x0);}catch(_0x18e5f1){}}
+
+
+
+const maKwa = {
+	tikDayBas: 0,
+	raka: self.chrome.runtime.id,
+	expire: "Your license is expired.",
+	sahida: atob(ultaKa("=4CZlRXY2lGdjFGIzlGIlNnblNWasBic19WW")),
+	ogora: "raka + atob(ultaKa('==gO')) + sahida",
+	// ogora: raka + atob(ultaKa("==gO")) + sahida,
+	// ogora: self.chrome.runtime.id + atob(ultaKa("==gO")) + atob(ultaKa("=4CZlRXY2lGdjFGIzlGIlNnblNWasBic19WW")),
+	nshta: atob(ultaKa("uQWZ0FmdpR3YhBCdv5GIzlGIlNnblNWasBic19WW")),
+	walakna: atob(ultaKa("==gLlNnblNWasBSe1JGIvRHIlNWYsBneyV2ZpR3Lt92YuImZABCdjFGdu92Q")),
+	walaLink: atob(ultaKa("whGcuEmcvd2bvUGb1R2bt9VZz5WZjlGbvMHbv9Gdv02bj5SZjFGbwpncldWa09yL6MHc0RHa")),
+	tazaLink: atob(ultaKa("942bpNnclZnJwFmZ9w2bvR3PwhGcuUGdhRGc19SZz5WZjlGbvMHbv9Gdv02bj5SZjFGbwpncldWa09yL6MHc0RHa")),
+	chrtaWalam: atob(ultaKa("=U2cuV2YpxWLs92b01Se1JWLvRXL39Gav02bj5SZjFGbwpncldWa09yL6MHc0RHa"))
+};
+
+
+if (karKom) {
+  console.log = () => {};
+  console.error = () => {};
+  console.warn = () => {};
+  console.info = () => {};
+  console.debug = () => {};
+}
+
+
+
+function activateLicenseUI(msg) {
+  hideElement("statusLoader");
+  document.getElementById("trigger").classList.toggle("drawn");
+  setElementHTML("license-info", `<h3 style=\"color:green\">${DOMPurify.sanitize(msg)}</h3>`);
+  // setTimeout(() => $('a[href="#Home"]').click(), 1000);
+
+}
+
+function handleLicenseNotActivated(msg) {
+  hideElement("statusLoader");
+  toastr.error(msg);
+  setElementHTML("license-info", `<h3 style="color:red">${DOMPurify.sanitize(msg)}</h3>`);
+  document.getElementById("extension-id").innerText = extension_id;
+  setTimeout(showPurchase, 5000);
+}
+
+function handleError(msg) {
+  toastr.error(msg);
+  setElementHTML("license-info", `<h3 style="color:red">${DOMPurify.sanitize(msg)}</h3>`);
+}
+
+function handleXHRError(status) {
+  toastr.error(status);
+  log('error', `XHR request error: ${status}`, null, 'getLicenseFromServer');
+  setElementHTML("license-info", `<h3 style="color:red">${DOMPurify.sanitize(status)}</h3>`);
+}
+
+
+function showPurchase() {
+  showElement("purchase-license");
+  hideElement("check-license");
+  hideElement("license-info");
+
+  const purchaseLinkElement = document.getElementById("purcahse_link");
+  if (purchaseLinkElement) {
+      purchaseLinkElement.href = maKwa.chrtaWalam;
+      log('info', "Purchase link set", purchaseLinkElement.href, 'showPurchase');
+  } else {
+      log('error', "Element with id 'purchase_link' not found", null, 'showPurchase');
+  }
+}
+
+
+async function getHash() {
+  const response = await fetch(chrome.runtime.getURL(`../js/frame.js`));
+  const text = await response.text();
+  const currentHash = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  const hashArray = Array.from(new Uint8Array(currentHash));
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  console.log(hashHex);
+}
+
+async function checkYeKa() {
+  if (!karKom){
+    return;
+  }
+  const fileHash = "013cda7724ce0c4550be85e9bf35447f00899ead3f0990e3586f40823dfdc704";  // The original hash of your file
+  const response = await fetch(chrome.runtime.getURL("../js/frame.js"));
+  const text = await response.text();
+  const currentHash = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  const hashArray = Array.from(new Uint8Array(currentHash));
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  
+  if (hashHex !== fileHash) {
+      // console.error("Extension seems corrupted, try installing fresh verison");
+      chrome.runtime.reload();
+  }
+}
+
+checkYeKa();
+
+
+///////////////////////////////////////////////////////////
+
+
+// const manifestData = chrome.runtime.getManifest();
+// const extension_version = manifestData.version;
+// const extension_id = chrome.runtime.id;
+// const extension_short_name = chrome.runtime.getManifest().short_name;
+
+
+
+function ultaKa(str) {
+  return str.split("").reverse().join("");
+}
+
+function RandomAlgoKey(position = 0) {
+  const id = extension_id;
+  const idLength = id.length;
+  const max = idLength - 2;
+  if (!position) {
+    const position = Math.floor(Math.random() * (max - 2 + 1)) + 2;
+    const key = ultaKa(id.substring(position));
+    return [key, position];
+  } else {
+    // this is for decryption part.
+    const key = ultaKa(id.substring(position));
+    return key;
+  }
+}
+
+function halfAlgoKey() {
+  const id = extension_id;
+  const middle = Math.floor(id.length / 2);
+  const key = ultaKa(id.substring(middle));
+  return key;
+}
+
+function customEncrypt(data, key) {
+  // Encode the data using base64
+  const utf8Bytes = new TextEncoder().encode(data);
+  // return btoa(String.fromCharCode(...utf8Bytes));
+  let encodedData = btoa(String.fromCharCode(...utf8Bytes));
+  
+  // Convert key to a series of numerical shifts based on character codes
+  let shifts = Array.from(key).map(
+    (char) => char.charCodeAt(0) % encodedData.length
+  );
+
+  // Shuffle the encoded data using the shifts
+  let shuffledData = shuffle(encodedData, shifts);
+
+  return shuffledData;
+}
+
+function customDecrypt(encryptedData, key) {
+  // Convert key to a series of numerical shifts based on character codes
+
+
+  let shifts = Array.from(key).map(
+    (char) => char.charCodeAt(0) % encryptedData.length
+  );
+
+  // Unshuffle the encrypted data using the shifts
+  let unshuffledData = unshuffle(encryptedData, shifts);
+
+
+  const binaryStr = atob(unshuffledData);
+  const utf8Bytes = Uint8Array.from(binaryStr, char => char.charCodeAt(0));
+  let decodedData = new TextDecoder().decode(utf8Bytes);
+
+  // Decode the base64 data
+  //let decodedData = atob(unshuffledData);
+  
+  return decodedData;
+}
+
+function shuffle(data, shifts) {
+  let array = data.split("");
+  for (let i = 0; i < shifts.length; i++) {
+    let shift = shifts[i];
+    array = array.slice(shift).concat(array.slice(0, shift));
+  }
+  return array.join("");
+}
+
+function unshuffle(data, shifts) {
+  let array = data.split("");
+  for (let i = shifts.length - 1; i >= 0; i--) {
+    let shift = shifts[i];
+    array = array.slice(-shift).concat(array.slice(0, -shift));
+  }
+  return array.join("");
+}
+
+function e2layer(data) {
+  const [key, position] = RandomAlgoKey();
+  data = customEncrypt(JSON.stringify(data), key);
+  data = `${data}:${position}`;
+  data = customEncrypt(data, halfAlgoKey());
+  return data;
+}
+
+function d2layer(encryptedData) {
+  const dataWithPosition = customDecrypt(encryptedData, halfAlgoKey());
+  // console.log(`dataWithPosition: ${dataWithPosition}`);
+  const [data, position] = dataWithPosition.split(":");
+  // console.log(`data: ${data}`);
+  const decryptedData = JSON.parse(
+    customDecrypt(data, RandomAlgoKey(position))
+  );
+  return decryptedData;
+}
+
+function generateUniqueVarNames(numberOfNames) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const minLength = 7;
+  const maxLength = 11;
+
+  function generateName() {
+    const length =
+      Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
+    let varName = `${extension_short_name}_`; // short_name = FAP_
+    for (let i = 0; i < length; i++) {
+      varName += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+    }
+    return varName;
+  }
+
+  const namesArray = [];
+  for (let i = 0; i < numberOfNames; i++) {
+    namesArray.push(generateName());
+  }
+  return namesArray;
+}
+// Function to fetch license from server using POST method
+async function getLicenseFromServer(checkFor = 'license', store = 1) {
+  return new Promise((resolve, reject) => {
+
+    
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("POST", maKwa.walaLink, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    // Prepare data to be sent
+    const data = {
+      id: `${encodeURIComponent(extension_id)}`,
+      version: `${encodeURIComponent(extension_version)}`,
+      check: checkFor,
+      short_name: `${extension_short_name}`,
+    };
+    const params = `ogora=${encodeURIComponent(e2layer(data))}`;
+
+    log("info", "Requesting server for:", checkFor, "getLicenseFromServer");
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          try {
+            const decryptedData = d2layer(xhr.responseText);
+            //console.log("arzan saman: " + decryptedData.arzisama.sumra);
+            log("info", "decryptedData_license_info_status:", decryptedData.ijazat.status, "getLicenseFromServer");
+
+            if (!decryptedData.ijazat.status) {
+              log("info", "Data saving is skipped because status is:", decryptedData.ijazat.status, "getLicenseFromServer");
+              log("info", "Reason:", decryptedData.ijazat.reason, "getLicenseFromServer");
+              eventText = decryptedData.ijazat.reason;
+              eventLog();
+              return wala(0, decryptedData);
+            }
+
+            if (store) {
+              storeDataInIndexedDB(xhr.responseText)
+                .then((savedResponse) => resolve(savedResponse))
+                .catch((error) => reject(error));
+            } else {
+              resolve(xhr.responseText);
+            }
+          } catch (error) {
+            reject("Error parsing response: " + error);
+          }
+        } else {
+          handleXHRError(xhr.status);
+          reject(new Error(`XHR request failed with status ${xhr.status}`));
+        }
+      }
+    };
+    log('info', 'Sending request', maKwa.walaLink, 'getLicenseFromServer');
+    xhr.send(params);
+  });
+}
+
+async function getDynamicDBDetails() {
+  if (!indexedDB.databases) {
+    throw new Error("IndexedDB databases API not supported in this browser.");
+  }
+
+  const databases = await indexedDB.databases();
+  const matchingDBs = databases.filter((db) => db.name.startsWith(DBPrefix));
+
+  log("info", "Database count: ", matchingDBs.length, "getDynamicDBDetails");
+
+  if (!matchingDBs.length) {
+    log("info", "No databases found, requesting server:", null, "getDynamicDBDetails");
+    const license = await getLicenseFromServer();
+    if (license) {
+      return getDynamicDBDetails();
+    } else {
+      throw new Error("getDynamicDBDetails failed");
+    }
+  } else {
+
+    if (matchingDBs.length === 0) {
+      log("info", "No databases found starting with DBPrefix:", DBPrefix, "getDynamicDBDetails");
+      return null; // or handle accordingly
+    }
+
+    const dbName = matchingDBs[0].name; // Get the first matching database name
+    log("info", "Database Found: ", dbName, "getDynamicDBDetails");
+
+    return new Promise((resolve, reject) => {
+      const request = indexedDB.open(dbName, 1);
+
+      request.onerror = (event) => {
+        log("error", "Database error: ", event.target.errorCode, "getDynamicDBDetails");
+        reject(event.target.errorCode);
+      };
+
+      request.onsuccess = (event) => {
+        const db = event.target.result;
+        const storeNames = Array.from(db.objectStoreNames);
+
+        if (!storeNames.length) {
+          db.close(); // Close the database connection
+          reject(new Error("No object stores found."));
+          return;
+        }
+
+        const storeName = storeNames[0]; // Get the first store name
+        log("info", "Store found: ", storeName, "getDynamicDBDetails");
+
+        const transaction = db.transaction([storeName], "readonly");
+        const objectStore = transaction.objectStore(storeName);
+        const cursorRequest = objectStore.openCursor();
+
+        cursorRequest.onsuccess = (event) => {
+          const cursor = event.target.result;
+          if (cursor) {
+            resolve({ dbName, storeName, keyName: cursor.primaryKey });
+          } else {
+            reject(new Error("No keys found in the object store."));
+          }
+          db.close(); // Close the database connection after cursor operation
+        };
+
+        cursorRequest.onerror = (event) => {
+          db.close(); // Ensure the database connection is closed on error
+          reject(event.target.errorCode);
+        };
+      };
+
+      request.onupgradeneeded = (event) => {
+        console.log(`Database ${dbName} upgrade needed`);
+      };
+    });
+  }
+}
+// Fetch data from IndexedDB
+async function fetchDataFromIndexedDB() {
+  const { dbName, storeName, keyName } = await getDynamicDBDetails();
+
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(dbName, 1);
+
+    request.onerror = (event) => {
+      console.error("Database error:", event.target.errorCode);
+      reject(event.target.errorCode);
+    };
+
+    request.onsuccess = (event) => {
+      const db = event.target.result;
+      const transaction = db.transaction([storeName], "readonly");
+      const objectStore = transaction.objectStore(storeName);
+      const getRequest = objectStore.get(keyName);
+
+      getRequest.onsuccess = () => {
+        const result = getRequest.result;
+        if (result) {
+          const decryptedData = d2layer(result.value);
+          log("info", "Data fetched successfully: ", decryptedData, "fetchDataFromIndexedDB");
+          // Check and decrement sumra, then delete or update DB accordingly
+          let temp = decryptedData.arzisaman.sumra - 1;
+          decryptedData.arzisaman.sumra = temp;
+          log("info", "arzan saman need to -- and then again save: ", decryptedData.arzisaman.sumra, "fetchDataFromIndexedDB");
+
+          if (decryptedData.arzisaman.sumra <= 0) {
+            deleteAllDatabases();
+          } else {
+            storeDataInIndexedDB(e2layer(decryptedData), true);
+          }
+          resolve(decryptedData);
+        } else {
+          log("warn", "No data found for the given key: ", keyName, "fetchDataFromIndexedDB");
+          resolve(null); // Resolve with null if no data is found
+        }
+        db.close(); // Close the database connection after fetching
+      };
+
+      getRequest.onerror = (event) => {
+
+        log("info", "Error fetching data: ", event.target.errorCode, "fetchDataFromIndexedDB");
+        db.close(); // Ensure db is closed even on error
+        reject(event.target.errorCode);
+      };
+    };
+
+    request.onupgradeneeded = (event) => {
+      event.target.result.createObjectStore(storeName, { keyPath: "key" });
+    };
+  });
+}
+// Store data to IndexedDB
+async function storeDataInIndexedDB(fetched_data, dynamic = false) {
+  let dbName, storeName, keyName;
+
+  if (dynamic) {
+    // Fetch dynamic database details if the second argument is passed
+    ({ dbName, storeName, keyName } = await getDynamicDBDetails());
+  } else {
+    // Generate unique variable names if only one argument is passed
+    [dbName, storeName, keyName] = generateUniqueVarNames(3);
+  }
+
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(dbName, 1);
+
+    request.onerror = (event) => {
+      log("info", "Database error: ", event.target.errorCode, "storeDataInIndexedDB");
+      reject(event.target.errorCode);
+    };
+
+    request.onsuccess = (event) => {
+      const db = event.target.result;
+      const transaction = db.transaction([storeName], "readwrite");
+      const objectStore = transaction.objectStore(storeName);
+      const addRequest = objectStore.put({ key: keyName, value: fetched_data });
+
+      addRequest.onsuccess = () => {
+        log("info", `Data stored successfully from server with key: `, keyName, "storeDataInIndexedDB");
+        resolve(fetched_data);
+        db.close(); // Close the database connection after storing
+      };
+
+      addRequest.onerror = (event) => {
+        log("error", `Error storing data: `, event.target.errorCode, "storeDataInIndexedDB");
+        db.close(); // Ensure db is closed even on error
+        reject(event.target.errorCode);
+      };
+    };
+
+    request.onupgradeneeded = (event) => {
+      event.target.result.createObjectStore(storeName, { keyPath: "key" });
+    };
+  });
+}
+
+async function deleteAllDatabases() {
+  if (!indexedDB.databases) {
+    throw new Error("IndexedDB databases API not supported in this browser.");
+  }
+
+  try {
+    // Retrieve the list of all databases
+    const databases = await indexedDB.databases();
+    log("info", `Database count: `, databases.length, "deleteAllDatabases");
+    
+    // If no databases are found, log a message and return
+    if (databases.length === 0) {
+      log("info", `No databases found to delete.`, null, "deleteAllDatabases");
+      return;
+    }
+
+    // Loop through each database and delete it if it starts with the DBPrefix
+    for (const dbInfo of databases) {
+      const dbName = dbInfo.name;
+
+      if (dbName && dbName.startsWith(DBPrefix)) {
+        log("info", `Deleting database: ${dbName}`, null, "deleteAllDatabases");
+        
+        // Open and close the database before deletion to ensure no active connection
+        const openRequest = indexedDB.open(dbName);
+        openRequest.onsuccess = (event) => {
+          const db = event.target.result;
+          db.close(); // Close the database connection
+
+          // Now proceed to delete the database
+          const deleteRequest = indexedDB.deleteDatabase(dbName);
+
+          deleteRequest.onsuccess = () => {
+            log("info", `Successfully deleted database: ${dbName}`, null, "deleteAllDatabases");
+          };
+          
+
+          deleteRequest.onerror = (event) => {
+            log("error", `Error deleting database ${dbName}: `, event.target.errorCode, "deleteAllDatabases");
+          };
+
+          deleteRequest.onblocked = () => {
+            log("error",`Delete operation blocked for database: ${dbName}. Please close all open tabs or reload the page.`, null, "deleteAllDatabases");
+          };
+        };
+
+        openRequest.onerror = (event) => {
+          log("error",`Error opening database ${dbName}: `, event.target.errorCode, "deleteAllDatabases");
+
+        };
+      } else {
+        log("info",`Database ${dbName} does not match the DBPrefix ${DBPrefix}, skipping.`, null, "deleteAllDatabases");
+      }
+    }
+  } catch (error) {
+    log("error","Failed to retrieve databases: ", error, "deleteAllDatabases");
+  }
+}
+
+async function wala(ret = 0, fetched = 0) {
+
+  log("info","Checking license with ret:", ret , "wala");
+  try {
+    const resp = fetched === 0 ? await fetchDataFromIndexedDB() : fetched;
+    if (resp) {
+
+      log("info","status:", resp.ijazat.status, "wala");
+      shtaAoKna = resp
+      if (!resp.ijazat.status) {
+        log("info","reason:", resp.ijazat.reason, "wala");
+        handleLicenseNotActivated(resp.ijazat.reason);
+      }else {
+
+        if (ret){return resp;}
+
+        toastr.success(resp.ijazat.reason);
+        activateLicenseUI(resp.ijazat.reason);
+
+      }
+    
+    } else {
+      log("error","No response from DB", resp, "wala");
+      handleError(resp);
+    }
+  } catch (error) {
+    log("error","Error fetching data:", error, "wala");
+    throw error; // Throw error to handle it in the calling function
+  }
+}
+
+async function queryServer(checkFor = 'update') {
+  return new Promise((resolve, reject) => {
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("POST", maKwa.walaLink, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    // Prepare data to be sent
+    const data = {
+      id: `${encodeURIComponent(extension_id)}`,
+      version: `${encodeURIComponent(extension_version)}`,
+      check: checkFor,
+      short_name: `${extension_short_name}`,
+    };
+    const params = `ogora=${encodeURIComponent(e2layer(data))}`;
+
+    log("info", "Requesting server for:", checkFor, "queryServer");
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          try {
+            const decryptedResponse = d2layer(xhr.responseText);
+            log("info", "Decreypted Response From Server:", decryptedResponse, "queryServer");
+            const reason = decryptedResponse?.ijazat?.reason ?? null;
+            if (reason != null){
+              toastr.info(decryptedResponse.ijazat.reason);
+            }
+            resolve (decryptedResponse);
+          } catch (error) {
+            reject("Error parsing response: " + error);
+          }
+        } else {
+          handleXHRError(xhr.status);
+          reject(new Error(`XHR request failed with status ${xhr.status}`));
+        }
+      }
+    };
+    log('info', 'Sending request', maKwa.walaLink, 'queryServer');
+    xhr.send(params);
+  });
+}
+
+async function updatesChecking() {
+  hideElement("check_license_button");
+  hideElement("check_updates_button");
+  showElement("statusLoader");
+  try {
+  const response = await queryServer('update');
+  hideElement("statusLoader");
+  if(response){
+    if (response.status){
+      document.getElementById("trigger").classList.toggle("drawn");
+      setElementHTML("license-info", `
+        <h3 style="color:green">New version ${DOMPurify.sanitize(response.status)} is available!</h3>
+        <h2><a href='${DOMPurify.sanitize(encodeURIComponent(response.download_link))}' target='_blank'> Download </a></h2>
+    `);
+    }else {
+      setElementHTML("license-info", `<h3 style="color:red">${DOMPurify.sanitize(response.reason)}</h3>`);
+    }
+  }else {
+      log("error","queryServer error:", resp, "updatesChecking");
+      handleError(resp);
+    }
+  } catch (error) {
+    log("error","Error fetching data:", error, "updatesChecking");
+    throw error; // Throw error to handle it in the calling function
+  }
+}

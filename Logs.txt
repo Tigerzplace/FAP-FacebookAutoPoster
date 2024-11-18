@@ -1,4 +1,16 @@
 
+
+--------------------
+v1.5.3.4
+
+
+Fix Unicode character handling in custom encryption method
+
+- Added UTF-8 encoding/decoding to ensure custom functions work with Unicode strings.
+- Ensured `Encryption` and `Decryption` are compatible with non-Latin1 characters, avoiding InvalidCharacterError.
+- Improved code robustness and tested with various Unicode strings for reliable encryption and decryption.
+
+
 --------------------
 v1.5.3.3
 
