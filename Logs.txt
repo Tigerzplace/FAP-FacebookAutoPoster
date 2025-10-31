@@ -1,4 +1,13 @@
 
+v1.5.3.5
+
+update: improved extension stability and communication layer
+
+- Enhanced reliability of license and update checks
+- Optimized data handling between extension and server
+- Improved background validation and logging flow
+- Added better status reporting for posting and activity events
+- Minor performance and security adjustments
 
 --------------------
 v1.5.3.4
