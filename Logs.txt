@@ -1,4 +1,18 @@
 
+
+v1.5.3.6
+
+- Added Custom Time Range (Minutes) with full validation.
+- Improved wait-time logic: no delay before first post, no delay after last.
+- Rebuilt posting engine for performance and natural timing.
+- Cleaned UI + improved custom minutes input panel.
+- Strengthened input validation and FB safety protections.
+- Removed duplicate logs and fixed early wait calculation bug.
+- Reorganized timing code, removed unused variables.
+- Improved logs for clarity, better console debugging.
+- Small UI refinements and visual enhancements.
+
+--------------------
 v1.5.3.5
 
 update: improved extension stability and communication layer
@@ -8,6 +22,7 @@ update: improved extension stability and communication layer
 - Improved background validation and logging flow
 - Added better status reporting for posting and activity events
 - Minor performance and security adjustments
+
 
 --------------------
 v1.5.3.4
@@ -28,7 +43,7 @@ Add logic to detect user or page type based on JSON data
 
 - Implemented regex to extract JSON containing ACCOUNT_ID, USER_ID, and NAME from the page content.
 - Added logic to check for PAGE_MESSAGING_MAILBOX_ID in the JSON data.
-- If PAGE_MESSAGING_MAILBOX_ID is found, set `user type` to 'page'.
+- If PAGE_MESSAGING_MAILBOX_ID is found, set `profileData.type` to 'page'.
 - Default detection to 'user' if no PAGE_MESSAGING_MAILBOX_ID is present.
 
 

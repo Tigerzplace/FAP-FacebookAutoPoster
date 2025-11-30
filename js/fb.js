@@ -1,1 +1,126 @@
-var _0x5962fd=_0xc5b4;(function(_0x38db43,_0x3dbed0){var _0x125c8f=_0xc5b4,_0x499fb6=_0x38db43();while(!![]){try{var _0x1248c9=parseInt(_0x125c8f(0x192))/(0x17*-0xbc+0xf59+0x18c)+parseInt(_0x125c8f(0x19a))/(-0x15f7+0x23b3+0x6dd*-0x2)*(parseInt(_0x125c8f(0x1a6))/(0x21f4+0x2*-0x1167+-0xdd*-0x1))+parseInt(_0x125c8f(0x1b0))/(-0x1*-0x24a5+-0x1904+-0xb9d)*(parseInt(_0x125c8f(0x1ac))/(0x5*0x28b+-0x23*-0x69+0x19*-0x115))+-parseInt(_0x125c8f(0x191))/(-0x4a2+-0x80+0xdc*0x6)*(-parseInt(_0x125c8f(0x1b5))/(0x191+-0x115*0x11+0x10db))+-parseInt(_0x125c8f(0x199))/(-0x2628+0x1*0xf29+-0x49b*-0x5)*(-parseInt(_0x125c8f(0x1ad))/(-0x1e13+-0x1*-0x1dd2+0x4a))+parseInt(_0x125c8f(0x1a4))/(-0x504+0x2618+-0x210a)+-parseInt(_0x125c8f(0x197))/(0x62a+-0xb*0x1c9+0xd84);if(_0x1248c9===_0x3dbed0)break;else _0x499fb6['push'](_0x499fb6['shift']());}catch(_0x1d9ae6){_0x499fb6['push'](_0x499fb6['shift']());}}}(_0x3728,-0x3f5cb*0x1+-0x4ccae+0x76e1*0x1a));let tabId;function _0x3728(){var _0x3ef5cc=['html/frame','xjgHJ','onUpdated','close','MRDYH','complete','cHjkA','query','JUDZh','258SYGEGi','4913AZlisD','tabs','YybXd','hgEAX','HDOUd','8448275otNDuS','PDkEl','1616192GOxdFl','2CdZdbu','ook.com','onload','PsJga','EGhfd','.html','string','windows','used','asic.faceb','522200qswWwr','kavCz','60933vvQMMo','addListene','niUeP','getLastFoc','IHAaU','https://mb','5nHuEpT','18BgaCuO','match','ykJUq','1177748bNMdiX','LcxcW','UxFIS','acXwW','status','34069xPrVCU','WCFNZ','jrsLf','uQssP','mseEP','update','bJCQt','ImuoI','length'];_0x3728=function(){return _0x3ef5cc;};return _0x3728();}function start(){var _0x1f9b3a=_0xc5b4,_0x57a5a5={'jrsLf':function(_0x4968e7,_0x148767){return _0x4968e7===_0x148767;},'LcxcW':_0x1f9b3a(0x18d),'niUeP':_0x1f9b3a(0x188)+_0x1f9b3a(0x19f)},_0x47c33f=_0x57a5a5[_0x1f9b3a(0x1a8)];window[_0x1f9b3a(0x18b)](),chrome[_0x1f9b3a(0x193)][_0x1f9b3a(0x1ba)](tabId,{'url':_0x47c33f},function(){var _0x58916f=_0x1f9b3a,_0x58467d={'EGhfd':function(_0x11ac63,_0x51be63){var _0x434c5e=_0xc5b4;return _0x57a5a5[_0x434c5e(0x1b7)](_0x11ac63,_0x51be63);},'WCFNZ':_0x57a5a5[_0x58916f(0x1b1)]};chrome[_0x58916f(0x193)][_0x58916f(0x18a)][_0x58916f(0x1a7)+'r'](function _0x37108c(_0x3423ef,_0x4c5039){var _0x208480=_0x58916f;if(_0x58467d[_0x208480(0x19e)](_0x4c5039[_0x208480(0x1b4)],_0x58467d[_0x208480(0x1b6)])){}});});}function updateUrl(){var _0x11a412=_0xc5b4,_0x4379d7={'mseEP':_0x11a412(0x1ab)+_0x11a412(0x1a3)+_0x11a412(0x19b),'MRDYH':function(_0x37135b,_0x12be55){return _0x37135b===_0x12be55;},'bJCQt':_0x11a412(0x18d),'xjgHJ':_0x11a412(0x188)+_0x11a412(0x19f)};chrome[_0x11a412(0x1a1)][_0x11a412(0x1a9)+_0x11a412(0x1a2)](null,function(){var _0xe5a40d=_0x11a412,_0x5755f4={'cHjkA':function(_0x2eea32,_0x541d9f){var _0x45e033=_0xc5b4;return _0x4379d7[_0x45e033(0x18c)](_0x2eea32,_0x541d9f);},'IHAaU':_0x4379d7[_0xe5a40d(0x185)],'UxFIS':function(_0x1f69c0,_0x137c10){var _0x2e5a73=_0xe5a40d;return _0x4379d7[_0x2e5a73(0x18c)](_0x1f69c0,_0x137c10);},'PsJga':_0x4379d7[_0xe5a40d(0x189)]};chrome[_0xe5a40d(0x193)][_0xe5a40d(0x18f)]({'active':!![],'highlighted':!![]},function(_0x391218){var _0x4afcae=_0xe5a40d;tabId=_0x391218[0x1f91+0x5*-0x533+-0x592]['id'],chrome[_0x4afcae(0x193)][_0x4afcae(0x1ba)](tabId,{'url':_0x4379d7[_0x4afcae(0x1b9)]},function(){var _0x2c5d84=_0x4afcae,_0x4a8385={'HDOUd':function(_0x48e7db,_0x848ae3){var _0x40d947=_0xc5b4;return _0x5755f4[_0x40d947(0x18e)](_0x48e7db,_0x848ae3);},'hgEAX':_0x5755f4[_0x2c5d84(0x1aa)],'ImuoI':function(_0x3a0ffb,_0x5181e5){var _0x403b37=_0x2c5d84;return _0x5755f4[_0x403b37(0x1b2)](_0x3a0ffb,_0x5181e5);},'YybXd':_0x5755f4[_0x2c5d84(0x19d)]};chrome[_0x2c5d84(0x193)][_0x2c5d84(0x18a)][_0x2c5d84(0x1a7)+'r'](function _0x4f6451(_0x41db2c,_0x262718){var _0x36a113=_0x2c5d84;if(_0x4a8385[_0x36a113(0x186)](_0x262718[_0x36a113(0x1b4)],_0x4a8385[_0x36a113(0x195)])){var _0x43b794=_0x4a8385[_0x36a113(0x194)];window[_0x36a113(0x18b)](),chrome[_0x36a113(0x193)][_0x36a113(0x1ba)](_0x41db2c,{'url':_0x43b794},function(){var _0x22e3f2=_0x36a113,_0x557130={'ykJUq':function(_0x31f791,_0x14081e){var _0x2e94bc=_0xc5b4;return _0x4a8385[_0x2e94bc(0x196)](_0x31f791,_0x14081e);},'PDkEl':_0x4a8385[_0x22e3f2(0x195)]};chrome[_0x22e3f2(0x193)][_0x22e3f2(0x18a)][_0x22e3f2(0x1a7)+'r'](function _0x1a40a9(_0x2ef743,_0x8b444c){var _0x39df4a=_0x22e3f2;if(_0x557130[_0x39df4a(0x1af)](_0x8b444c[_0x39df4a(0x1b4)],_0x557130[_0x39df4a(0x198)])){}});});}});});});});}function _0xc5b4(_0x4b166d,_0x4721b4){var _0x429a15=_0x3728();return _0xc5b4=function(_0xfc00c0,_0x36e965){_0xfc00c0=_0xfc00c0-(-0x1ec*-0xd+-0x13b2*0x1+-0x3c5);var _0x114f39=_0x429a15[_0xfc00c0];return _0x114f39;},_0xc5b4(_0x4b166d,_0x4721b4);}function getHostName(_0x3c2286){var _0x314a42=_0xc5b4,_0x1e08c2={'uQssP':function(_0x48dc09,_0x333195){return _0x48dc09!=_0x333195;},'JUDZh':function(_0x266bda,_0x4e012a){return _0x266bda>_0x4e012a;},'acXwW':function(_0xa83468,_0x103934){return _0xa83468===_0x103934;},'kavCz':_0x314a42(0x1a0)},_0x36de51=_0x3c2286[_0x314a42(0x1ae)](/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);return _0x1e08c2[_0x314a42(0x1b8)](_0x36de51,null)&&_0x1e08c2[_0x314a42(0x190)](_0x36de51[_0x314a42(0x187)],-0x1a00+-0x1*-0x1403+0x5ff*0x1)&&_0x1e08c2[_0x314a42(0x1b3)](typeof _0x36de51[0xd6b+-0x689+-0x6e0],_0x1e08c2[_0x314a42(0x1a5)])&&_0x1e08c2[_0x314a42(0x190)](_0x36de51[0x45a*-0x7+-0x39*0x1b+0x247b][_0x314a42(0x187)],-0x71e+-0x10*-0x113+-0xa12*0x1)?_0x36de51[-0x8d7*0x1+-0x569*-0x4+0x19*-0x83]:null;}window[_0x5962fd(0x19c)]=start;
+/* ================================================================
+   fb.js – Frame Initializer & Navigation Handler
+   Purpose:
+     - Redirects active tab to mbasic.facebook.com
+     - Then loads html/frame.html into that same tab
+     - Utility: Extract hostname
+     - Auto-run start() on load
+
+   NOTE:
+     * No code changes.
+     * No logic removed.
+     * Only organized & documented.
+================================================================ */
+
+
+/* ================================================================
+   1. GLOBALS
+================================================================ */
+
+let tabId;
+
+
+/* ================================================================
+   2. MAIN ENTRY FUNCTION
+   Triggered on window.onload
+================================================================ */
+
+function start() {
+    // FAP.getElementById("start").addEventListener("click", function() { updateUrl(); });
+
+    const URL = "html/frame.html";
+
+    // Close popup window before updating tab
+    window.close();
+
+    chrome.tabs.update(tabId, { url: URL }, function () {
+        chrome.tabs.onUpdated.addListener(function listener(tabId, tabInfo) {
+
+            if (tabInfo.status === "complete") {
+                // Frame loaded
+                // (No internal logic provided)
+            }
+
+        }); // onUpdated listener for frame.html
+
+    }); // update tab to frame.html
+}
+
+
+/* ================================================================
+   3. LOGIN REDIRECT → LOAD FRAME
+   Step 1: Open mbasic.facebook.com
+   Step 2: Replace with frame.html
+================================================================ */
+
+function updateUrl() {
+
+    chrome.windows.getLastFocused(null, function () {
+
+        chrome.tabs.query({ active: true, highlighted: true }, function (tab) {
+
+            tabId = tab[0].id;
+
+            // Step 1: Redirect to mbasic
+            chrome.tabs.update(tabId, { url: "https://mbasic.facebook.com" }, function () {
+
+                chrome.tabs.onUpdated.addListener(function listener(tabId, tabInfo) {
+
+                    if (tabInfo.status === "complete") {
+
+                        // Step 2: Replace with frame.html
+                        const URL = "html/frame.html";
+                        window.close();
+
+                        chrome.tabs.update(tabId, { url: URL }, function () {
+
+                            chrome.tabs.onUpdated.addListener(function listener(tabId, tabInfo) {
+
+                                if (tabInfo.status === "complete") {
+                                    // Frame loaded
+                                }
+
+                            }); // onUpdated frame load
+
+                        }); // update tab to frame.html
+
+                    } // if complete
+
+                }); // onUpdated mbasic
+
+            }); // update to mbasic
+
+        }); // tabs.query
+
+    }); // getLastFocused
+
+} // updateUrl()
+
+
+
+/* ================================================================
+   4. HOSTNAME PARSER
+   Utility function to safely extract hostname from a URL
+================================================================ */
+
+function getHostName(hostName) {
+
+    const match = hostName.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+
+    if (match !== null &&
+        match.length > 2 &&
+        typeof match[2] === "string" &&
+        match[2].length > 0) 
+    {
+        return match[2];
+    }
+
+    return null;
+}
+
+
+/* ================================================================
+   5. INIT – Execute start()
+================================================================ */
+
+window.onload = start;

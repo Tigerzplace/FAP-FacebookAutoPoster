@@ -2,7 +2,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>AutoPoster v1.5.3.4 ~ by Tigerzplace</title>
+	<title>AutoPoster v1.5.3.6 ~ by Tigerzplace</title>
 	<link rel="shortcut icon" href="../icons/32.png">
 	<link rel="stylesheet" type="text/css" href="../include/css/lic.css">
 	<link rel="stylesheet" type="text/css" href="../include/css/app.scss.css">
@@ -177,8 +177,36 @@
 														<option value="1200">3 - 20 Minutes</option>
 														<option value="1800">20 - 30 Minutes</option>
 														<option value="3600">30 -- 60 Minutes</option>
+														<option value="custom">Custom Range</option>
 														<!-- Add other range delay options here -->
 													</select>
+
+													<div id="customMinutesBox" 
+														style="display:none; margin-top:15px; text-align:center;">
+
+														<div style="margin-bottom:12px;">
+															<label style="font-weight:600; font-size:14px;">Min (Minutes)</label><br>
+															<input type="number" id="customMinMints"
+																placeholder="Min" min="1" max="180"
+																class="pader"
+																style="width:120px; padding:6px; margin-top:5px; 
+																		border:1px solid #ccc; border-radius:4px; 
+																		text-align:center;">
+														</div>
+
+														<div>
+															<label style="font-weight:600; font-size:14px;">Max (Minutes)</label><br>
+															<input type="number" id="customMaxMints"
+																placeholder="Max" min="1" max="180"
+																class="pader"
+																style="width:120px; padding:6px; margin-top:5px; 
+																		border:1px solid #ccc; border-radius:4px; 
+																		text-align:center;">
+														</div>
+
+													</div>
+
+
 
 													<select id="waitTimeSelectFixed" style="display: none;"
 														class="pader">
@@ -646,7 +674,7 @@
 
 			<div class="copyright-line-2" style="color: #e5e8f0;">
 				<span data-l10n="All rights reserved">All rights reserved.</span> © <span
-					class="copyright-year">2024</span>
+					class="copyright-year">2025</span>
 			</div>
 		</div>
 
