@@ -2,7 +2,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>AutoPoster v1.5.3.6 ~ by Tigerzplace</title>
+	<title>AutoPoster v1.6 ~ by Tigerzplace</title>
 	<link rel="shortcut icon" href="../icons/32.png">
 	<link rel="stylesheet" type="text/css" href="../include/css/lic.css">
 	<link rel="stylesheet" type="text/css" href="../include/css/app.scss.css">
@@ -18,14 +18,10 @@
 	<script type="text/javascript" src="/global/js/bootstrap.js"></script>
 
 	<script type="text/javascript" src="/include/toastr/toastr.min.js"></script>
-
-
+	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script type="text/javascript" async="" src="/global/js/ga.js"></script>
 	<script type="text/javascript" src="/global/js/analytics.js"></script>
-
-
-
 	<script src='/js/frame.js'></script>
 	<script src='/js/functions.js'></script>
 	<script src='/js/Terms.js'></script>
@@ -34,25 +30,6 @@
 </head>
 
 <body>
-	<div id="loading-container">
-		<div id="progress-bar"></div>
-	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	<div class="svg-container">
 		<svg viewbox="0 0 800 400" class="svg">
@@ -96,19 +73,12 @@
 		</div>
 	</header>
 	<main>
-
-
-
-
-
 		<!-- User Profile -->
 		<a id='profile-link' href="https://www.facebook.com/tigerzplace" target="_blank">
 			<div id="profile-picture-container" style="display: none;">
 				<img id="profile-picture" src="../FAP.png" alt="Profile Picture">
 			</div>
 		</a>
-
-
 		<div class="material-content _ngcontent-tml-0">
 			<div class="container _ngcontent-tml-0">
 				<div class="pad-me max-width  center-me " style="background-color: #f6f9ff; padding-top:0px;">
@@ -134,7 +104,8 @@
 
 
 								<span class="styled-text" style="font-size:larger;">
-									Facebook Auto Poster is a Chrome extension that automates posting to multiple Facebook groups with one click, helping you save time and improve engagement.
+									Facebook Auto Poster is a Chrome extension that automates posting to multiple
+									Facebook groups with one click, helping you save time and improve engagement.
 									<br />
 									<br />
 
@@ -181,25 +152,23 @@
 														<!-- Add other range delay options here -->
 													</select>
 
-													<div id="customMinutesBox" 
+													<div id="customMinutesBox"
 														style="display:none; margin-top:15px; text-align:center;">
 
 														<div style="margin-bottom:12px;">
-															<label style="font-weight:600; font-size:14px;">Min (Minutes)</label><br>
-															<input type="number" id="customMinMints"
-																placeholder="Min" min="1" max="180"
-																class="pader"
-																style="width:120px; padding:6px; margin-top:5px; 
+															<label style="font-weight:600; font-size:14px;">Min
+																(Minutes)</label><br>
+															<input type="number" id="customMinMints" placeholder="Min"
+																min="1" max="180" class="pader" style="width:120px; padding:6px; margin-top:5px; 
 																		border:1px solid #ccc; border-radius:4px; 
 																		text-align:center;">
 														</div>
 
 														<div>
-															<label style="font-weight:600; font-size:14px;">Max (Minutes)</label><br>
-															<input type="number" id="customMaxMints"
-																placeholder="Max" min="1" max="180"
-																class="pader"
-																style="width:120px; padding:6px; margin-top:5px; 
+															<label style="font-weight:600; font-size:14px;">Max
+																(Minutes)</label><br>
+															<input type="number" id="customMaxMints" placeholder="Max"
+																min="1" max="180" class="pader" style="width:120px; padding:6px; margin-top:5px; 
 																		border:1px solid #ccc; border-radius:4px; 
 																		text-align:center;">
 														</div>
@@ -256,13 +225,9 @@
 						padding:0px;border:0px solid;
 					   border-bottom:white; border:1px solid #999 
 					   ">
-
 							<div class="show-shadow ">
 								<div id="wrapper">
 
-
-
-									
 									<h4 class="form-label _ngcontent-tml-0" id="empty_message_error">Post Text</h4>
 
 
@@ -302,18 +267,12 @@
 							</div>
 						</div>
 						<!-- Group  List-->
-
-
-
 						<br />
 						<div class="max-width center-me " id="group_table">
-							<div class="nobuttom-show-shadow  " style=" 
-				 padding:10px;border:0px solid;
-				border-bottom:white; border:1px solid #999 
-				">
+
+							<div class="nobuttom-show-shadow  " style=" padding:10px;border:0px solid;border-bottom:white; border:1px solid #999">
+								
 								<div class="form-label _ngcontent-tml-0" style="color:#581845; ">
-
-
 
 									<div class="custom-select" style="display:none;">
 										<button id="list_group" class="select-selected pader"
@@ -324,27 +283,29 @@
 										</div>
 									</div> &nbsp;&nbsp;&nbsp;
 
+									<div class="custom-select" id="campaignDropdown" style="display:none;">
+										<button id="campaign_list_button" class="select-selected pader"
+											style="width: 25%; height: 30px; margin-top: 6px; background-color:white; border:1px solid #999;">
+											Campaigns
+										</button>&nbsp;&nbsp;&nbsp;
+
+										<div class="select-items" id="campaign-items">
+											<!-- Dynamic campaign options inserted here -->
+										</div>
+									</div>
+									<br />
 
 									<button id="saveSelectedGroup" value="Save selected Group" class="pader"
 										style="width: 25%;height: 30px;margin-top: 6px;display:none;background-color:white; border:1px solid #999 ">
 										Save Selection (Group List)</button>&nbsp;&nbsp;&nbsp;
 
-
-
-
-
-
-
+									<button id="saveCampaignBtn" class="pader"
+										style="width: 25%; height: 30px; margin-top: 6px; display:none; background-color:white; border:1px solid #999;">
+										Save Campaign
+									</button>
 									<br />
-									<br />
+
 								</div>
-
-
-
-
-
-
-
 
 								<div class="show-shadow " style="max-height:350px;overflow-y:scroll;margin-top:0px;">
 
@@ -386,19 +347,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 								<br />
 								<br />
 								<center>
@@ -415,87 +363,51 @@
 
 							<center>
 
-								<!-- <button id="loadGroups"
-							style="border-radius: 20px;width: 25%;height: 30px;margin: 5px;display:none;">
-							Load Groups</button> -->
-
-
-
-
-
-
 								<center>
 									<div id="loadGroups_center">
 										<ul id="menu" style="border: 0px; " class="loadGroup">
 											<div class="loader" id="loader" style="display: none;">
 											</div>
 
-											
+
 											<li>
-												<a style="display:none;"
-													id="loadGroups">
+												<a style="display:none;" id="loadGroups">
 													<button id="loadGroups"
 														style="cursor:pointer;width:100%;border:0px; height:25px;  font-weight: bold; ">Load
 														Groups</button>
 												</a>
 
-												<a style="display:none;"
-													id="start_posting" class="start_posting">
+												<a style="display:none;" id="start_posting" class="start_posting">
 													<button id="startPosting"
 														style="cursor:pointer;width:100%;border:0px; height:25px;  font-weight: bold; ">Start
 														Posting</button>
 												</a>
 
+												<a style="display:none;" id="pausePosting">
+													<button id="pausePostingBtn" class="pause-btn">Pause
+													</button>
+												</a>
 											</li>
-
-
-
-
 
 
 										</ul>
 									</div>
 
 
-
-
-
 									<div id="postingStatus" style="display:block;"></div>
-
-
-
-
-
 
 									<!-- <div id="groupsLoading" style="display:none;margin-top:-60px;">Loading</div> -->
 								</center>
-
-
-
-
 
 								<button id="loadMembers"
 									style="border-radius: 20px;width: 25%;height: 30px;margin: 5px;display:none;"> Load
 									Group Members</button>
 
 
-
-								<!-- <button id="startPosting"
-							style="border-radius: 20px;width: 25%;height: 30px;margin: 5px;display:none;"> Start
-							Posting </button> -->
-
-
-
-
-
-
-
-
 								<div class="progress" id="loadingProgress" style="display:none">
 									<div id="innerProgressBar" class="progress-bar progress-bar-success"
 										role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
 										style="width:0%; white-space: nowrap;">
-										Completed (0%)
 									</div>
 								</div>
 							</center>
@@ -513,20 +425,16 @@
 
 							<div class="max-width center-me ">
 
-
-
-
-
-
-
 								<div class="nobuttom-show-shadow  " style=" 
 									 padding:10px;border:0px solid;
 									border-bottom:white;
 									">
-									<h3 class="form-label _ngcontent-tml-0" style="color:#581845">
-										<b>Event Logs
-											<b>
+									<h3 class="form-label _ngcontent-tml-0"
+										style="color:#581845; display:flex; justify-content:space-between; align-items:center;">
+										<span><b>Event Logs</b></span>
+										<button id="clearLogsBtn" class="btn-clear-logs">Clear Logs</button>
 									</h3>
+								
 								</div>
 
 								<div class="show-shadow" style="margin:0px;border-top-style: none ;">
@@ -544,14 +452,6 @@
 										</ul>
 									</center>
 								</div>
-
-
-
-
-
-
-
-
 
 							</div>
 
@@ -618,14 +518,17 @@
 										<button title="Purchase License" class="btn btn-success"
 											style="border-radius: 20px;margin: 5px;">
 
-											<a href="https://tigerzplace.com/how-to-buy-tool-license/?ref=FAP" id="purcahse_link" target="_blank" style="color:#c8d9ff">Buy
+											<a href="https://tigerzplace.com/how-to-buy-tool-license/?ref=FAP"
+												id="purcahse_link" target="_blank" style="color:#c8d9ff">Buy
 												License</a>
 											<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
 
 										</button>
 										<br>Click on the button above to be redirected to the payment page.<br>
-										There, you can choose to pay for either a 6-month ($10) or 1-year license ($15).<br>
-										Please enter your extension ID and the tool name in the provided box for reference.
+										There, you can choose to pay for either a 6-month ($10) or 1-year license
+										($15).<br>
+										Please enter your extension ID and the tool name in the provided box for
+										reference.
 										</br><br />
 										Your extension ID: <b id="extension-id"></b><br>
 
@@ -648,20 +551,6 @@
 					<div id="fbProfile" style="display:none"></div>
 	</main>
 	<footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		<div class="section" id="footer-col-1-section" name="Footer Column 1">
 			<div class="widget Image no-title" data-version="1" id="Image2" style="opacity: 1;">

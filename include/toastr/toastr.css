@@ -71,21 +71,22 @@ If you want the anchor version, it requires `href="#"`.*/
 		left: 12px;
 	}
 	.toast-top-right {
-		top: -340px;
-		right: -495px;
-	}
+		top: 12px;   /* was negative */
+		right: 12px; /* was negative */
+		width: auto; /* or 100% if you prefer full-width mobile-style */
+	  }
 	.toast-bottom-right {
-		right: -74px;
-		bottom: 12px;
+	right: 12px;   /* was -74px */
+	bottom: 12px;
 	}
 	.toast-bottom-left {
 		bottom: 12px;
 		left: 12px;
 	}
 	#toast-container {
-		position: relative;
+		position: fixed;
 		z-index: 999999;
-		
+		pointer-events: none;  /* clicks pass through except on toasts themselves */
 		/*overrides*/
 
 	}
@@ -112,6 +113,7 @@ If you want the anchor version, it requires `href="#"`.*/
 		opacity: 0.8;
 		-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 		filter: alpha(opacity=80);
+		pointer-events: auto;
 	}
 	#toast-container > :hover {
 		-moz-box-shadow: 0 0 12px #000000;

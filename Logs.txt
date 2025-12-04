@@ -1,5 +1,43 @@
 
 
+v1.6 – Smarter Campaigns, Pause Button, Cleaner UI, Stability & UX Upgrade
+
+New: Pause / Resume Button
+- You can now pause an active posting campaign at any time.
+- Perfect if you want to quickly stop, review the logs, or change something before continuing.
+
+New: Post URL Display
+- After each successful post, FAP now shows the direct Facebook URL in the logs.
+- Quickly open, verify or share your posts without searching in Facebook manually.
+
+New: Save & Load Campaigns
+- Save your favourite group selections and post settings as named “Campaigns”.
+- Load any saved campaign in one click – no need to reselect groups or reconfigure timings every time.
+- Great for recurring promotions, weekly posts, or multiple niches.
+
+New: Extended Wait-Time Options (Safer Posting)
+- More flexible fixed and custom wait times between posts.
+- Set your own min/max delay window for multi-post campaigns.
+- First post starts immediately, and the waiting logic is smarter to avoid unnecessary delays while still keeping things FB-safe.
+
+Improved: Logs & Toastr Notifications
+- Event log auto-scrolls to the latest entry, so you always see what’s happening right now.
+- “Clear Logs” button to reset the log area with a single click.
+- Log messages are cleaner and easier to read: `[time] STATUS message` (no extra clutter).
+- Group names / links in the log are clickable again, so you can NOW jump straight to the post in the group.
+- Toast popups are more accurate and consistent: real success vs error messages with better styling.
+
+Improved: Progress Bar & Mode B UX
+- Progress bar is easier to read at all stages (text stays visible even around 50%+ fill).
+- The bar hides automatically when it’s not needed to keep the interface clean.
+- Overall Mode B posting flow is smoother and more informative while your campaign runs.
+
+🛠 Minor Fixes & Optimizations
+- More reliable storage for saved group lists and campaigns (less chance of data conflicts between versions).
+- Better handling of edge cases so the extension behaves more consistently across different user setups.
+- Small performance and stability tweaks throughout the posting flow.
+
+--------------------
 v1.5.3.6
 
 - Added Custom Time Range (Minutes) with full validation.
@@ -11,6 +49,7 @@ v1.5.3.6
 - Reorganized timing code, removed unused variables.
 - Improved logs for clarity, better console debugging.
 - Small UI refinements and visual enhancements.
+
 
 --------------------
 v1.5.3.5
