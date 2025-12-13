@@ -758,7 +758,6 @@ svg {
   }
 }
 
-
 #progress-bar {
   width: 0%;
   height: 100%;
@@ -769,28 +768,31 @@ svg {
 }
 
 
+/* Posting progress bar + centered label */
 #loadingProgress {
-  position: relative;
-  overflow: visible !important;
+  position: relative;          /* parent for the overlay text */
+  height: 20px;                /* adjust if you want it taller */
 }
 
-#innerProgressBar {
-  position: relative;
-  background-color: #4caf50; /* green bar */
-  height: 17px;
-  z-index: 1;
-  white-space: nowrap;
+#loadingProgress .progress-bar {
+  height: 100%;
+  transition: width 0.3s linear;
 }
 
-#innerProgressBar::after {
-  
+/* Centered text overlay (independent from green width) */
+#loadingProgress::after {
+  content: attr(data-label);
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
-  color: black; /* always visible */
-  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  color: #222;  /* stays readable on grey + green */
 }
 
 

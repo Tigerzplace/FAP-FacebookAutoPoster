@@ -1,4 +1,11 @@
+v1.6.1 – Campaign load fixes & posting stability improvements
 
+
+- Fixed progress bar text rendering and initialization issues
+- Start Posting button now appears correctly when loading a saved campaign
+- Improved usage reporting for posted content reliability
+
+--------------------
 
 v1.6 – Smarter Campaigns, Pause Button, Cleaner UI, Stability & UX Upgrade
 
