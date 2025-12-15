@@ -41,37 +41,6 @@ if (karKom) {
       () => {};
 }
 
-function sendToBackgroundRequest({ url, method, headers, body }) {
-  return new Promise((resolve, reject) => {
-    try {
-      chrome.runtime.sendMessage(
-        {
-          type: "karkom_request",
-          payload: { url, method, headers, body },
-        },
-        (response) => {
-          // If extension channel itself failed
-          if (chrome.runtime && chrome.runtime.lastError) {
-            return reject(new Error(chrome.runtime.lastError.message));
-          }
-
-          // Our background.js can return either plain text or { error: true, ... }
-          if (response && typeof response === "object" && response.error) {
-            return reject(new Error(response.message || "Background request error"));
-          }
-
-          // Normal case: response is the raw text from fetch()
-          resolve(response);
-        }
-      );
-    } catch (e) {
-      reject(e);
-    }
-  });
-}
-
-
-
 /* ========================================================================
      🔹 UI HANDLING AND ERROR MANAGEMENT
      ------------------------------------------------------------------------
@@ -107,7 +76,7 @@ function handleError(msg) {
   );
 }
 
-function handleXHRError(status) {
+function handleLicenseError(status) {
   toastr.error(status);
   log("error", `XHR request error: ${status}`, null, "getLicenseFromServer");
   setElementHTML(
@@ -159,7 +128,8 @@ async function getHash() {
 async function checkYeKa() {
   if (!karKom) return;
 
-  const fileHash = "1bfdd4ead3ce8e5655782182ab341badc394cda0a98142037923e074e96ca6d4"; // Original hash
+  const fileHash =
+    "c35c35675a09d46cfd8aa7de6c67be596ed90ebfd885bdbd0ef8206cc29a35e7"; // Original hash
   const response = await fetch(chrome.runtime.getURL("../js/frame.js"));
   const text = await response.text();
   const currentHash = await crypto.subtle.digest(
@@ -325,7 +295,7 @@ async function talkToServer(checkFor = "license", extra = {}) {
               reject("Decryption failed: " + err);
             }
           } else {
-            handleXHRError(xhr.status);
+            handleLicenseError(xhr.status);
             reject(new Error(`XHR ${checkFor} failed: ${xhr.status}`));
           }
         }
@@ -526,7 +496,7 @@ async function getLicenseFromServer(checkFor = "license", store = 1) {
       resolve(decryptedData);
     } catch (error) {
       // 🔸 5. Handle any network/decryption failure
-      handleXHRError(error.message || error);
+      handleLicenseError(error.message || error);
       log("error", "License request failed:", error, "getLicenseFromServer");
       reject(error);
     }
@@ -913,7 +883,7 @@ async function queryServer(checkFor = "update") {
       resolve(decryptedResponse);
     } catch (error) {
       // 🔸 5. Error handling
-      handleXHRError(error.message || error);
+      handleLicenseError(error.message || error);
       log("error", "Update check request failed:", error, "queryServer");
       reject(error);
     }

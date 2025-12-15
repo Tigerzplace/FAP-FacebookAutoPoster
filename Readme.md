@@ -25,6 +25,15 @@ For a full step-by-step tutorial, screenshots, and best practices, see the Ultim
   Save your favourite group selection and posting settings as **named campaigns**.  
   Load them in one click—perfect for recurring promotions, niche-specific posts, and weekly routines.
 
+- **Manual Link Preview (Multi-Link Support)**  
+  If your post contains one or more links, you can manually choose which link to use for preview.  
+  Preview data is fetched only when requested, shown exactly like Facebook, and reused during posting and campaign reloads.
+
+- **Single Instance Protection**  
+  Prevents multiple extension windows from running at the same time.  
+  If the extension is opened again, the previous instance is automatically closed to avoid conflicts.
+
+
 - **Extended Fixed & Custom Wait Times**  
   Configure safe custom delay ranges between posts (min/max).  
   The first post starts immediately, and the waiting logic is optimized to avoid unnecessary delays while still reducing the risk of FB blocks.
@@ -53,7 +62,10 @@ For a full step-by-step tutorial, screenshots, and best practices, see the Ultim
    Choose specific groups or load a saved group list / campaign.
 
 3. **Compose Your Post**  
-   Write your post once. (You can also include links, emojis, etc., just like a normal FB post.)
+   Write your post once.  
+   You can include links, emojis, and rich content. If multiple links are detected, FAP lets you choose which link to use for preview.
+   When posting links, avoid changing the message after selecting a preview unless you refresh the preview first.
+
 
 4. **Configure Wait Times**  
    Decide how long FAP should wait between posts:
@@ -116,6 +128,26 @@ For a full step-by-step tutorial, screenshots, and best practices, see the Ultim
 For detailed tips, examples, and screenshots, refer to the full guide on Tigerzplace.
 
 ---
+
+## 🆕 What’s New in v1.7
+
+- **New:** Manual link preview with multi-link selection  
+  - Detects links in your post and lets you choose which one to preview  
+  - Preview is fetched only when requested (lighter & safer)  
+  - Facebook-style preview card with title, description, and image  
+
+- **New:** Campaign-safe link previews  
+  - Selected preview is saved with campaigns  
+  - Loading a campaign restores the exact preview without refetching  
+
+- **Improved:** Extension stability  
+  - Only one extension instance can be active at a time  
+  - Prevents duplicate windows and posting conflicts  
+
+- **Improved:** Internal posting flow and request handling  
+  - Cleaner background request routing  
+  - Better consistency across long-running campaigns
+
 
 ## 🆕 What’s New in v1.6
 

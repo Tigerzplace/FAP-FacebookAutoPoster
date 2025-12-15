@@ -2,7 +2,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>AutoPoster v1.6.1 ~ by Tigerzplace</title>
+	<title>AutoPoster v1.7 ~ by Tigerzplace</title>
 	<link rel="shortcut icon" href="../icons/32.png">
 	<link rel="stylesheet" type="text/css" href="../include/css/lic.css">
 	<link rel="stylesheet" type="text/css" href="../include/css/app.scss.css">
@@ -18,10 +18,8 @@
 	<script type="text/javascript" src="/global/js/bootstrap.js"></script>
 
 	<script type="text/javascript" src="/include/toastr/toastr.min.js"></script>
-	
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script type="text/javascript" async="" src="/global/js/ga.js"></script>
-	<script type="text/javascript" src="/global/js/analytics.js"></script>
+
+
 	<script src='/js/frame.js'></script>
 	<script src='/js/functions.js'></script>
 	<script src='/js/Terms.js'></script>
@@ -246,6 +244,7 @@
 
 											</div>
 										</div>
+	
 
 										<br> Multiple Posts &nbsp;
 										<select id="random_post" class="pader" style="text-align: center;">
@@ -258,10 +257,44 @@
 											<option value="7">7</option>
 											<option value="8">8</option>
 										</select>&nbsp;
-
+										
 										<span data-toggle="tooltip" class="question-mark-logo"
 											title="Get Multiple Post Areas: If selected, you can have multiple text areas where you can compose multiple posts. Each text area represents a separate post.">?</span>
 										<pre></pre>
+
+										<!-- Link Preview Controls -->
+										<div id="linkPreviewBox" style="display:none; margin-top:10px; text-align:left;">
+
+										<div style="display:flex; gap:6px; align-items:center;">
+											<select id="linkPreviewSelect" class="pader" style="flex:1; height:30px;"></select>
+
+											<button id="linkPreviewFetchBtn" class="pader" style="height:30px;">
+											Get Preview
+											</button>
+
+											<button id="linkPreviewClearBtn" class="pader" style="height:30px;">
+											Clear
+											</button>
+										</div>
+
+										<!-- Preview Card (Facebook-like) -->
+										<div id="linkPreviewCard"
+											style="display:none; margin-top:8px; border:1px solid #dcdcdc; border-radius:6px; overflow:hidden; background:#fff;">
+											<div style="display:flex;">
+											<div style="width:135px; height:95px; background:#f2f2f2; flex:0 0 135px; overflow:hidden;">
+												<img id="lpImg" src="" style="width:100%; height:100%; object-fit:cover; display:none;" />
+											</div>
+
+											<div style="padding:8px 10px; flex:1;">
+												<div id="lpDomain" style="font-size:11px; color:#777; text-transform:uppercase;"></div>
+												<div id="lpTitle" style="font-size:13px; font-weight:600; margin-top:2px; color:#111;"></div>
+												<div id="lpDesc" style="font-size:12px; color:#555; margin-top:4px; line-height:1.25; max-height:38px; overflow:hidden;"></div>
+											</div>
+											</div>
+										</div>
+
+										<div id="linkPreviewStatus" style="margin-top:6px; font-size:12px; color:#777;"></div>
+										</div>
 									</form>
 								</div>
 							</div>
