@@ -1,606 +1,1265 @@
+<!doctype html>
+
 <html lang="en">
 
+
+
 <head>
-	<meta charset="UTF-8">
-	<title>AutoPoster v1.7 ~ by Tigerzplace</title>
-	<link rel="shortcut icon" href="../icons/32.png">
-	<link rel="stylesheet" type="text/css" href="../include/css/lic.css">
-	<link rel="stylesheet" type="text/css" href="../include/css/app.scss.css">
-	<link rel="stylesheet" type="text/css" href="../include/font/ng_roboto/font.css">
-	<link rel="stylesheet" type="text/css" href="../include/font/material_icon/font.css">
-	<link type="text/css" href="../include/css/main.css" rel="stylesheet" media="screen" />
-	<link rel="stylesheet" type="text/css" href="/include/toastr/toastr.css">
 
-	<link rel="stylesheet" type="text/css" href="/global/css/bootstrap-theme.css">
+  <meta charset="UTF-8" />
 
-	<script type="text/javascript" src="/global/js/purify.js"></script>
-	<script type="text/javascript" src="/global/js/jquery.js"></script>
-	<script type="text/javascript" src="/global/js/bootstrap.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<script type="text/javascript" src="/include/toastr/toastr.min.js"></script>
+  <title>AutoPoster v1.8 ~ by Tigerzplace</title>
 
 
-	<script src='/js/frame.js'></script>
-	<script src='/js/functions.js'></script>
-	<script src='/js/Terms.js'></script>
-	<script src='/js/API.js'></script>
+
+  <link rel="shortcut icon" href="../icons/32.png" />
+
+
+
+  <!-- Keep your existing CSS (some legacy classes may be used by frame.js) -->
+
+  <link rel="stylesheet" type="text/css" href="../include/css/lic.css">
+
+  <link rel="stylesheet" type="text/css" href="../include/css/app.scss.css">
+
+  <link rel="stylesheet" type="text/css" href="../include/font/ng_roboto/font.css">
+
+  <link rel="stylesheet" type="text/css" href="../include/font/material_icon/font.css">
+
+  <link type="text/css" href="../include/css/main.css" rel="stylesheet" media="screen" />
+
+  <link rel="stylesheet" type="text/css" href="/include/toastr/toastr.css">
+
+  <link rel="stylesheet" type="text/css" href="/global/css/bootstrap-theme.css">
+
+
+
+  <!-- NEW Dashboard UI (compatible) -->
+
+  <link rel="stylesheet" href="../include/css/dashboard.css" />
+
+
+
+  <script type="text/javascript" src="/global/js/purify.js"></script>
+
+  <script type="text/javascript" src="/global/js/jquery.js"></script>
+
+  <script type="text/javascript" src="/global/js/bootstrap.js"></script>
+
+  <script type="text/javascript" src="/include/toastr/toastr.min.js"></script>
 
 </head>
 
+
+
 <body>
 
-	<div class="svg-container">
-		<svg viewbox="0 0 800 400" class="svg">
-			<path id="curve" fill="#50c6d8" d="M 800 150 Q 500 350 0 58 L 0 0 L 800 0 L 800 300 Z"></path>
-		</svg>
-	</div>
-	<header id="coverImg">
-		<!--<div class="show-shadow" style="background-color:#FFC300;">-->
-		<div class="show-shadow" style="background-color:#38332ce5; z-index:1 ;">
-			<h1 class="logo">
-				<span class="word2">&nbsp;Facebook</span>
-				<span class="word1">Auto&nbsp;&nbsp;&nbsp;</span>
-				<span class="word2">Poster</span>
-				<span id="version" style="font-size: 40px;  letter-spacing: -2px;"></span>
-			</h1>
-
-			<br>
-			<p>Automatically post to multiple groups on
-				<a href="https://www.facebook.com/tigerzplace" target="_blank" rel="nofollow">Facebook </a>
-			</p>
-			<center>
-				<ul id="menu">
-					<li>
-						<a href="https://tigerzplace.com/terms-of-service-for-tigerzplace/" target="_blank"
-							rel="nofollow">
-							<span>Terms</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://tigerzplace.com/privacy-policy-of-tigerzplace/" target="_blank" rel="nofollow">
-							<span>Privacy</span>
-						</a>
-					</li>
-					<li>
-						<a style="cursor:pointer;">
-							<span type="button" id="myLicense">License</span>
-						</a>
-					</li>
-				</ul>
-			</center>
-		</div>
-	</header>
-	<main>
-		<!-- User Profile -->
-		<a id='profile-link' href="https://www.facebook.com/tigerzplace" target="_blank">
-			<div id="profile-picture-container" style="display: none;">
-				<img id="profile-picture" src="../FAP.png" alt="Profile Picture">
-			</div>
-		</a>
-		<div class="material-content _ngcontent-tml-0">
-			<div class="container _ngcontent-tml-0">
-				<div class="pad-me max-width  center-me " style="background-color: #f6f9ff; padding-top:0px;">
-					<!-- first page code start-->
-
-					<div id='first' class="">
-						<div class="nobuttom-show-shadow  " style=" 
-						padding:0px;border:0px solid;
-					   border-bottom:white; border:1px solid #999 
-					   ">
-							<div class="nobuttom-show-shadow  _ngcontent-tml-0" style="
-			 padding:10px;border:0px solid;
-			border-bottom:white;
-			">
-								<h3 class="form-label _ngcontent-tml-0 " style="color:#581845">
-									<b>What is Facebook Auto Poster?
-										<b>
-								</h3>
-							</div>
-
-							<div class="show-shadow  _ngcontent-tml-0 " style="margin:0px;border-top-style: none ">
-
-
-
-								<span class="styled-text" style="font-size:larger;">
-									Facebook Auto Poster is a Chrome extension that automates posting to multiple
-									Facebook groups with one click, helping you save time and improve engagement.
-									<br />
-									<br />
-
-									<sub style="color:#999" id="targetText">
-										This tool also works with new version of Facebook.<br />
-										It is not recommended to post more than 60 requests per posting with less wait
-										time.
-
-									</sub>
-
-								</span>
-
-								</ul>
-							</div>
-						</div>
-						<br />
-						<div class="nobuttom-show-shadow  " style=" 
-						padding:0px;border:0px solid;
-					   border-bottom:white; border:1px solid #999 
-					   ">
-							<div class="show-shadow  _ngcontent-tml-0">
-								<h4 class="form-label _ngcontent-tml-0">Select a time interval between requests</h4>
-								<br />
-								<delay-range-selection class="margin-top-br _ngcontent-tml-0 _nghost-tml-2">
-									<material-dropdown-select class="_ngcontent-tml-2 _nghost-tml-3">
-										<dropdown-button initpopupariaattributes="false" popupsource=""
-											popuptype="listbox" class="_ngcontent-tml-3 _nghost-tml-4">
-											<div buttondecorator="" class="button _ngcontent-tml-4 border"
-												keyboardonlyfocusindicator=""
-												id="1F634176-3A85-4C40-9B52-1B4B58842C4D--0" aria-haspopup="listbox"
-												aria-expanded="false" tabindex="0" role="button" aria-disabled="false">
-												<!---->
-												<span class="button-text _ngcontent-tml-4">
-
-
-													<select id="waitTimeSelectRange" class="pader">
-														<option value="20">01 - 20 Sec</option>
-														<option value="60">20 - 60 Sec</option>
-														<option value="180">1 - 3 Minutes</option>
-														<option value="1200">3 - 20 Minutes</option>
-														<option value="1800">20 - 30 Minutes</option>
-														<option value="3600">30 -- 60 Minutes</option>
-														<option value="custom">Custom Range</option>
-														<!-- Add other range delay options here -->
-													</select>
-
-													<div id="customMinutesBox"
-														style="display:none; margin-top:15px; text-align:center;">
-
-														<div style="margin-bottom:12px;">
-															<label style="font-weight:600; font-size:14px;">Min
-																(Minutes)</label><br>
-															<input type="number" id="customMinMints" placeholder="Min"
-																min="1" max="180" class="pader" style="width:120px; padding:6px; margin-top:5px; 
-																		border:1px solid #ccc; border-radius:4px; 
-																		text-align:center;">
-														</div>
-
-														<div>
-															<label style="font-weight:600; font-size:14px;">Max
-																(Minutes)</label><br>
-															<input type="number" id="customMaxMints" placeholder="Max"
-																min="1" max="180" class="pader" style="width:120px; padding:6px; margin-top:5px; 
-																		border:1px solid #ccc; border-radius:4px; 
-																		text-align:center;">
-														</div>
-
-													</div>
-
-
-
-													<select id="waitTimeSelectFixed" style="display: none;"
-														class="pader">
-														<option value="1">01 Second</option>
-														<option value="15">15 Seconds</option>
-														<option value="30">30 Seconds</option>
-														<option value="45">45 Seconds</option>
-														<option value="60">60 Seconds</option>
-														<option value="90">1.5 Minutes</option>
-														<option value="120">2.0 Mintues</option>
-														<option value="150">2.5 Mintues</option>
-														<option value="180">3.0 Mintues</option>
-														<option value="240">4.0 Minutes</option>
-														<option value="600">10 Minutes</option>
-														<option value="1200">20 Minutes</option>
-														<option value="1800">30 Minutes</option>
-														<option value="3600">60 Minutes</option>
-													</select>
-
-												</span>
-
-											</div>
-											<br /><br />
-											<div>
-
-												<label>
-													<input type="radio" name="delayType" value="rangeButtonTime"
-														checked>
-													Range
-												</label>
-												|
-												<label>
-													<input type="radio" name="delayType" value="fixedButtonTime"> Fixed
-												</label>
-
-											</div>
-											<!---->
-										</dropdown-button>
-									</material-dropdown-select>
-								</delay-range-selection>
-							</div>
-						</div>
-
-						<br />
-
-						<div class="nobuttom-show-shadow  " style=" 
-						padding:0px;border:0px solid;
-					   border-bottom:white; border:1px solid #999 
-					   ">
-							<div class="show-shadow ">
-								<div id="wrapper">
-
-									<h4 class="form-label _ngcontent-tml-0" id="empty_message_error">Post Text</h4>
-
-
-									<!-- Msg Box -->
-									<form id="paper" method="get" action="">
-										<div id="textareas">
-											<div class="slider-container">
-												<div class="text-area-wrapper active">
-													<textarea id="post_msg1"
-														placeholder="Write someting to post in multiple Facebook groups."
-														name="post_msg1" class="post-msg-textarea" rows="4"
-														cols="50"></textarea>
-												</div>
-											</div>
-											<div class="slider-controls">
-
-											</div>
-										</div>
-	
-
-										<br> Multiple Posts &nbsp;
-										<select id="random_post" class="pader" style="text-align: center;">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											<option value="6">6</option>
-											<option value="7">7</option>
-											<option value="8">8</option>
-										</select>&nbsp;
-										
-										<span data-toggle="tooltip" class="question-mark-logo"
-											title="Get Multiple Post Areas: If selected, you can have multiple text areas where you can compose multiple posts. Each text area represents a separate post.">?</span>
-										<pre></pre>
-
-										<!-- Link Preview Controls -->
-										<div id="linkPreviewBox" style="display:none; margin-top:10px; text-align:left;">
-
-										<div style="display:flex; gap:6px; align-items:center;">
-											<select id="linkPreviewSelect" class="pader" style="flex:1; height:30px;"></select>
-
-											<button id="linkPreviewFetchBtn" class="pader" style="height:30px;">
-											Get Preview
-											</button>
-
-											<button id="linkPreviewClearBtn" class="pader" style="height:30px;">
-											Clear
-											</button>
-										</div>
-
-										<!-- Preview Card (Facebook-like) -->
-										<div id="linkPreviewCard"
-											style="display:none; margin-top:8px; border:1px solid #dcdcdc; border-radius:6px; overflow:hidden; background:#fff;">
-											<div style="display:flex;">
-											<div style="width:135px; height:95px; background:#f2f2f2; flex:0 0 135px; overflow:hidden;">
-												<img id="lpImg" src="" style="width:100%; height:100%; object-fit:cover; display:none;" />
-											</div>
-
-											<div style="padding:8px 10px; flex:1;">
-												<div id="lpDomain" style="font-size:11px; color:#777; text-transform:uppercase;"></div>
-												<div id="lpTitle" style="font-size:13px; font-weight:600; margin-top:2px; color:#111;"></div>
-												<div id="lpDesc" style="font-size:12px; color:#555; margin-top:4px; line-height:1.25; max-height:38px; overflow:hidden;"></div>
-											</div>
-											</div>
-										</div>
-
-										<div id="linkPreviewStatus" style="margin-top:6px; font-size:12px; color:#777;"></div>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- Group  List-->
-						<br />
-						<div class="max-width center-me " id="group_table">
-
-							<div class="nobuttom-show-shadow  " style=" padding:10px;border:0px solid;border-bottom:white; border:1px solid #999">
-								
-								<div class="form-label _ngcontent-tml-0" style="color:#581845; ">
-
-									<div class="custom-select" style="display:none;">
-										<button id="list_group" class="select-selected pader"
-											style="width: 25%;height: 30px;margin-top: 6px;background-color:white; border:1px solid #999 ">
-											Group Lists</button>
-										<div class="select-items" id="select-items">
-											<!-- Options will be added here dynamically -->
-										</div>
-									</div> &nbsp;&nbsp;&nbsp;
-
-									<div class="custom-select" id="campaignDropdown" style="display:none;">
-										<button id="campaign_list_button" class="select-selected pader"
-											style="width: 25%; height: 30px; margin-top: 6px; background-color:white; border:1px solid #999;">
-											Campaigns
-										</button>&nbsp;&nbsp;&nbsp;
-
-										<div class="select-items" id="campaign-items">
-											<!-- Dynamic campaign options inserted here -->
-										</div>
-									</div>
-									<br />
-
-									<button id="saveSelectedGroup" value="Save selected Group" class="pader"
-										style="width: 25%;height: 30px;margin-top: 6px;display:none;background-color:white; border:1px solid #999 ">
-										Save Selection (Group List)</button>&nbsp;&nbsp;&nbsp;
-
-									<button id="saveCampaignBtn" class="pader"
-										style="width: 25%; height: 30px; margin-top: 6px; display:none; background-color:white; border:1px solid #999;">
-										Save Campaign
-									</button>
-									<br />
-
-								</div>
-
-								<div class="show-shadow " style="max-height:350px;overflow-y:scroll;margin-top:0px;">
-
-									<div style="overflow-x: auto;">
-										<table id="groupsTable" class="display" style="width: 100%; ">
-											<thead>
-												<tr>
-													<th style="padding-bottom: 10px;">
-														Id<br /><br />
-													</th>
-													<th style="padding-bottom: 10px;">
-														<div style="text-align: center;">
-															Select<br />
-															<input class='search1' type="checkbox" id="selectGroups"
-																name="selectall" value="">
-														</div>
-													</th>
-													<th style="text-align: left;">
-														Group Name
-														<br />
-														<input type="text" class='search1 pader' id="searchGroups"
-															name="search" placeholder="Search....."
-															style="max-width: 90%; ">
-
-
-
-													</th>
-												</tr>
-											</thead>
-											<tbody id="groupsTableBody">
-												<!-- Table body content goes here -->
-											</tbody>
-											<tfoot></tfoot>
-										</table>
-									</div>
-									<br />
-									<br />
-								</div>
-
-
-
-								<br />
-								<br />
-								<center>
-
-									<p id="groupsCount" style="display:none"> Selected: 0</p>
-								</center>
-								<br />
-							</div>
-
-						</div>
-						<!-- Group  List End-->
-						<br>
-						<div>
-
-							<center>
-
-								<center>
-									<div id="loadGroups_center">
-										<ul id="menu" style="border: 0px; " class="loadGroup">
-											<div class="loader" id="loader" style="display: none;">
-											</div>
-
-
-											<li>
-												<a style="display:none;" id="loadGroups">
-													<button id="loadGroups"
-														style="cursor:pointer;width:100%;border:0px; height:25px;  font-weight: bold; ">Load
-														Groups</button>
-												</a>
-
-												<a style="display:none;" id="start_posting" class="start_posting">
-													<button id="startPosting"
-														style="cursor:pointer;width:100%;border:0px; height:25px;  font-weight: bold; ">Start
-														Posting</button>
-												</a>
-
-												<a style="display:none;" id="pausePosting">
-													<button id="pausePostingBtn" class="pause-btn">Pause
-													</button>
-												</a>
-											</li>
-
-
-										</ul>
-									</div>
-
-
-									<div id="postingStatus" style="display:block;"></div>
-
-									<!-- <div id="groupsLoading" style="display:none;margin-top:-60px;">Loading</div> -->
-								</center>
-
-								<button id="loadMembers"
-									style="border-radius: 20px;width: 25%;height: 30px;margin: 5px;display:none;"> Load
-									Group Members</button>
-
-
-								<div class="progress" id="loadingProgress" style="display:none">
-									<div id="innerProgressBar" class="progress-bar progress-bar-success"
-										role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-										style="width:0%; white-space: nowrap;">
-									</div>
-								</div>
-							</center>
-
-						</div>
-						<br>
-						<br>
-						<!---->
-
-
-						<div class="nobuttom-show-shadow  " style=" 
-						padding:0px;border:0px solid;
-					   border-bottom:white; border:1px solid #999 
-					   ">
-
-							<div class="max-width center-me ">
-
-								<div class="nobuttom-show-shadow  " style=" 
-									 padding:10px;border:0px solid;
-									border-bottom:white;
-									">
-									<h3 class="form-label _ngcontent-tml-0"
-										style="color:#581845; display:flex; justify-content:space-between; align-items:center;">
-										<span><b>Event Logs</b></span>
-										<button id="clearLogsBtn" class="btn-clear-logs">Clear Logs</button>
-									</h3>
-								
-								</div>
-
-								<div class="show-shadow" style="margin:0px;border-top-style: none ;">
-									<center>
-										<ul style="list-style: none; color: #737270;">
-											<li style="border-bottom:1px dotted;padding:10px;">
-												<div style="font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
-															overflow: auto; height: 200px;" id="logs">
-													<p id='logBody'>
-
-														<br />
-													</p>
-												</div>
-											</li>
-										</ul>
-									</center>
-								</div>
-
-							</div>
-
-
-
-						</div>
-
-					</div>
-
-
-
-					<!--Checking License -->
-					<div id='license' style="display:none" class="show-shadow margin-bottom-10 _ngcontent-tml-0">
-						<h2 class="form-label _ngcontent-tml-0">
-
-							<div class="tab-pane" id="license">
-								<center>
-
-									<button title="Home" type="button" id="home" class="button _ngcontent-tml-4 border"
-										style="border-radius: 20px;">
-										<h5>Home</h5>
-									</button>
-
-
-									<div id="check-license">
-										<button title="Check License" type="button"
-											class="button _ngcontent-tml-4 border"
-											style="border-radius: 20px;width: 55%;margin: 5px;height: 52px;"
-											id="check_license_button">
-											<h4>Check License</h4>
-										</button>
-										<br>
-
-										<button title="Check Updates" type="button"
-											class="button _ngcontent-tml-4 border"
-											style="border-radius: 20px;width: 55%;margin: 5px;height: 52px;"
-											id="check_updates_button">
-											<h4>Check Updates</h4>
-										</button>
-										<div id="statusLoader" style="display:none;"></div>
-										<div id="trigger"></div>
-										<svg style="width:100px;" version="1.1" id="tick"
-											xmlns="http://www.w3.org/2000/svg"
-											xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-											viewBox="0 0 37 37" style="enable-background:new 1 0 373 371;"
-											xml:space="preserve">
-											<path class="circ path"
-												style="fill:none;stroke:#32b348;stroke-linejoin:round;stroke-miterlimit:10;"
-												d="
-																											M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z" />
-											<polyline class="tick path"
-												style="fill:none;stroke:#32b348;stroke-linejoin:round;stroke-miterlimit:10;"
-												points="
-																											11.6,20 15.9,24.2 26.4,13.8 " />
-										</svg>
-
-										<div id="license-info"> License Status</div>
-									</div>
-
-
-									<!--purchase license div-->
-									<div id="purchase-license" style="display:none">
-										<h3>How to activate license?</h3><br>
-										<button title="Purchase License" class="btn btn-success"
-											style="border-radius: 20px;margin: 5px;">
-
-											<a href="https://tigerzplace.com/how-to-buy-tool-license/?ref=FAP"
-												id="purcahse_link" target="_blank" style="color:#c8d9ff">Buy
-												License</a>
-											<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
-
-										</button>
-										<br>Click on the button above to be redirected to the payment page.<br>
-										There, you can choose to pay for either a 6-month ($10) or 1-year license
-										($15).<br>
-										Please enter your extension ID and the tool name in the provided box for
-										reference.
-										</br><br />
-										Your extension ID: <b id="extension-id"></b><br>
-
-
-										✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦<a href="https://www.facebook.com/tigerzplace"
-											target="_blank">
-											<h3>Tigerzplace</h3>
-										</a><br>
-										✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦
-
-									</div>
-									<!--purchase license div-->
-
-								</center>
-							</div>
-					</div>
-					<!-- Checking License end -->
-
-					<div id="fb_groups" style="display:none"></div>
-					<div id="fbProfile" style="display:none"></div>
-	</main>
-	<footer>
-
-		<div class="section" id="footer-col-1-section" name="Footer Column 1">
-			<div class="widget Image no-title" data-version="1" id="Image2" style="opacity: 1;">
-				<a href="https://www.tigerzplace.com" target="_blank" rel="nofollow"><img alt="Tigerzplace" height="27"
-						id="tigerzplace-footer" src="/Tigerzplace.png" width="150" style="visibility: visible;"></a>
-				<br>
-			</div>
-		</div>
-		<div class="footer-copyright">
-
-			<div class="copyright-line-2" style="color: #e5e8f0;">
-				<span data-l10n="All rights reserved">All rights reserved.</span> © <span
-					class="copyright-year">2025</span>
-			</div>
-		</div>
-
-	</footer>
+
+
+  <!-- Legacy hooks required by frame.js -->
+
+  <div id="coverImg" style="display:none;"></div>
+
+
+
+  <!-- Legacy profile nodes (kept for JS but moved into topbar) -->
+
+
+
+  <div class="app-shell" id="appShell">
+
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+      <div class="brand">
+
+        <div class="brand__logo">
+          <img src="../FAP.png" alt="FAP" class="brand__logo-img">
+        </div>
+
+        <div class="brand__text">
+
+          <div class="brand__title">Facebook Auto Poster</div>
+
+          <div class="brand__sub">Tigerzplace • <span id="version">v1.8</span></div>
+
+        </div>
+
+      </div>
+
+
+
+      <nav class="nav" id="sideNav">
+
+        <button class="nav__item active" data-target="view-dashboard" type="button">
+
+          <span class="nav__dot"></span> Dashboard
+
+        </button>
+
+        <button class="nav__item" data-target="view-content" type="button">
+
+          <span class="nav__dot"></span> Content
+
+        </button>
+
+        <button class="nav__item" data-target="view-groups" type="button">
+
+          <span class="nav__dot"></span> Groups
+
+        </button>
+
+        <button class="nav__item" data-target="view-logs" type="button">
+
+          <span class="nav__dot"></span> Logs
+
+        </button>
+
+        <button class="nav__item" data-target="view-settings" type="button">
+
+          <span class="nav__dot"></span> Settings
+
+        </button>
+
+      </nav>
+
+
+
+      <div class="sidebar__footer">
+
+        <a class="mini-link" href="https://tigerzplace.com/terms-of-service-for-tigerzplace/" target="_blank"
+          rel="nofollow">Terms</a>
+
+        <a class="mini-link" href="https://tigerzplace.com/privacy-policy-of-tigerzplace/" target="_blank"
+          rel="nofollow">Privacy</a>
+
+        <a class="mini-link" href="https://www.facebook.com/tigerzplace" target="_blank" rel="nofollow">Support</a>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- Main -->
+
+    <main class="main">
+
+      <!-- Topbar -->
+
+      <header class="topbar">
+
+        <div class="topbar__left">
+
+          <div class="page-title" id="pageTitle">Dashboard</div>
+
+          <div class="page-sub" id="pageSub">Manage your Facebook group automation in one place.</div>
+
+        </div>
+
+
+
+        <div class="topbar__right">
+          <div class="topbar__actions">
+            <a id="profile-link" href="https://www.facebook.com/tigerzplace" target="_blank" style="display:none;">
+              <div id="profile-picture-container" style="display:none;">
+                <img id="profile-picture" src="../FAP.png" alt="Profile Picture">
+              </div>
+            </a>
+
+            <!-- IMPORTANT: Keep SAME ID "myLicense" for your frame.js click handler -->
+            <button class="btn btn--ghost" id="myLicense" type="button">License</button>
+
+            <!-- IMPORTANT: keep EXACT ids expected in your old UI -->
+            <button class="btn btn--primary" id="startPosting" style="display:none" type="button">Start Posting</button>
+            <button class="btn btn--ghost" id="pausePostingBtn" style="display:none" type="button">Pause</button>
+          </div>
+        </div>
+
+      </header>
+
+
+
+      <!-- Views -->
+
+      <section class="views">
+
+
+
+        <!-- Dashboard -->
+
+        <div class="view active" id="view-dashboard">
+
+          <div class="grid grid-4">
+
+            <div class="card">
+
+              <div class="card__label">Total Groups</div>
+
+              <div class="card__value" id="statTotalGroups">—</div>
+
+              <div class="card__hint">Loaded groups count</div>
+
+            </div>
+
+            <div class="card">
+
+              <div class="card__label">Selected</div>
+
+              <div class="card__value" id="statSelectedGroups">—</div>
+
+              <div class="card__hint">Ready to post</div>
+
+            </div>
+
+            <div class="card">
+
+              <div class="card__label">Campaigns</div>
+
+              <div class="card__value" id="statCampaigns">—</div>
+
+              <div class="card__hint">Saved campaigns</div>
+
+            </div>
+
+            <div class="card">
+
+              <div class="card__label">Status</div>
+
+              <div class="card__value" id="statStatus">Idle</div>
+
+              <div class="card__hint">Posting engine state</div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="grid grid-2 mt">
+
+            <div class="card">
+
+              <div class="card__head">
+
+                <div class="card__title">Quick Start</div>
+
+                <div class="card__tools">
+
+                  <!-- IMPORTANT: keep old id "loadGroups" (button now) -->
+
+                  <button class="btn btn--ghost" id="loadGroups" style="display:none" type="button">Load Groups</button>
+
+                </div>
+
+              </div>
+
+              <div class="card__body">
+
+                <ol class="steps">
+
+                  <li>Go to <b>Content</b>, write your post(s), pick delay.</li>
+
+                  <li>Go to <b>Groups</b>, load/select groups.</li>
+
+                  <li>Click <b>Start Posting</b> (top-right).</li>
+
+                </ol>
+
+                <div class="notice notice--tips mt-sm">
+                  <div class="notice__title">Tips for Safer & Better Posting</div>
+
+                  <ul class="tips-grid">
+
+                    <li class="tips-links"><a href="https://www.youtube.com/watch?v=Xx3vaqMPdVs" target="_blank"
+                        rel="noopener">
+                        Rotate messages
+                      </a> when posting to multiple groups. </li>
+
+                    <li>Use range delays to avoid posting too fast.</li>
+                    <li>Avoid posting the same content repeatedly.</li>
+                    <li>Post during active hours for better reach.</li>
+
+                  </ul>
+                  <br />
+                  <div class="tips-links">
+                    <a href="https://tigerzplace.com/how-to-post-in-multiple-facebook-groups/" target="_blank"
+                      rel="noopener">
+                      Read the complete guide →
+                    </a>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+              <div class="card__head">
+
+                <div class="card__title">Recent Activity</div>
+
+                <div class="card__tools">
+
+                  <!-- IMPORTANT: keep clearLogsBtn -->
+
+                  <button class="btn btn--ghost" id="clearLogsBtn" type="button">Clear</button>
+
+                </div>
+
+              </div>
+
+              <div class="card__body">
+
+                <!-- IMPORTANT: keep ids logs + logBody -->
+
+                <div class="logbox" id="logs">
+
+                  <p id="logBody"><br /></p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <!-- Content -->
+
+        <div class="view" id="view-content">
+
+          <div class="grid content-grid">
+
+            <div class="stacked">
+
+              <div class="card card--tight">
+
+                <div class="card__head between">
+
+                  <div class="card__title">Delay Settings</div>
+
+                  <div class="delay-toggle">
+
+                    <label class="radio">
+
+                      <input type="radio" name="delayType" value="rangeButtonTime" checked />
+
+                      <span>Range</span>
+
+                    </label>
+
+                    <label class="radio">
+
+                      <input type="radio" name="delayType" value="fixedButtonTime" />
+
+                      <span>Fixed</span>
+
+                    </label>
+
+                  </div>
+
+                </div>
+
+
+
+                <div class="card__body delay-body">
+
+                  <div class="delay-row">
+
+                    <div class="delay-select-wrap">
+
+                      <label class="label label--center">Select a time interval between requests</label>
+
+
+
+                      <div class="delay-select-row">
+
+                        <!-- IMPORTANT: keep waitTimeSelectRange -->
+
+                        <select id="waitTimeSelectRange" class="input">
+
+                          <option value="20">01 - 20 Sec</option>
+
+                          <option value="60">20 - 60 Sec</option>
+
+                          <option value="180">1 - 3 Minutes</option>
+
+                          <option value="1200">3 - 20 Minutes</option>
+
+                          <option value="1800">20 - 30 Minutes</option>
+
+                          <option value="3600">30 -- 60 Minutes</option>
+
+                          <option value="custom">Custom Range</option>
+
+                        </select>
+
+
+
+                        <!-- IMPORTANT: keep waitTimeSelectFixed -->
+
+                        <select id="waitTimeSelectFixed" class="input" style="display:none;">
+
+                          <option value="1">01 Second</option>
+
+                          <option value="15">15 Seconds</option>
+
+                          <option value="30">30 Seconds</option>
+
+                          <option value="45">45 Seconds</option>
+
+                          <option value="60">60 Seconds</option>
+
+                          <option value="90">1.5 Minutes</option>
+
+                          <option value="120">2.0 Mintues</option>
+
+                          <option value="150">2.5 Mintues</option>
+
+                          <option value="180">3.0 Mintues</option>
+
+                          <option value="240">4.0 Minutes</option>
+
+                          <option value="600">10 Minutes</option>
+
+                          <option value="1200">20 Minutes</option>
+
+                          <option value="1800">30 Minutes</option>
+
+                          <option value="3600">60 Minutes</option>
+
+                        </select>
+
+                      </div>
+
+                    </div>
+
+
+
+                    <!-- IMPORTANT: keep customMinutesBox + inputs -->
+
+                    <div id="customMinutesBox" class="custom-range" style="display:none;">
+
+                      <div class="row gap">
+
+                        <div class="field">
+
+                          <label class="label-sm">Min (Minutes)</label>
+
+                          <input type="number" id="customMinMints" min="1" max="180" class="input" placeholder="Min" />
+
+                        </div>
+
+                        <div class="field">
+
+                          <label class="label-sm">Max (Minutes)</label>
+
+                          <input type="number" id="customMaxMints" min="1" max="180" class="input" placeholder="Max" />
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+                  <div class="notice notice--inline">
+
+                    <div class="notice__title">Recommended</div>
+
+                    <div class="notice__text">Use Range delays for safer posting.</div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+
+              <div class="card card--tight">
+
+                <div class="card__head">
+
+                  <div class="card__title">Scheduling</div>
+
+                  <span class="pill pill--lock locked-inline__pill">Locked</span>
+
+                </div>
+
+                <div class="card__body locked-inline">
+
+                  <div class="muted">Set a date/time to start posting automatically (coming soon after image posting).
+                  </div>
+
+                  <div class="locked-inline__inputs">
+
+                    <input class="input" type="date" disabled />
+
+                    <input class="input" type="time" disabled />
+
+                    <button class="btn btn--primary" type="button" disabled>Schedule</button>
+
+                  </div>
+
+                  <div class="muted">Coming soon (Pro)</div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+              <div class="card__head">
+
+                <div class="card__title">Post Content</div>
+
+                <div class="card__tools row gap">
+
+                  <span class="muted">Multiple Posts</span>
+
+                  <!-- IMPORTANT: keep random_post -->
+
+                  <select id="random_post" class="input input--sm">
+
+                    <option value="1">1</option>
+
+                    <option value="2">2</option>
+
+                    <option value="3">3</option>
+
+                    <option value="4">4</option>
+
+                    <option value="5">5</option>
+
+                    <option value="6">6</option>
+
+                    <option value="7">7</option>
+
+                    <option value="8">8</option>
+
+                  </select>
+
+                </div>
+
+              </div>
+
+
+
+              <div class="card__body">
+
+                <!-- IMPORTANT: keep paper, textareas, slider-container, slider-controls -->
+
+                <form id="paper" method="get" action="">
+
+                  <div id="textareas">
+
+                    <div class="slider-container">
+
+                      <div class="text-area-wrapper active">
+
+                        <textarea id="post_msg1" name="post_msg1" class="post-msg-textarea" rows="6"
+                          placeholder="Write something to post in multiple Facebook groups."></textarea>
+
+                      </div>
+
+                    </div>
+
+                    <div class="slider-controls"></div>
+
+                  </div>
+
+
+
+                  <!-- IMPORTANT: keep link preview ids -->
+
+                  <div id="linkPreviewBox" style="display:none; margin-top:10px; text-align:left;">
+
+                    <div style="display:flex; gap:6px; align-items:center;">
+
+                      <select id="linkPreviewSelect" class="input" style="flex:1; height:36px;"></select>
+
+                      <button id="linkPreviewFetchBtn" class="btn btn--ghost" type="button">Get Preview</button>
+
+                      <button id="linkPreviewClearBtn" class="btn btn--ghost" type="button">Clear</button>
+
+                    </div>
+
+
+
+                    <div id="linkPreviewCard"
+                      style="display:none; margin-top:10px; border:1px solid #E5E7EB; border-radius:10px; overflow:hidden; background:#fff;">
+
+                      <div style="display:flex;">
+
+                        <div style="width:160px; height:110px; background:#f2f2f2; flex:0 0 160px; overflow:hidden;">
+
+                          <img id="lpImg" src="" style="width:100%; height:100%; object-fit:cover; display:none;" />
+
+                        </div>
+
+                        <div style="padding:10px 12px; flex:1;">
+
+                          <div id="lpDomain" style="font-size:11px; color:#777; text-transform:uppercase;"></div>
+
+                          <div id="lpTitle" style="font-size:14px; font-weight:600; margin-top:2px; color:#111;"></div>
+
+                          <div id="lpDesc"
+                            style="font-size:12px; color:#555; margin-top:6px; line-height:1.25; max-height:46px; overflow:hidden;">
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+
+
+                    <div id="linkPreviewStatus" style="margin-top:6px; font-size:12px; color:#777;"></div>
+
+                  </div>
+
+                </form>
+
+
+
+                <div class="locked-block mt">
+
+                  <div class="locked-block__title">Image Upload</div>
+
+                  <div class="locked-block__text">
+
+                    <div class="notice__text">
+                      Coming Soon (Pro). UI is ready - feature will be enabled in next update<br><br>
+
+                      For now, you can still share images or videos by posting them on your
+                      Facebook timeline or page first, then pasting the post link here.
+                      The auto-poster will publish it to all selected groups with preview.
+                    </div>
+
+                    <a href="https://tigerzplace.com/how-to-post-in-multiple-facebook-groups/#sp-ea-3540"
+                      target="_blank" rel="noopener" class="link-sm">
+                      Learn how to post images & videos →
+                    </a>
+
+                  </div>
+
+                  <div class="locked-block__tag">Locked</div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card rail-card">
+
+              <div class="card__head">
+
+                <div class="card__title">Promo / Tips</div>
+
+              </div>
+
+              <div class="card__body">
+
+                <div class="ad">
+
+                  <!-- Binance Promo – Final Fixed -->
+                  <style>
+                    .fap-binance-promo {
+                      display: flex;
+                      background: #f1f5f9;
+                      /* matches Auto Poster surface */
+                      border-radius: 14px;
+                      padding: 16px;
+
+                      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                      color: #1f2937;
+                      flex-direction: column;
+                      justify-content: center;
+                      border: 1px solid #e2e8f0;
+                    }
+
+                    .fap-binance-promo .promo-badge {
+                      display: inline-block;
+                      background: #2563eb;
+                      color: #ffffff;
+                      font-size: 11px;
+                      font-weight: 600;
+                      padding: 4px 10px;
+                      border-radius: 999px;
+                      margin-bottom: 10px;
+                    }
+
+                    .fap-binance-promo .promo-title {
+                      text-align: center;
+                      font-size: 16px;
+                      font-weight: 700;
+                      margin: 6px 0;
+                    }
+
+                    .fap-binance-promo .promo-title strong {
+                      color: #2563eb;
+                    }
+
+                    .fap-binance-promo .promo-text {
+                      text-align: center;
+                      font-size: 13px;
+                      line-height: 1.45;
+                      color: #475569;
+                      margin-bottom: 12px;
+                    }
+
+                    .fap-binance-promo .promo-btn {
+                      display: block;
+                      margin: 0 auto;
+                      background: #2563eb;
+                      color: #ffffff;
+                      text-decoration: none;
+                      font-weight: 600;
+                      font-size: 13px;
+                      padding: 9px 16px;
+                      border-radius: 10px;
+                      transition: background 0.15s ease;
+                      width: fit-content;
+                    }
+
+                    .fap-binance-promo .promo-btn:hover {
+                      background: #1d4ed8;
+                    }
+
+                    .fap-binance-promo .promo-footer {
+                      margin-top: 10px;
+                      text-align: center;
+                      font-size: 11px;
+                      color: #64748b;
+                    }
+
+                    /* Promo rail must stretch */
+                    .rail-card .card__body {
+                      height: 100%;
+                    }
+
+                    .rail-card .ad {
+                      height: 90%;
+                      display: flex;
+                    }
+
+                    .rail-card .ad>* {
+                      flex: 1;
+                    }
+                  </style>
+
+                  <div class="fap-binance-promo">
+                    <div style="text-align:center;">
+                      <span class="promo-badge">Limited Offer</span>
+                    </div>
+
+                    <div class="promo-title">
+                      Win Up to <strong>2,000 USDC</strong>
+                    </div>
+
+                    <div class="promo-text">
+                      Earn rewards by joining Binance’s referral campaign.
+                      Trade, learn, and earn together.
+                    </div>
+
+                    <a href="https://www.binance.com/en/register?ref=R3BO39RO" target="_blank" rel="noopener sponsored"
+                      class="promo-btn">
+                      Join Binance Now
+                    </a>
+
+                    <div class="promo-footer">
+                      #BinanceEarnTogether
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+                <!-- Ad -->
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Groups -->
+
+        <div class="view" id="view-groups">
+
+          <div class="card" id="group_table">
+
+            <div class="card__head">
+
+              <div class="card__title">Groups</div>
+
+              <div class="card__tools row gap">
+
+                <!-- IMPORTANT: keep searchGroups id -->
+
+                <input type="text" class="input input--wide" id="searchGroups" name="search"
+                  placeholder="Search groups..." />
+
+                <button class="btn btn--ghost" id="loadGroupsAlt" type="button">Load Groups</button>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card__body">
+
+              <div class="table-wrap table-wrap--fixed">
+
+                <!-- IMPORTANT: keep groupsTable + groupsTableBody + selectGroups -->
+
+                <table id="groupsTable" class="display" style="width:100%;">
+
+                  <thead>
+
+                    <tr>
+
+                      <th>Id</th>
+
+                      <th style="text-align:center;">
+
+                        Select<br />
+
+                        <input class="search1" type="checkbox" id="selectGroups" name="selectall" value="">
+
+                      </th>
+
+                      <th>Group Name</th>
+
+                    </tr>
+
+                  </thead>
+
+                  <tbody id="groupsTableBody"></tbody>
+
+                </table>
+
+              </div>
+
+              <div class="groups-actions mt-sm">
+
+                <p id="groupsCount" style="display:none" class="muted">Selected: 0</p>
+
+                <div class="groups-actions__row">
+                  <!-- IMPORTANT: keep campaign/group list controls and ids -->
+                  <div class="groups-actions__left">
+                    <div class="custom-select" style="display:none;">
+                      <button id="list_group" class="btn btn--ghost select-selected" type="button">Group Lists</button>
+                      <div class="select-items" id="select-items"></div>
+                    </div>
+
+                    <div class="custom-select" id="campaignDropdown" style="display:none;">
+                      <button id="campaign_list_button" class="btn btn--ghost" type="button">Campaigns</button>
+                      <div class="select-items" id="campaign-items"></div>
+                    </div>
+                  </div>
+
+                  <div class="groups-actions__right">
+                    <button id="saveSelectedGroup" class="btn btn--primary" style="display:none" type="button">Save
+                      Selection</button>
+                    <button id="saveCampaignBtn" class="btn btn--primary" style="display:none" type="button">Save
+                      Campaign</button>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div class="loader" id="loader" style="display:none;"></div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Campaigns -->
+
+        <div class="view" id="view-campaigns">
+
+          <div class="card">
+
+            <div class="card__head">
+
+              <div class="card__title">Campaigns</div>
+
+              <div class="card__tools">
+
+                <span class="muted">Use “Save Campaign” in Groups after selecting.</span>
+
+              </div>
+
+            </div>
+
+            <div class="card__body">
+
+              <div class="notice">
+
+                <div class="notice__title">Tip</div>
+
+                <div class="notice__text">Campaigns already exist in v1.7. Dropdown in Groups remains the control
+                  (compatibility preserved).</div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Scheduling -->
+
+        <div class="view" id="view-scheduling">
+
+          <div class="card">
+
+            <div class="card__head">
+
+              <div class="card__title">Scheduling</div>
+
+              <div class="card__tools"><span class="pill pill--lock">Locked</span></div>
+
+            </div>
+
+            <div class="card__body">
+
+              <div class="locked-big">
+
+                <div class="locked-big__title">Schedule Campaign</div>
+
+                <div class="locked-big__desc">UI is ready. Scheduling will be enabled after image posting.</div>
+
+                <div class="row gap mt-sm">
+
+                  <input class="input" type="date" disabled />
+
+                  <input class="input" type="time" disabled />
+
+                  <button class="btn btn--primary" type="button" disabled>Schedule</button>
+
+                </div>
+
+                <div class="muted mt-sm">Upgrade to Pro to unlock scheduling.</div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Logs -->
+
+        <div class="view" id="view-logs">
+
+          <div class="card">
+
+            <div class="card__head">
+
+              <div class="card__title">Event Logs</div>
+
+              <div class="card__tools">
+
+                <!-- reuse SAME clearLogsBtn (no duplicates) -->
+
+                <button class="btn btn--ghost" id="clearLogsBtnTop" type="button">Clear</button>
+
+              </div>
+
+            </div>
+
+            <div class="card__body">
+
+              <!-- Reuse SAME #logs/#logBody by cloning content via JS (no new ids required in frame.js) -->
+
+              <div class="logbox logbox--tall" id="logsLong">
+
+                <div id="logsLongInner"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+        <!-- Settings / License -->
+        <div class="view" id="view-settings">
+          <div class="grid settings-grid">
+            <div class="stacked">
+              <!-- IMPORTANT: keep original #license id -->
+              <div id="license" class="card" style="display:block;">
+                <div class="card__head">
+                  <div class="card__title">License & Updates</div>
+                  <div class="card__tools">
+                    <!-- IMPORTANT: keep home id -->
+                    <button title="Home" type="button" id="home" class="btn btn--primary">Home</button>
+                  </div>
+                </div>
+
+                <div class="card__body">
+                  <div id="check-license">
+                    <button title="Check License" type="button" id="check_license_button" class="btn btn--primary">Check
+                      License</button>
+                    <button title="Check Updates" type="button" id="check_updates_button" class="btn btn--ghost">Check
+                      Updates</button>
+
+                    <div id="statusLoader" style="display:none;"></div>
+                    <div id="trigger"></div>
+
+                    <div class="mt-sm muted" id="license-info">License Status</div>
+                    <div class="mt-sm muted">Your extension ID: <b id="extension-id"></b></div>
+                  </div>
+
+                  <div id="purchase-license" style="display:none" class="mt">
+                    <h3>How to activate license?</h3>
+                    <button title="Purchase License" class="btn btn--primary" type="button">
+                      <a href="https://tigerzplace.com/how-to-buy-tool-license/?ref=FAP" id="purcahse_link"
+                        target="_blank" style="color:white; text-decoration:none;">Buy License</a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card__head">
+                  <div class="card__title">About</div>
+                </div>
+                <div class="card__body muted">
+                  Facebook Auto Poster by Tigerzplace<br>
+                  Smart automation for posting to Facebook groups efficiently and safely.<br>
+                  © <span class="copyright-year" style="display: inline;">2026</span> Tigerzplace. All rights reserved.
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+            <div class="card rail-card" style="height: 100%;">
+              <div class="card__head">
+                <div class="card__title">Promo / Tips</div>
+              </div>
+              <div class="card__body">
+                <div class="ad">
+
+
+                  <style>
+                    .hosting-ad {
+                      font-family: Arial, sans-serif;
+                      margin: 0 auto;
+                      padding: 20px;
+                      text-align: center;
+                      border: 1px solid #e0e0e0;
+                      border-radius: 8px;
+                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+                    }
+
+                    .hosting-ad h2 {
+                      font-size: 24px;
+                      color: #2a2a2a;
+                      margin-bottom: 15px
+                    }
+
+                    .hosting-ad p {
+                      color: #555555;
+                      line-height: 1.3
+                    }
+
+                    .hosting-ad ul {
+                      list-style: none;
+                      padding: 0
+                    }
+
+                    .hosting-ad ul li {
+                      font-size: 15px;
+                      color: #333333;
+                      display: flex;
+                      align-items: center
+                    }
+
+                    .hosting-ad ul li::before {
+                      content: '✔';
+                      color: #28a745;
+                      margin-right: 10px;
+                      font-weight: bold
+                    }
+
+                    /* Updated button class with more specificity and !important flag */
+                    .hosting-ad .btn {
+                      display: inline-block;
+                      margin-top: 7px;
+                      padding: 10px 20px;
+                      text-decoration: none;
+                      border-radius: 30px;
+                      transition: background-color 0.3s ease, color 0.3s ease;
+                    }
+                  </style>
+                  </head>
+
+                  <body>
+                    <div class="hosting-ad">
+                      <h2>Premium Web Hosting</h2>
+                      <p>From a business owner to an individual who desires full functionality on a small budget, we
+                        provide you
+                        complete web hosting solution.</p>
+                      <ul>
+                        <li>Free SSL Certificate</li>
+                        <li>1-Click WordPress Installer</li>
+                        <li>Unmetered DDoS Protection</li>
+                        <li>RAID-10 NVMe SSD Storage</li>
+                        <li>Automatic Daily Backups</li>
+                        <li>LiteSpeed Web Server</li>
+                        <li>USA Data Center</li>
+                        <li>24/7 Live Support</li>
+                      </ul><a href="https://bit.ly/orange-host?ref=tigerzplace.com" target="_blank"
+                        rel="sponsored noopener noreferrer" class="btn btn--ghost"
+                        title="Orange Host web-hosting plans (affiliate)">View
+                        Plans</a>
+                    </div>
+                  </body>
+
+
+                </div>
+                <!-- Ad -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =======================
+
+           LEGACY COMPATIBILITY STUBS
+
+           Keep your frame.js working (do not remove)
+
+           ======================= -->
+
+        <!-- Global posting progress (sticky across views) -->
+        <br />
+
+        <div class="progress progress--inline" id="loadingProgress" style="display: none;" data-label="">
+          <div id="innerProgressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100" style="width:0%;">
+          </div>
+        </div>
+
+
+        <div style="display:none;">
+
+          <!-- frame.js may toggle these -->
+
+          <div id="first"></div>
+
+          <div id="loadGroups_center"></div>
+
+
+
+          <!-- Some codebases rely on these IDs existing -->
+
+          <a id="start_posting" class="start_posting"></a>
+
+          <a id="pausePosting"></a>
+
+        </div>
+
+
+
+        <div id="fb_groups" style="display:none"></div>
+
+        <div id="fbProfile" style="display:none"></div>
+
+    </main>
+
+  </div>
+
+  <!-- App modal (input/confirm) -->
+  <div id="fapModal" class="modal" style="display:none;">
+    <div class="modal__backdrop"></div>
+    <div class="modal__dialog">
+      <div class="modal__header">
+        <div id="fapModalTitle" class="modal__title"></div>
+        <button id="fapModalClose" class="modal__close" type="button">&times;</button>
+      </div>
+      <div id="fapModalBody" class="modal__body"></div>
+      <div id="fapModalActions" class="modal__actions"></div>
+    </div>
+  </div>
+
+
+
+  <!-- NEW UI JS (safe) -->
+
+  <script src="/js/dashboard.js"></script>
+
+
+
+  <!-- Your existing engine scripts -->
+
+  <script src="/js/frame.js"></script>
+
+  <script src="/js/functions.js"></script>
+
+  <script src="/js/Terms.js"></script>
+
+  <script src="/js/API.js"></script>
+
 </body>
+
+
 
 </html>

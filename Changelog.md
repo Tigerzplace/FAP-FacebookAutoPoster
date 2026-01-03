@@ -3,6 +3,18 @@
 All notable changes to Facebook Auto Poster (FAP) are documented in this file.
 
 ---
+## v1.8 – Full UI Refresh & Workflow Improvements
+
+- Redesigned the entire interface for a cleaner, more modern experience across Dashboard, Content, Groups, and Settings.
+- Improved posting progress visibility with a unified progress bar, clearer status indicators, and a completion confirmation.
+- Enhanced Groups management with smoother scrolling, clearer loading states, and more consistent controls.
+- Refined Content and delay settings for better clarity, including improved locked-feature messaging.
+- Added helpful Tips and guidance sections to support safer and more effective posting.
+- Improved readability, contrast, and hover feedback throughout the interface.
+- General stability and performance improvements.
+
+
+---
 
 ## v1.7 – Link Preview & Single-Instance Stability Fix
 
