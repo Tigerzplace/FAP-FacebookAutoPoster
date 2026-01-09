@@ -713,6 +713,7 @@ body{
   bottom: 28px;
   right: 24px;
 }
+
 #toast-container.toast-top-right > div{
   width: 320px;
   box-shadow: 0 10px 28px rgba(15,23,42,0.18);
@@ -723,7 +724,7 @@ body{
 #view-settings .card__head{ padding: 10px 14px; }
 #view-settings .card__body{
   padding: 14px 18px;
-  /* display:flex;*/
+  display:flex;
   flex-direction:column;
   gap: 12px;
 }
