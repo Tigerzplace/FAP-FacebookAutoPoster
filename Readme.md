@@ -10,13 +10,13 @@ For a full step-by-step tutorial, screenshots, and best practices, see the Ultim
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - **Post to Multiple Groups at Once**  
   Load your joined groups and send a single post to many groups automatically.
 
 - **Pause / Resume Campaigns**  
-  Need a break or want to tweak something mid-run? Pause an active campaign and resume later without losing progress.
+  Need a break or want to make a tweak mid-run? Pause an active campaign and resume later without losing progress.
 
 - **Post URL Display in Logs**  
   After each successful post, FAP shows the **direct Facebook post URL** in the event log so you can quickly open, verify, or share it.
@@ -53,7 +53,7 @@ For a full step-by-step tutorial, screenshots, and best practices, see the Ultim
 
 ---
 
-## 🧩 How It Works (High-Level)
+## How It Works (High-Level)
 
 1. **Load Groups**  
    FAP reads your joined Facebook groups and displays them in a searchable list.
@@ -86,7 +86,7 @@ For a full step-by-step tutorial, screenshots, and best practices, see the Ultim
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Install the Extension**
    - Download / clone this repository.  
@@ -118,7 +118,7 @@ For a full step-by-step tutorial, screenshots, and best practices, see the Ultim
 
 ---
 
-## 🧠 Best Practices & Safety Tips
+## Best Practices & Safety Tips
 
 - Avoid posting the **exact same message** to dozens of groups in a very short time.
 - Use custom wait-time ranges (e.g., 60–180 seconds) instead of ultra-short, fixed delays.
@@ -129,7 +129,7 @@ For detailed tips, examples, and screenshots, refer to the full guide on Tigerzp
 
 ---
 
-## 🆕 What’s New in v1.7
+## What’s New in v1.7
 
 - **New:** Manual link preview with multi-link selection  
   - Detects links in your post and lets you choose which one to preview  
@@ -149,7 +149,7 @@ For detailed tips, examples, and screenshots, refer to the full guide on Tigerzp
   - Better consistency across long-running campaigns
 
 
-## 🆕 What’s New in v1.6
+## What’s New in v1.6
 
 - **New:** Pause / Resume button for running campaigns  
 - **New:** Direct post URL shown in logs after each successful post  
@@ -162,7 +162,7 @@ For detailed tips, examples, and screenshots, refer to the full guide on Tigerzp
 
 ---
 
-## 📥 Licensing & Support
+## Licensing & Support
 
 - Licenses are available via **tigerzplace.com** (see the “Buy License” section on the site).
 👉 **https://tigerzplace.com/how-to-buy-tool-license/**
@@ -175,7 +175,7 @@ For detailed tips, examples, and screenshots, refer to the full guide on Tigerzp
 ---
 
 
-## ⚖️ Disclaimer
+## Disclaimer
 
 This tool is intended for **legitimate use only**:
 - Respect Facebook’s Terms of Service.
