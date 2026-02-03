@@ -2,6 +2,32 @@
 
 All notable changes to Facebook Auto Poster (FAP) are documented in this file.
 
+
+---
+## v1.9 – Scheduled Posts & Smarter Posting Experience
+
+###  New: Post Scheduling
+- You can now **schedule posts** by selecting a date and time.
+- A clear **“New”** badge highlights the scheduling feature so it’s easy to spot.
+- Minimum scheduling time is enforced automatically to avoid Facebook errors.
+- Added a **Reset Schedule** button so you can cancel scheduling anytime and post normally.
+
+###  Improved Posting Experience
+- Link preview handling has been improved for better reliability.
+- Posting behavior is now more consistent across different post types.
+
+### Better UX & Clarity
+- Scheduling section layout improved for better visibility.
+- Helpful text explains how scheduling works and what to expect.
+- Reduced confusion by aligning messages with actual post status.
+
+### Stability Improvements
+- Fixed edge cases where scheduling data could affect normal posts.
+- Improved internal checks to ensure smooth posting flow.
+- Overall posting process is more stable and predictable.
+
+**Note:** Scheduling behavior follows Facebook’s latest platform limitations and rules.
+
 ---
 ## v1.8 – Full UI Refresh & Workflow Improvements
 

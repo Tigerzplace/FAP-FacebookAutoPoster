@@ -187,30 +187,59 @@ body{
 .topbar__actions{ display:flex; gap:8px; align-items:center; }
 .topbar__actions > *{ flex-shrink:0; }
 
-/* Avatar in top bar (far right, inside actions) */
-#profile-link{
+
+/* === Profile avatar hard lock === */
+#profile-link {
   position: fixed;
   bottom: 22px;
   right: 22px;
-  display: none;
   z-index: 1200;
 }
-#profile-picture-container{
-  position: relative;
+
+/* HARD container size */
+#profile-picture-container {
+  width: 48px;              /*  fixed */
+  height: 48px;             /*  fixed */
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #eef4ff;
-  box-shadow: 0 10px 26px rgba(15,23,42,0.18);
   background: #fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;           /* prevent flex stretching */
 }
-#profile-picture{
+
+/* Image never controls layout */
+#profile-picture {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: cover;        /* FB-style crop */
+  object-position: center;
+
+  display: block;
+  user-select: none;
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity .25s ease;
 }
+
+
+
+#profile-picture.show {
+  opacity: 1;
+}
+
 /* Buttons */
 .btn{
   border:1px solid var(--border);
@@ -842,4 +871,43 @@ body{
 .image-upload-helper:hover::after{
   transform: translateX(3px);
   opacity:1;
+}
+
+
+
+/* NEW badge – v1.9 feature */
+.new-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+
+  color: #fff;
+  background: linear-gradient(135deg, #ff4d4f, #FF8A3D);
+  border-radius: 999px;
+
+  box-shadow: 0 4px 10px rgba(255, 77, 79, 0.35);
+  margin-left: 8px;
+
+  animation: newPulse 1.8s infinite;
+}
+
+/* Subtle pulse animation */
+@keyframes newPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.6);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 8px rgba(255, 77, 79, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0);
+  }
 }

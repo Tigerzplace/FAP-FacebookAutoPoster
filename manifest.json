@@ -4,7 +4,7 @@
    "name": "Facebook Auto Poster",
    "short_name": "FAP",
    "description": "Auto-poster for Facebook groups, allowing you to publish posts to multiple groups simultaneously. Perfect for marketers, community managers, and anyone looking to engage with a wide audience efficiently",
-   "version": "1.8.4",
+   "version": "1.9",
    "minimum_chrome_version": "88",
 
    "icons": {

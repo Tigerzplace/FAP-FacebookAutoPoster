@@ -10,7 +10,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>AutoPoster v1.8.4 ~ by Tigerzplace</title>
+  <title>AutoPoster v1.9 ~ by Tigerzplace</title>
 
 
 
@@ -503,26 +503,31 @@
 
                   <div class="card__title">Scheduling</div>
 
-                  <span class="pill pill--lock locked-inline__pill">Locked</span>
+                  <span class="new-badge" title="Introduced in v1.9">New</span>
+
 
                 </div>
 
-                <div class="card__body locked-inline">
-
-                  <div class="muted">Set a date/time to start posting automatically (coming soon after image posting).
-                  </div>
+                <div class="card__body">
 
                   <div class="locked-inline__inputs">
 
-                    <input class="input" type="date" disabled />
+                    <input class="input" type="date" id="scheduleDate"/>
 
-                    <input class="input" type="time" disabled />
+                    <select class="input" id="scheduleTime">
+                      <option value="">Select time</option>
+                    </select>
 
-                    <button class="btn btn--primary" type="button" disabled>Schedule</button>
-
+                    <button class="btn btn--ghost" id="resetScheduleBtn" type="button">
+                      Reset Schedule
+                    </button>
                   </div>
 
-                  <div class="muted">Coming soon (Pro)</div>
+                  
+                  <div class="muted" id="scheduleHint">
+                    Select date & time to schedule (minimum now + 35 minutes)
+                  </div>
+
 
                 </div>
 
