@@ -1,0 +1,1348 @@
+<!doctype html>
+
+<html lang="en">
+
+
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>AutoPoster ~ by Tigerzplace</title>
+
+
+
+  <link rel="shortcut icon" href="../assets/icons/32.png" />
+
+
+
+  <!-- Keep your existing CSS (some legacy classes may be used by frame.js) -->
+
+  <link rel="stylesheet" type="text/css" href="../styles/lic.css">
+
+  <link rel="stylesheet" type="text/css" href="../styles/app.scss.css">
+
+  <link rel="stylesheet" type="text/css" href="../vendor/fonts/ng_roboto/font.css">
+
+  <link rel="stylesheet" type="text/css" href="../vendor/fonts/material_icon/font.css">
+
+  <link type="text/css" href="../styles/main.css" rel="stylesheet" media="screen" />
+
+  <link rel="stylesheet" type="text/css" href="/vendor/css/toastr.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/vendor/css/bootstrap-theme.css">
+
+
+
+  <!-- NEW Dashboard UI (compatible) -->
+
+  <link rel="stylesheet" href="../styles/dashboard.css" />
+
+
+
+  <script type="text/javascript" src="/vendor/js/purify.js"></script>
+
+  <script type="text/javascript" src="/vendor/js/jquery.js"></script>
+
+  <script type="text/javascript" src="/vendor/js/bootstrap.js"></script>
+
+  <script type="text/javascript" src="/vendor/js/toastr.min.js"></script>
+
+</head>
+
+
+
+<body>
+
+
+
+  <!-- Legacy hooks required by frame.js -->
+
+  <div id="coverImg" style="display:none;"></div>
+
+
+
+  <!-- Legacy profile nodes (kept for JS but moved into topbar) -->
+
+
+
+  <div class="app-shell" id="appShell">
+
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+      <div class="brand">
+
+        <div class="brand__logo">
+          <img src="../assets/images/FAP.png" alt="FAP" class="brand__logo-img">
+        </div>
+
+        <div class="brand__text">
+
+          <div class="brand__title">Facebook Auto Poster</div>
+
+          <div class="brand__sub">Tigerzplace • <span id="version"></span></div>
+
+        </div>
+
+      </div>
+
+
+
+      <nav class="nav" id="sideNav">
+
+        <button class="nav__item active" data-target="view-dashboard" type="button">
+
+          <span class="nav__dot"></span> Dashboard
+
+        </button>
+
+        <button class="nav__item" data-target="view-content" type="button">
+
+          <span class="nav__dot"></span> Content
+
+        </button>
+
+        <button class="nav__item" data-target="view-groups" type="button">
+
+          <span class="nav__dot"></span> Groups
+
+        </button>
+
+        <button class="nav__item" data-target="view-logs" type="button">
+
+          <span class="nav__dot"></span> Logs
+
+        </button>
+
+        <button class="nav__item" data-target="view-settings" type="button">
+
+          <span class="nav__dot"></span> Settings
+
+        </button>
+
+      </nav>
+
+
+
+      <div class="sidebar__footer">
+
+        <a class="mini-link" href="https://tigerzplace.com/terms-of-service-for-tigerzplace/" target="_blank"
+          rel="nofollow">Terms</a>
+
+        <a class="mini-link" href="https://tigerzplace.com/privacy-policy-of-tigerzplace/" target="_blank"
+          rel="nofollow">Privacy</a>
+
+        <a class="mini-link" href="https://www.facebook.com/tigerzplace" target="_blank" rel="nofollow">Support</a>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- Main -->
+
+    <main class="main">
+
+      <!-- Topbar -->
+
+      <header class="topbar">
+
+        <div class="topbar__left">
+
+          <div class="page-title" id="pageTitle">Dashboard</div>
+
+          <div class="page-sub" id="pageSub">Manage your Facebook group automation in one place.</div>
+
+        </div>
+
+
+
+        <div class="topbar__right">
+          <div class="topbar__actions">
+            <a id="profile-link" href="https://www.facebook.com/tigerzplace" target="_blank" style="display:none;">
+              <div id="profile-picture-container" style="display:none;">
+                <img id="profile-picture" src="../assets/images/FAP.png" alt="Profile Picture">
+              </div>
+            </a>
+
+            <!-- IMPORTANT: Keep SAME ID "myLicense" for your frame.js click handler -->
+            <button class="btn btn--ghost" id="myLicense" type="button">License</button>
+
+            <!-- IMPORTANT: keep EXACT ids expected in your old UI -->
+            <button class="btn btn--primary" id="startPosting" style="display:none" type="button">Start Posting</button>
+            <button class="btn btn--ghost" id="pausePostingBtn" style="display:none" type="button">Pause</button>
+          </div>
+        </div>
+
+      </header>
+
+
+
+      <!-- Global sticky bars (visible across all views) -->
+      <div class="global-bars">
+
+        <!-- Estimate banner — shown when groups selected, hidden during posting -->
+        <div id="estimateBanner" style="display:none;">
+          <div class="estimate-bar">
+            <div class="estimate-bar__item">
+              <span class="estimate-bar__icon">⏱</span>
+              <span class="estimate-bar__label">Est. run time</span>
+              <span class="estimate-bar__value" id="estRunTime">—</span>
+            </div>
+            <div class="estimate-bar__divider"></div>
+            <div class="estimate-bar__item" style="position:relative;">
+              <span class="estimate-bar__icon">💪</span>
+              <span class="estimate-bar__label">Active effort saved</span>
+              <span class="estimate-bar__value estimate-bar__value--green" id="estTimeSaved">—</span>
+              <span class="est-info-btn" id="estInfoBtn">ℹ</span>
+              <div class="est-info-popover" id="estInfoPopover" style="display:none;"></div>
+            </div>
+            <div class="estimate-bar__divider"></div>
+            <div class="estimate-bar__item">
+              <span class="estimate-bar__icon">📋</span>
+              <span class="estimate-bar__label">Groups queued</span>
+              <span class="estimate-bar__value" id="estGroupCount">—</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live post counter — shown only during active posting -->
+        <div id="livePostCounter" style="display:none;">
+          <div class="live-counter-bar">
+            <span class="live-counter__dot"></span>
+            <span id="liveCounterText" class="live-counter__text">Starting…</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Views -->
+
+      <section class="views">
+
+
+
+        <!-- Dashboard -->
+
+        <div class="view active" id="view-dashboard">
+
+          <div class="grid grid-4">
+
+            <div class="card">
+
+              <div class="card__label">Total Groups</div>
+
+              <div class="card__value" id="statTotalGroups">—</div>
+
+              <div class="card__hint">Loaded groups count</div>
+
+            </div>
+
+            <div class="card">
+
+              <div class="card__label">Selected</div>
+
+              <div class="card__value" id="statSelectedGroups">—</div>
+
+              <div class="card__hint">Ready to post</div>
+
+            </div>
+
+            <div class="card">
+
+              <div class="card__label">Campaigns</div>
+
+              <div class="card__value" id="statCampaigns">—</div>
+
+              <div class="card__hint">Saved campaigns</div>
+
+            </div>
+
+            <div class="card">
+
+              <div class="card__label">Status</div>
+
+              <div class="card__value" id="statStatus">Idle</div>
+
+              <div class="card__hint">Posting engine state</div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="grid grid-2 mt">
+
+            <div class="card">
+
+              <div class="card__head">
+
+                <div class="card__title">Quick Start</div>
+
+                <div class="card__tools">
+
+                  <!-- IMPORTANT: keep old id "loadGroups" (button now) -->
+
+                  <button class="btn btn--ghost" id="loadGroups" style="display:none" type="button">Load Groups</button>
+
+                </div>
+
+              </div>
+
+              <div class="card__body">
+
+                <ol class="steps">
+
+                  <li>Go to <b>Content</b>, write your post(s), pick delay.</li>
+
+                  <li>Go to <b>Groups</b>, load/select groups.</li>
+
+                  <li>Click <b>Start Posting</b> (top-right).</li>
+
+                </ol>
+
+                <div class="notice notice--tips mt-sm">
+                  <div class="notice__title">Tips for Safer & Better Posting</div>
+
+                  <ul class="tips-grid">
+
+                    <li class="tips-links"><a href="https://www.youtube.com/watch?v=Xx3vaqMPdVs" target="_blank"
+                        rel="noopener">
+                        Rotate messages
+                      </a> when posting to multiple groups. </li>
+
+                    <li>Use range delays to avoid posting too fast.</li>
+                    <li>Avoid posting the same content repeatedly.</li>
+                    <li>Post during active hours for better reach.</li>
+
+                  </ul>
+                  <br />
+                  <div class="tips-links">
+                    <a href="https://tigerzplace.com/how-to-post-in-multiple-facebook-groups/" target="_blank"
+                      rel="noopener">
+                      Read the complete guide →
+                    </a>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+              <div class="card__head">
+
+                <div class="card__title">Recent Activity</div>
+
+                <div class="card__tools">
+
+                  <!-- IMPORTANT: keep clearLogsBtn -->
+
+                  <button class="btn btn--ghost" id="clearLogsBtn" type="button">Clear</button>
+
+                </div>
+
+              </div>
+
+              <div class="card__body">
+
+                <!-- IMPORTANT: keep ids logs + logBody -->
+
+                <div class="logbox" id="logs">
+
+                  <p id="logBody"><br /></p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <!-- Content -->
+
+        <div class="view" id="view-content">
+
+          <div class="grid content-grid">
+
+            <div class="stacked">
+
+              <div class="card card--tight">
+
+                <div class="card__head between">
+
+                  <div class="card__title">Delay Settings</div>
+
+                  <div class="delay-toggle">
+
+                    <label class="radio">
+
+                      <input type="radio" name="delayType" value="rangeButtonTime" checked />
+
+                      <span>Range</span>
+
+                    </label>
+
+                    <label class="radio">
+
+                      <input type="radio" name="delayType" value="fixedButtonTime" />
+
+                      <span>Fixed</span>
+
+                    </label>
+
+                  </div>
+
+                </div>
+
+
+
+                <div class="card__body delay-body">
+
+                  <!-- Hidden selects — keep for all downstream JS logic -->
+                  <select id="waitTimeSelectRange" class="input" style="display:none;">
+                    <option value="20">01 - 20 Sec</option>
+                    <option value="60">20 - 60 Sec</option>
+                    <option value="180">1 - 3 Minutes</option>
+                    <option value="1200">3 - 20 Minutes</option>
+                    <option value="1800">20 - 30 Minutes</option>
+                    <option value="3600">30 -- 60 Minutes</option>
+                    <option value="custom">Custom Range</option>
+                  </select>
+                  <select id="waitTimeSelectFixed" class="input" style="display:none;">
+                    <option value="1">01 Second</option>
+                    <option value="15">15 Seconds</option>
+                    <option value="30">30 Seconds</option>
+                    <option value="45">45 Seconds</option>
+                    <option value="60">60 Seconds</option>
+                    <option value="90">1.5 Minutes</option>
+                    <option value="120">2.0 Minutes</option>
+                    <option value="150">2.5 Minutes</option>
+                    <option value="180">3.0 Minutes</option>
+                    <option value="240">4.0 Minutes</option>
+                    <option value="600">10 Minutes</option>
+                    <option value="1200">20 Minutes</option>
+                    <option value="1800">30 Minutes</option>
+                    <option value="3600">60 Minutes</option>
+                  </select>
+
+                  <!-- customMinutesBox kept as empty hook for legacy JS references -->
+                  <div id="customMinutesBox" style="display:none;"></div>
+
+                  <!-- Visual slider UI -->
+                  <div id="delaySliderWrap" class="delay-slider-wrap">
+
+                    <!-- Range mode: dual handle -->
+                    <div id="sliderRangeUI" class="slider-ui">
+                      <div class="slider-labels">
+                        <span id="sliderMinLabel">Min: 1s</span>
+                        <span id="sliderMaxLabel">Max: 20s</span>
+                      </div>
+                      <div class="dual-slider" id="dualSlider">
+                        <div class="dual-slider__track"></div>
+                        <div class="dual-slider__fill" id="sliderFill"></div>
+                        <input type="range" id="sliderRangeMin" class="dual-slider__input dual-slider__input--min"
+                          min="1" max="3600" step="1" value="1" />
+                        <input type="range" id="sliderRangeMax" class="dual-slider__input dual-slider__input--max"
+                          min="1" max="3600" step="1" value="20" />
+                      </div>
+                      <div class="slider-presets" id="sliderPresets">
+                        <button class="preset-btn active" data-min="1"   data-max="20"   type="button">01–20s</button>
+                        <button class="preset-btn"        data-min="20"  data-max="60"   type="button">20–60s</button>
+                        <button class="preset-btn"        data-min="60"  data-max="180"  type="button">1–3m</button>
+                        <button class="preset-btn"        data-min="180" data-max="1200" type="button">3–20m</button>
+                        <button class="preset-btn"        data-min="1200" data-max="1800" type="button">20–30m</button>
+                        <button class="preset-btn"        data-min="1800" data-max="3600" type="button">30–60m</button>
+                        <button class="preset-btn preset-btn--custom" id="customRangeBtn" type="button">Custom</button>
+                      </div>
+
+                      <!-- Custom range inputs — shown when Custom preset is active -->
+                      <div id="customRangeInputs" style="display:none;" class="custom-range-inputs">
+                        <div class="custom-range-row">
+                          <div class="custom-range-field">
+                            <label class="label-sm">Min (minutes)</label>
+                            <input type="number" id="customMinMints" min="1" max="999" class="input" placeholder="e.g. 30" />
+                          </div>
+                          <div class="custom-range-sep">–</div>
+                          <div class="custom-range-field">
+                            <label class="label-sm">Max (minutes)</label>
+                            <input type="number" id="customMaxMints" min="1" max="999" class="input" placeholder="e.g. 90" />
+                          </div>
+                        </div>
+                        <p class="custom-range-hint">Enter any range in minutes — no upper limit.</p>
+                      </div>
+                    </div>
+
+                    <!-- Fixed mode: single handle -->
+                    <div id="sliderFixedUI" class="slider-ui" style="display:none;">
+                      <div class="slider-labels">
+                        <span>Delay</span>
+                        <span id="sliderFixedLabel">30s</span>
+                      </div>
+                      <div class="single-slider">
+                        <input type="range" id="sliderFixed" class="single-slider__input"
+                          min="1" max="3600" step="1" value="30" />
+                      </div>
+                      <div class="slider-presets" id="sliderFixedPresets">
+                        <button class="preset-btn" data-val="1"    type="button">1s</button>
+                        <button class="preset-btn" data-val="15"   type="button">15s</button>
+                        <button class="preset-btn" data-val="30"   type="button">30s</button>
+                        <button class="preset-btn active" data-val="60"   type="button">60s</button>
+                        <button class="preset-btn" data-val="120"  type="button">2m</button>
+                        <button class="preset-btn" data-val="300"  type="button">5m</button>
+                        <button class="preset-btn" data-val="600"  type="button">10m</button>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="notice notice--inline" style="margin-top:10px;">
+                    <div class="notice__title">Recommended</div>
+                    <div class="notice__text">Use Range delays for safer posting.</div>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+
+              <div class="card card--tight" style="flex:1; display:flex; flex-direction:column;">
+
+                <div class="card__head">
+
+                  <div class="card__title">Scheduling</div>
+
+                </div>
+
+                <div class="card__body" id="scheduleArea" style="position:relative; flex:1; display:flex; flex-direction:column; gap:10px;">
+
+                  <div class="muted">Set a date/time to set posting on Schedule Mode</div>
+
+                  <div class="locked-inline__inputs">
+
+                    <input class="input" type="date" id="scheduleDate"/>
+
+                    <input class="input" type="time" id="scheduleTime" min="">
+
+                  </div>
+
+                  <div class="muted" id="scheduleHint">
+                    Select date & time to schedule (minimum now + 35 minutes)
+                  </div>
+
+                  <!-- Info tiles — fill remaining height gracefully -->
+                  <!-- Clean filler — pushes a single subtle hint to the bottom -->
+                  <div style="flex:1; display:flex; align-items:flex-end;">
+                    <div style="width:100%; border-top:1px dashed #e5e7eb; padding-top:10px; display:flex; align-items:center; gap:7px;">
+                      <span style="font-size:13px; flex-shrink:0;">🕐</span>
+                      <span style="font-size:11px; color:#9ca3af; line-height:1.45;">Applies to all selected groups. Minimum <strong style="color:#6b7280; font-weight:600;">+35 min</strong> from now required by Facebook.</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card">
+
+              <div class="card__head">
+
+                <div class="card__title">Post Content</div>
+
+                <div class="card__tools row gap">
+
+                  <span class="muted">Multiple Posts</span>
+
+                  <!-- IMPORTANT: keep random_post -->
+
+                  <select id="random_post" class="input input--sm">
+
+                    <option value="1">1</option>
+
+                    <option value="2">2</option>
+
+                    <option value="3">3</option>
+
+                    <option value="4">4</option>
+
+                    <option value="5">5</option>
+
+                    <option value="6">6</option>
+
+                    <option value="7">7</option>
+
+                    <option value="8">8</option>
+
+                  </select>
+
+                </div>
+
+              </div>
+
+
+
+              <div class="card__body">
+
+                <!-- IMPORTANT: keep paper, textareas, slider-container, slider-controls -->
+
+                <form id="paper" method="get" action="">
+
+                  <div id="textareas">
+
+                    <div class="slider-container">
+
+                      <div class="text-area-wrapper active">
+
+                        <textarea id="post_msg1" name="post_msg1" class="post-msg-textarea" rows="6"
+                          placeholder="Write something to post in multiple Facebook groups."></textarea>
+
+                      </div>
+
+                    </div>
+
+                    <div class="slider-controls"></div>
+
+                  </div>
+
+
+
+                  <!-- IMPORTANT: keep link preview ids -->
+
+                  <div id="linkPreviewBox" style="display:none; margin-top:10px; text-align:left;">
+
+                    <div style="display:flex; gap:6px; align-items:center;">
+
+                      <select id="linkPreviewSelect" class="input" style="flex:1; height:36px;"></select>
+
+                      <button id="linkPreviewFetchBtn" class="btn btn--ghost" type="button">Get Preview</button>
+
+                      <button id="linkPreviewClearBtn" class="btn btn--ghost" type="button">Clear</button>
+
+                    </div>
+
+
+
+                    <div id="linkPreviewCard"
+                      style="display:none; margin-top:10px; border:1px solid #E5E7EB; border-radius:10px; overflow:hidden; background:#fff;">
+
+                      <div style="display:flex;">
+
+                        <div style="width:160px; height:110px; background:#f2f2f2; flex:0 0 160px; overflow:hidden;">
+
+                          <img id="lpImg" src="" style="width:100%; height:100%; object-fit:cover; display:none;" />
+
+                        </div>
+
+                        <div style="padding:10px 12px; flex:1;">
+
+                          <div id="lpDomain" style="font-size:11px; color:#777; text-transform:uppercase;"></div>
+
+                          <div id="lpTitle" style="font-size:14px; font-weight:600; margin-top:2px; color:#111;"></div>
+
+                          <div id="lpDesc"
+                            style="font-size:12px; color:#555; margin-top:6px; line-height:1.25; max-height:46px; overflow:hidden;">
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+
+
+                    <div id="linkPreviewStatus" style="margin-top:6px; font-size:12px; color:#777;"></div>
+
+                  </div>
+
+                </form>
+
+
+
+              <div class="card mt" id="imageUploadBlock">
+                <div class="card__head">
+                  <div class="card__title">Image Upload
+                      <span style="
+                      display: inline-block;
+                      margin-left: 8px;
+                      padding: 2px 7px;
+                      background: #dcfce7;
+                      color: #16a34a;
+                      font-size: 10px;
+                      font-weight: 700;
+                      border-radius: 20px;
+                      vertical-align: middle;
+                      letter-spacing: 0.4px;
+                    ">NEW</span></div>
+                </div>
+                <div class="card__body">
+
+                  <!-- Drop zone / file picker -->
+                  <div id="imageDropZone" style="
+                    border: 2px dashed #d1d5db;
+                    border-radius: 10px;
+                    padding: 20px;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #6b7280;
+                    transition: border-color 0.2s;
+                  ">
+                    <div style="font-size:28px;">🖼️</div>
+                    <div style="margin-top:6px; font-size:13px;">Click to select or drag & drop an image</div>
+                    <div style="font-size:11px; color:#aaa; margin-top:4px;">PNG, JPG, GIF, WEBP — max 10MB</div>
+                    <input type="file" id="imageFileInput" accept="image/*"
+                      style="display:none;" />
+                  </div>
+
+                  <!-- Preview -->
+                  <!-- Media tray — populated by imageUpload.js after file pick -->
+                  <div id="mediaTray" class="media-tray"></div>
+
+                  <!-- Legacy progress bar (kept for JS compat) -->
+                  <div id="imageProgressWrap" style="display:none; margin-top:10px;">
+                    <div style="font-size:12px; color:#6b7280; margin-bottom:4px;" id="imageProgressLabel">Uploading…</div>
+                    <div style="background:#e5e7eb; border-radius:4px; height:6px; overflow:hidden;">
+                      <div id="imageProgressBar"
+                        style="height:6px; width:0%; background:#3b82f6; border-radius:4px; transition:width 0.3s;"></div>
+                    </div>
+                  </div>
+
+                  <!-- Uploaded photo ID (hidden, used by poster) -->
+                  <input type="hidden" id="uploadedPhotoID" value="" />
+
+
+                <div id="multiPostImageNote" style="display:none; margin-top:8px; font-size:12px; color:#6b7280; line-height:1.35;">
+                  <strong>Note:</strong> This image applies to <strong>all captions</strong> in Multiple Posts.
+                  If an image is selected, it will <strong>override link preview</strong> for that run.
+                </div>
+                </div>
+                
+              </div>
+              <!-- /#imageUploadBlock -->
+
+                <!-- Video upload — coming soon -->
+                <div class="locked-block mt" style="margin-top:10px;">
+                  <div class="locked-block__title">Video Upload</div>
+                  <div class="locked-block__text">
+                    <div class="notice__text">
+                      Coming Soon. For now, paste a video post link in the content area —
+                      the auto-poster will share it to all selected groups with preview.
+                    </div>
+                  </div>
+                  <div class="locked-block__tag">Soon</div>
+                </div>
+
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card rail-card">
+
+              <div class="card__head">
+
+                <div class="card__title">Promo / Tips</div>
+
+              </div>
+
+              <div class="card__body">
+
+                <div class="ad">
+
+                  <!-- Binance Promo – Final Fixed -->
+                  <style>
+                    .fap-binance-promo {
+                      display: flex;
+                      background: #f1f5f9;
+                      /* matches Auto Poster surface */
+                      border-radius: 14px;
+                      padding: 16px;
+
+                      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                      color: #1f2937;
+                      flex-direction: column;
+                      justify-content: center;
+                      border: 1px solid #e2e8f0;
+                    }
+
+                    .fap-binance-promo .promo-badge {
+                      display: inline-block;
+                      background: #2563eb;
+                      color: #ffffff;
+                      font-size: 11px;
+                      font-weight: 600;
+                      padding: 4px 10px;
+                      border-radius: 999px;
+                      margin-bottom: 10px;
+                    }
+
+                    .fap-binance-promo .promo-title {
+                      text-align: center;
+                      font-size: 16px;
+                      font-weight: 700;
+                      margin: 6px 0;
+                    }
+
+                    .fap-binance-promo .promo-title strong {
+                      color: #2563eb;
+                    }
+
+                    .fap-binance-promo .promo-text {
+                      text-align: center;
+                      font-size: 13px;
+                      line-height: 1.45;
+                      color: #475569;
+                      margin-bottom: 12px;
+                    }
+
+                    .fap-binance-promo .promo-btn {
+                      display: block;
+                      margin: 0 auto;
+                      background: #2563eb;
+                      color: #ffffff;
+                      text-decoration: none;
+                      font-weight: 600;
+                      font-size: 13px;
+                      padding: 9px 16px;
+                      border-radius: 10px;
+                      transition: background 0.15s ease;
+                      width: fit-content;
+                    }
+
+                    .fap-binance-promo .promo-btn:hover {
+                      background: #1d4ed8;
+                    }
+
+                    .fap-binance-promo .promo-footer {
+                      margin-top: 10px;
+                      text-align: center;
+                      font-size: 11px;
+                      color: #64748b;
+                    }
+
+                    /* Promo rail must stretch */
+                    .rail-card .card__body {
+                      height: 100%;
+                    }
+
+                    .rail-card .ad {
+                      height: 90%;
+                      display: flex;
+                    }
+
+                    .rail-card .ad>* {
+                      flex: 1;
+                    }
+                  </style>
+
+                  <div class="fap-binance-promo">
+                    <div style="text-align:center;">
+                      <span class="promo-badge">Limited Offer</span>
+                    </div>
+
+                    <div class="promo-title">
+                      Win Up to <strong>2,000 USDC</strong>
+                    </div>
+
+                    <div class="promo-text">
+                      Earn rewards by joining Binance’s referral campaign.
+                      Trade, learn, and earn together.
+                    </div>
+
+                    <a href="https://www.binance.com/en/register?ref=R3BO39RO" target="_blank" rel="noopener sponsored"
+                      class="promo-btn">
+                      Join Binance Now
+                    </a>
+
+                    <div class="promo-footer">
+                      #BinanceEarnTogether
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+                <!-- Ad -->
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Groups -->
+
+        <div class="view" id="view-groups">
+
+          <div class="card" id="group_table">
+
+            <div class="card__head">
+
+              <div class="card__title">Groups</div>
+
+              <div class="card__tools row gap">
+
+                <!-- IMPORTANT: keep searchGroups id -->
+
+                <input type="text" class="input input--wide" id="searchGroups" name="search"
+                  placeholder="Search groups..." />
+
+                <button class="btn btn--ghost" id="loadGroupsAlt" type="button">Load Groups</button>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="card__body">
+
+              <div class="table-wrap table-wrap--fixed">
+
+                <!-- IMPORTANT: keep groupsTable + groupsTableBody + selectGroups -->
+
+                <table id="groupsTable" class="display" style="width:100%;">
+
+                  <thead>
+
+                    <tr>
+
+                      <th>Id</th>
+
+                      <th style="text-align:center;">
+
+                        Select<br />
+
+                        <input class="search1" type="checkbox" id="selectGroups" name="selectall" value="">
+
+                      </th>
+
+                      <th>Group Name</th>
+
+                    </tr>
+
+                  </thead>
+
+                  <tbody id="groupsTableBody"></tbody>
+
+                </table>
+
+              </div>
+
+              <div class="groups-actions mt-sm">
+
+                <p id="groupsCount" style="display:none" class="muted">Selected: 0</p>
+
+                <div class="groups-actions__row">
+                  <!-- IMPORTANT: keep campaign/group list controls and ids -->
+                  <div class="groups-actions__left">
+                    <div class="custom-select" style="display:none;">
+                      <button id="list_group" class="btn btn--ghost select-selected" type="button">Group Lists</button>
+                      <div class="select-items" id="select-items"></div>
+                    </div>
+
+                    <div class="custom-select" id="campaignDropdown" style="display:none;">
+                      <button id="campaign_list_button" class="btn btn--ghost" type="button">Campaigns</button>
+                      <div class="select-items" id="campaign-items"></div>
+                    </div>
+                  </div>
+
+                  <div class="groups-actions__right">
+                    <button id="saveSelectedGroup" class="btn btn--primary" style="display:none" type="button">Save
+                      Selection</button>
+                    <button id="saveCampaignBtn" class="btn btn--primary" style="display:none" type="button">Save
+                      Campaign</button>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div class="loader" id="loader" style="display:none;"></div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Campaigns -->
+
+        <div class="view" id="view-campaigns">
+
+          <div class="card">
+
+            <div class="card__head">
+
+              <div class="card__title">Campaigns</div>
+
+              <div class="card__tools">
+
+                <span class="muted">Use “Save Campaign” in Groups after selecting.</span>
+
+              </div>
+
+            </div>
+
+            <div class="card__body">
+
+              <div class="notice">
+
+                <div class="notice__title">Tip</div>
+
+                <div class="notice__text">Campaigns already exist in v1.7. Dropdown in Groups remains the control
+                  (compatibility preserved).</div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Scheduling -->
+
+        <div class="view" id="view-scheduling">
+
+          <div class="card">
+
+            <div class="card__head">
+
+              <div class="card__title">Scheduling</div>
+
+              <div class="card__tools"><span class="pill pill--lock">Locked</span></div>
+
+            </div>
+
+            <div class="card__body">
+
+              <div class="locked-big">
+
+                <div class="locked-big__title">Schedule Campaign</div>
+
+                <div class="locked-big__desc">UI is ready. Scheduling will be enabled after image posting.</div>
+
+                <div class="row gap mt-sm">
+
+                  <input class="input" type="date" disabled />
+
+                  <input class="input" type="time" disabled />
+
+                  <button class="btn btn--primary" type="button" disabled>Schedule</button>
+
+                </div>
+
+                <div class="muted mt-sm">Upgrade to Pro to unlock scheduling.</div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Logs -->
+
+        <div class="view" id="view-logs">
+
+          <div class="card">
+
+            <div class="card__head">
+
+              <div class="card__title">Event Logs</div>
+
+              <div class="card__tools">
+
+                <!-- reuse SAME clearLogsBtn (no duplicates) -->
+
+                <button class="btn btn--ghost" id="clearLogsBtnTop" type="button">Clear</button>
+
+              </div>
+
+            </div>
+
+            <div class="card__body">
+
+              <!-- Reuse SAME #logs/#logBody by cloning content via JS (no new ids required in frame.js) -->
+
+              <div class="logbox logbox--tall" id="logsLong">
+
+                <div id="logsLongInner"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+        <!-- Settings / License -->
+        <div class="view" id="view-settings">
+          <div class="grid settings-grid">
+            <div class="stacked">
+              <!-- IMPORTANT: keep original #license id -->
+              <div id="license" class="card" style="display:block;">
+                <div class="card__head">
+                  <div class="card__title">License & Updates</div>
+                  <div class="card__tools">
+                    <!-- IMPORTANT: keep home id -->
+                    <button title="Home" type="button" id="home" class="btn btn--primary">Home</button>
+                  </div>
+                </div>
+
+                <div class="card__body">
+                  <div id="check-license">
+
+                    <div style="gap:10px; flex-wrap:wrap; margin-bottom:4px;">
+                      <button title="Check License" type="button" id="check_license_button" class="btn btn--ghost">
+                        🔑 Check License
+                      </button>
+                      <button title="Check Updates" type="button" id="check_updates_button" class="btn btn--ghost">
+                        🔄 Check Updates
+                      </button>
+                    </div>
+
+                    <div id="statusLoader" style="display:none;"></div>
+                    <div id="trigger"></div>
+
+                    <div id="license-info" class="license-status-placeholder"></div>
+
+                  </div>
+
+                  <div id="purchase-license" style="display:none" class="mt">
+                    <a href="https://tigerzplace.com/how-to-buy-tool-license/?ref=FAP" id="purcahse_link"
+                      target="_blank" style="display:none;"></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card__head">
+                  <div class="card__title">About</div>
+                </div>
+                <div class="card__body muted">
+                  Facebook Auto Poster by Tigerzplace<br>
+                  Smart automation for posting to Facebook groups efficiently and safely.<br>
+                  © <span class="copyright-year" style="display: inline;">2026</span> Tigerzplace. All rights reserved.
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+            <div class="card rail-card" style="height: 100%;">
+              <div class="card__head">
+                <div class="card__title">Promo / Tips</div>
+              </div>
+              <div class="card__body">
+                <div class="ad">
+
+
+                  <style>
+                    .hosting-ad {
+                      font-family: Arial, sans-serif;
+                      margin: 0 auto;
+                      padding: 20px;
+                      text-align: center;
+                      border: 1px solid #e0e0e0;
+                      border-radius: 8px;
+                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+                    }
+
+                    .hosting-ad h2 {
+                      font-size: 24px;
+                      color: #2a2a2a;
+                      margin-bottom: 15px
+                    }
+
+                    .hosting-ad p {
+                      color: #555555;
+                      line-height: 1.3
+                    }
+
+                    .hosting-ad ul {
+                      list-style: none;
+                      padding: 0
+                    }
+
+                    .hosting-ad ul li {
+                      font-size: 15px;
+                      color: #333333;
+                      display: flex;
+                      align-items: center
+                    }
+
+                    .hosting-ad ul li::before {
+                      content: '✔';
+                      color: #28a745;
+                      margin-right: 10px;
+                      font-weight: bold
+                    }
+
+                    /* Updated button class with more specificity and !important flag */
+                    .hosting-ad .btn {
+                      display: inline-block;
+                      margin-top: 7px;
+                      padding: 10px 20px;
+                      text-decoration: none;
+                      border-radius: 30px;
+                      transition: background-color 0.3s ease, color 0.3s ease;
+                    }
+                  </style>
+                  </head>
+
+                  <body>
+                    <div class="hosting-ad">
+                      <h2>Premium Web Hosting</h2>
+                      <p>From a business owner to an individual who desires full functionality on a small budget, we
+                        provide you
+                        complete web hosting solution.</p>
+                      <ul>
+                        <li>Free SSL Certificate</li>
+                        <li>1-Click WordPress Installer</li>
+                        <li>Unmetered DDoS Protection</li>
+                        <li>RAID-10 NVMe SSD Storage</li>
+                        <li>Automatic Daily Backups</li>
+                        <li>LiteSpeed Web Server</li>
+                        <li>USA Data Center</li>
+                        <li>24/7 Live Support</li>
+                      </ul><a href="https://bit.ly/orange-host?ref=tigerzplace.com" target="_blank"
+                        rel="sponsored noopener noreferrer" class="btn btn--ghost"
+                        title="Orange Host web-hosting plans (affiliate)">View
+                        Plans</a>
+                    </div>
+                  </body>
+
+
+                </div>
+                <!-- Ad -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =======================
+
+           LEGACY COMPATIBILITY STUBS
+
+           Keep your frame.js working (do not remove)
+
+           ======================= -->
+
+        <!-- Global posting progress (sticky across views) -->
+        <br />
+
+        <div class="progress progress--inline" id="loadingProgress" style="display: none;" data-label="">
+          <div id="innerProgressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100" style="width:0%;">
+          </div>
+        </div>
+
+
+        <div style="display:none;">
+
+          <!-- frame.js may toggle these -->
+
+          <div id="first"></div>
+
+          <div id="loadGroups_center"></div>
+
+
+
+          <!-- Some codebases rely on these IDs existing -->
+
+          <a id="start_posting" class="start_posting"></a>
+
+          <a id="pausePosting"></a>
+
+        </div>
+
+
+
+        <div id="fb_groups" style="display:none"></div>
+
+        <div id="fbProfile" style="display:none"></div>
+
+    </main>
+
+  </div>
+
+  <!-- App modal (input/confirm) -->
+  <div id="fapModal" class="modal" style="display:none;">
+    <div class="modal__backdrop"></div>
+    <div class="modal__dialog">
+      <div class="modal__header">
+        <div id="fapModalTitle" class="modal__title"></div>
+        <button id="fapModalClose" class="modal__close" type="button">&times;</button>
+      </div>
+      <div id="fapModalBody" class="modal__body"></div>
+      <div id="fapModalActions" class="modal__actions"></div>
+    </div>
+  </div>
+
+
+
+  <!-- NEW UI JS (safe) -->
+
+  <script src="/scripts/core/dashboard.js"></script>
+
+  <script type="text/javascript" src="/scripts/core/frame.js"></script>
+  <script type="text/javascript" src="/scripts/core/functions.js"></script>
+  <script type="text/javascript" src="/scripts/core/Terms.js"></script>
+
+  <script type="text/javascript" src="/scripts/core/API.js"></script>
+  <script type="text/javascript" src="/scripts/core/imageUpload.js"></script>
+
+
+</body>
+
+
+
+</html>

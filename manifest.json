@@ -4,24 +4,24 @@
    "name": "Facebook Auto Poster",
    "short_name": "FAP",
    "description": "Auto-poster for Facebook groups, allowing you to publish posts to multiple groups simultaneously. Perfect for marketers, community managers, and anyone looking to engage with a wide audience efficiently",
-   "version": "1.9",
+   "version": "2.0",
    "minimum_chrome_version": "88",
 
    "icons": {
-      "128": "icons/128.png",
-      "16": "icons/16.png",
-      "32": "icons/32.png",
-      "48": "icons/48.png"
+      "128": "assets/icons/128.png",
+      "16": "assets/icons/16.png",
+      "32": "assets/icons/32.png",
+      "48": "assets/icons/48.png"
    },
 
    "background": {
-      "service_worker": "/js/background/background.js",
+      "service_worker": "/scripts/background/background.js",
       "type": "module"
    },
 
    "action": {
-      "default_icon": "icons/128.png",
-      "default_popup": "html/popup.html",
+      "default_icon": "assets/icons/128.png",
+      "default_popup": "pages/popup.html",
       "default_title": "Facebook Auto Poster"
    },
 
@@ -31,7 +31,7 @@
             "*://*.facebook.com/*"
          ],
          "js": [
-            "js/content.js"
+            "scripts/content.js"
          ],
          "run_at": "document_end"
       }
@@ -49,8 +49,7 @@
    ],
 
    "host_permissions": [
-      
-      "*://*.facebook.com/*"
+      "*://*.facebook.com/*",
+      "*://upload.facebook.com/*"
    ]
-
 }
