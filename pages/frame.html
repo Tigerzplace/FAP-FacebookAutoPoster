@@ -98,31 +98,31 @@
 
         <button class="nav__item active" data-target="view-dashboard" type="button">
 
-          <span class="nav__dot"></span> Dashboard
+          <i class="material-icons nav__icon">home</i> Dashboard
 
         </button>
 
         <button class="nav__item" data-target="view-content" type="button">
 
-          <span class="nav__dot"></span> Content
+          <i class="material-icons nav__icon">create</i> Content
 
         </button>
 
         <button class="nav__item" data-target="view-groups" type="button">
 
-          <span class="nav__dot"></span> Groups
+          <i class="material-icons nav__icon">group</i> Groups
 
         </button>
 
         <button class="nav__item" data-target="view-logs" type="button">
 
-          <span class="nav__dot"></span> Logs
+          <i class="material-icons nav__icon">list</i> Logs
 
         </button>
 
         <button class="nav__item" data-target="view-settings" type="button">
 
-          <span class="nav__dot"></span> Settings
+          <i class="material-icons nav__icon">settings</i> Settings
 
         </button>
 
@@ -235,7 +235,9 @@
 
           <div class="grid grid-4">
 
-            <div class="card">
+            <div class="card stat-card stat-card--blue">
+
+              <div class="stat-card__icon"><i class="material-icons">group</i></div>
 
               <div class="card__label">Total Groups</div>
 
@@ -245,7 +247,9 @@
 
             </div>
 
-            <div class="card">
+            <div class="card stat-card stat-card--green">
+
+              <div class="stat-card__icon"><i class="material-icons">done_all</i></div>
 
               <div class="card__label">Selected</div>
 
@@ -255,7 +259,9 @@
 
             </div>
 
-            <div class="card">
+            <div class="card stat-card stat-card--purple">
+
+              <div class="stat-card__icon"><i class="material-icons">bookmark</i></div>
 
               <div class="card__label">Campaigns</div>
 
@@ -265,7 +271,9 @@
 
             </div>
 
-            <div class="card">
+            <div class="card stat-card stat-card--status" id="statStatusCard">
+
+              <div class="stat-card__icon"><i class="material-icons" id="statStatusIcon">radio_button_unchecked</i></div>
 
               <div class="card__label">Status</div>
 
@@ -929,35 +937,32 @@
 
             <div class="card__body">
 
-              <div class="table-wrap table-wrap--fixed">
+              <div class="gt-wrap">
 
                 <!-- IMPORTANT: keep groupsTable + groupsTableBody + selectGroups -->
+                <table id="groupsTable" class="gt">
 
-                <table id="groupsTable" class="display" style="width:100%;">
-
-                  <thead>
-
-                    <tr>
-
-                      <th>Id</th>
-
-                      <th style="text-align:center;">
-
-                        Select<br />
-
-                        <input class="search1" type="checkbox" id="selectGroups" name="selectall" value="">
-
+                  <thead class="gt__head">
+                    <tr class="gt__head-row">
+                      <th class="gt__th gt__th--num">#</th>
+                      <th class="gt__th gt__th--check">
+                        <label class="gt-checkbox">
+                          <input type="checkbox" id="selectGroups" name="selectall" value="">
+                          <span class="gt-checkbox__box"></span>
+                        </label>
                       </th>
-
-                      <th>Group Name</th>
-
+                      <th class="gt__th gt__th--name">Group Name</th>
                     </tr>
-
                   </thead>
 
-                  <tbody id="groupsTableBody"></tbody>
+                  <tbody id="groupsTableBody" class="gt__body"></tbody>
 
                 </table>
+
+                <div class="gt-empty" id="gtEmpty">
+                  <div class="gt-empty__icon">📋</div>
+                  <div class="gt-empty__text">No groups loaded yet.<br>Click <strong>Load Groups</strong> to fetch your Facebook groups.</div>
+                </div>
 
               </div>
 

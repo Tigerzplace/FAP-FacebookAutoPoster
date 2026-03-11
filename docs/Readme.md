@@ -6,6 +6,11 @@ Instead of copy-paste spam or risky bots, FAP keeps you in control: you choose t
 
 👉 **Tool page & full overview:** [tigerzplace.com/auto-post-to-multiple-facebook-groups/](https://tigerzplace.com/auto-post-to-multiple-facebook-groups/)
 
+📺 **Prefer video?** Watch the complete v2.0 walkthrough:  
+👉 [FAP v2.0 — Full Tutorial on YouTube](https://www.youtube.com/watch?v=XR7HbUYs6fo)
+
+---
+
 ---
 
 ## ✨ Key Features
@@ -153,6 +158,7 @@ Full documentation and tutorials are published on Tigerzplace:
 
 | Guide | Description |
 |---|---|
+| [▶ FAP v2.0 — Complete Video Tutorial](https://www.youtube.com/watch?v=XR7HbUYs6fo) | Full walkthrough of all v2.0 features — installation to posting |
 | [Facebook Auto Poster — Complete 2026 Guide](https://tigerzplace.com/facebook-auto-poster/) | Pillar guide covering all features, use cases, and setup |
 | [How to Post in Multiple Facebook Groups at Once](https://tigerzplace.com/how-to-post-in-multiple-facebook-groups-at-once-safely/) | Step-by-step tutorial for bulk group posting safely |
 | [How to Schedule Posts to Facebook Groups](https://tigerzplace.com/schedule-posts-to-facebook-groups/) | Scheduling feature walkthrough (v1.9+) |

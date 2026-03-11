@@ -79,14 +79,17 @@ body{
 .nav__item:hover{ background: rgba(255,255,255,.06); }
 .nav__item.active{
   background: rgba(59,130,246,.16);
-  border-color: rgba(59,130,246,.22);
+  border-color: transparent;
 }
-.nav__dot{
-  width:10px; height:10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.25);
+.nav__icon {
+  font-size: 18px !important;
+  width: 20px;
+  flex-shrink: 0;
+  opacity: 0.65;
+  transition: opacity 0.15s;
 }
-.nav__item.active .nav__dot{ background: var(--blue); }
+.nav__item.active .nav__icon,
+.nav__item:hover .nav__icon { opacity: 1; }
 
 .sidebar__footer{
   margin-top:auto;
@@ -1654,3 +1657,205 @@ body{
   border-top: 1px solid #f1f5f9;
   padding-top: 8px;
 }
+
+/* ================================================================
+   Stat Cards — colored accent icons on dashboard
+================================================================ */
+.stat-card {
+  padding: 16px 18px 14px;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 16px 16px 0 0;
+}
+.stat-card--blue::before  { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+.stat-card--green::before { background: linear-gradient(90deg, #22c55e, #4ade80); }
+.stat-card--purple::before{ background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+.stat-card--status::before{ background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+
+.stat-card__icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 10px;
+}
+.stat-card__icon .material-icons { font-size: 20px !important; }
+
+.stat-card--blue   .stat-card__icon { background: rgba(59,130,246,.1);  color: #3b82f6; }
+.stat-card--green  .stat-card__icon { background: rgba(34,197,94,.1);   color: #22c55e; }
+.stat-card--purple .stat-card__icon { background: rgba(139,92,246,.1);  color: #8b5cf6; }
+.stat-card--status .stat-card__icon { background: rgba(245,158,11,.1);  color: #f59e0b; }
+
+.stat-card .card__value { font-size: 26px; font-weight: 900; margin-top: 2px; }
+.stat-card .card__label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+
+/* ================================================================
+   GT Group Table — new styled table for groups view
+================================================================ */
+.gt-wrap {
+  position: relative;
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+}
+.gt {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.gt__head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f8fafc;
+}
+.gt__head-row {
+  border-bottom: 2px solid var(--border);
+}
+.gt__th {
+  padding: 10px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.gt__th--num   { width: 48px;  text-align: center; }
+.gt__th--check { width: 52px;  text-align: center; }
+.gt__th--name  { text-align: left; }
+
+.gt__body { }
+.gt__row {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.1s;
+}
+.gt__row:hover { background: #f8fafc; }
+.gt__row:has(input:checked) { background: rgba(59,130,246,.05); }
+.gt__row:has(input:checked):hover { background: rgba(59,130,246,.09); }
+.gt__row:last-child { border-bottom: none; }
+
+.gt__td {
+  padding: 9px 12px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+.gt__td--num {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  width: 48px;
+}
+.gt__td--check {
+  text-align: center;
+  width: 52px;
+}
+.gt__td--name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.gt__td--name a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.gt__td--name a:hover { color: var(--blue); }
+
+/* Custom checkbox */
+.gt-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  line-height: 1;
+}
+.gt-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0; height: 0;
+  pointer-events: none;
+}
+.gt-checkbox__box {
+  width: 17px; height: 17px;
+  border-radius: 5px;
+  border: 2px solid #d1d5db;
+  background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color .15s, background .15s;
+  flex-shrink: 0;
+}
+.gt-checkbox input:checked + .gt-checkbox__box {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+.gt-checkbox input:checked + .gt-checkbox__box::after {
+  content: '';
+  display: block;
+  width: 5px; height: 9px;
+  border: 2px solid #fff;
+  border-top: none; border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.gt-checkbox:hover .gt-checkbox__box { border-color: var(--blue); }
+.gt__td--check .gt-checkbox__box { width: 16px; height: 16px; }
+
+/* Empty state */
+.gt-empty {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  text-align: center;
+  color: var(--muted);
+}
+#gtEmpty.gt-empty--visible { display: flex; }
+.gt-empty__icon { font-size: 36px; margin-bottom: 10px; }
+.gt-empty__text { font-size: 13px; line-height: 1.6; }
+
+/* ================================================================
+   Progress Bar — taller, more visual weight
+================================================================ */
+.progress--inline {
+  height: 32px !important;
+  border-radius: 16px !important;
+}
+.progress--inline .progress-bar {
+  border-radius: 16px !important;
+}
+.progress--posting {
+  height: 32px !important;
+  border-radius: 16px !important;
+}
+.progress--posting .progress-bar {
+  border-radius: 16px !important;
+}
+.progress--inline::after {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: .01em;
+}
+
+/* ================================================================
+   Status card — dynamic state variants
+================================================================ */
+.stat-card--running::before { background: linear-gradient(90deg, #22c55e, #4ade80); }
+.stat-card--running .stat-card__icon { background: rgba(34,197,94,.1); color: #22c55e; }
+
+.stat-card--paused::before  { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.stat-card--paused .stat-card__icon  { background: rgba(245,158,11,.1); color: #f59e0b; }
+
+.stat-card--done::before    { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+.stat-card--done .stat-card__icon    { background: rgba(59,130,246,.1); color: #3b82f6; }

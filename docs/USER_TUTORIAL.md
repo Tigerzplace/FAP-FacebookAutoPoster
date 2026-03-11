@@ -2,6 +2,9 @@
 
 A step-by-step guide to installing, configuring, and using the Facebook Auto Poster (FAP) Chrome extension.
 
+> 📺 **Prefer to watch?** The complete v2.0 video tutorial covers everything in this guide:  
+> 👉 [Watch on YouTube — FAP v2.0 Full Tutorial](https://www.youtube.com/watch?v=XR7HbUYs6fo)
+
 ---
 
 ## Table of Contents
@@ -33,6 +36,8 @@ A step-by-step guide to installing, configuring, and using the Facebook Auto Pos
 ### Step 1: Download the Extension
 
 Download or clone the FAP extension folder to your computer.
+
+> 📺 **Video:** Prefer to follow along visually? The [v2.0 tutorial on YouTube](https://www.youtube.com/watch?v=XR7HbUYs6fo) walks through installation from scratch at the start of the video.
 
 ### Step 2: Open Chrome Extensions Page
 
