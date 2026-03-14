@@ -569,6 +569,7 @@ body{
   width: auto;
   padding: 10px 14px;
 }
+/* REPLACE WITH: */
 .select-items{
   display:none;
   position:absolute;
@@ -580,8 +581,11 @@ body{
   box-shadow: var(--shadow);
   padding:6px;
   z-index: 2000;
-  min-width: 220px;
-  max-width: 280px;
+  min-width: max-content;
+  max-width: 360px;
+  max-height: 260px;
+  overflow-y: auto;
+  width: auto;
 }
 .select-items div{
   display:flex;
@@ -619,11 +623,12 @@ body{
 .groups-actions #groupsCount{
   margin:0;
 }
+
 .groups-actions .custom-select{
   display:inline-flex;
   flex:0 0 auto;
+  position:relative;
 }
-
 #view-groups .loader{
   position:absolute;
   left:50%;

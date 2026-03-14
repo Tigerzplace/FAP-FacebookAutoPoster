@@ -579,7 +579,7 @@ The dashboard shows your current identity (name and profile picture) so you alwa
 ### Posts failing
 
 - Check the event log for specific error messages
-- Your `fb_dtsg` token may have expired — relaunch FAP to refresh tokens
+- Your `session` token may have expired — relaunch FAP to refresh tokens
 - Facebook may be rate-limiting you — increase wait times
 - Some groups may have posting restrictions or require admin approval
 
@@ -590,7 +590,7 @@ The dashboard shows your current identity (name and profile picture) so you alwa
 
 ### Post-run summary shows 0 successful posts
 
-- Check the event log for errors — `fb_dtsg` expiry and rate-limiting are the most common causes
+- Check the event log for errors — `session` expiry and rate-limiting are the most common causes
 - Relaunch FAP and try with a smaller group selection first
 
 ### Extension shows wrong version

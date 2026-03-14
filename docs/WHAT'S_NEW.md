@@ -5,6 +5,84 @@ All notable changes to Facebook Auto Poster (FAP) are documented in this file.
 
 
 
+# What's New in v2.0.2
+ 
+This is a stability and polish update. No new features — just fixes for things that were
+behaving unexpectedly after v2.0.
+ 
+---
+ 
+## Start Button Now Appears After Loading a Group List
+ 
+When you loaded a saved group list, all groups were correctly auto-selected — but the
+**Start Posting** button stayed hidden until you manually ticked or unticked a checkbox.
+That extra step is gone. The button now appears immediately as soon as your groups are
+loaded and selected, with no manual interaction needed.
+ 
+## Groups Load Clean
+ 
+When you click **Load Groups**, your groups now load unchecked. Previously they were all
+auto-selected on load, which could lead to accidental campaigns. You now pick your groups
+deliberately before starting.
+ 
+Loading a **saved group list** still works exactly as before — your saved selection is
+auto-checked when you load a list.
+ 
+## Search No Longer Shows False "All Selected"
+ 
+If you searched for a group while all groups were selected, the select-all checkbox would
+stay checked even though you were only looking at filtered results. This is fixed — the
+checkbox clears whenever you type in the search box.
+ 
+## Campaign Load Now Fully Restores Delay Settings
+ 
+When you load a saved campaign, the delay slider now correctly shows the saved settings —
+the slider handles, the fill bar, and the preset button highlights all update to match.
+Previously the slider looked like it was in default state even though the correct delay
+was loaded.
+ 
+## Reset Button Now Works
+ 
+The **Clear** button (to reset your campaign selection) was missing from the interface
+entirely. It's back, and it works correctly from both the save and load flows.
+ 
+## Dropdowns Fixed
+ 
+The Group List and Campaign dropdowns had a positioning issue that caused them to behave
+inconsistently — sometimes wrong width, sometimes not closing properly. Both dropdowns now
+open correctly, size to fit their content, scroll if the list is long, and close cleanly
+when you click outside.
+ 
+## Duplicate Notifications Fixed
+ 
+In a couple of places, error messages were appearing twice for a single event. This is
+fixed — you'll see one notification per event, not two.
+ 
+## Better Behaviour on Slow Connections
+ 
+If the extension can't reach the license server (slow internet, temporary outage), it now
+quietly retries in the background before showing anything. If the connection fails
+completely, you'll see a simple "connection issue" message with a retry button — not a
+purchase prompt. An active campaign will also never be stopped due to a connectivity blip
+mid-run.
+ 
+## Reliability Improvements
+ 
+This update includes internal hardening to make the extension more reliable and
+consistent across all usage flows. Several edge cases that could leave the extension in
+an inconsistent state have been addressed.
+ 
+---
+ 
+**v2.0.2 is a drop-in update.** Your saved campaigns, group lists, and settings are
+all preserved.
+
+---
+
+**v2.0.2 is a drop-in update.** Your saved campaigns, group lists, and settings are all preserved.
+
+---
+
 ## v2.0.1 — Stability & Bug Fixes
 
 ### Pause & Resume — More Reliable
