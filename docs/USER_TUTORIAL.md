@@ -39,6 +39,8 @@ Download or clone the FAP extension folder to your computer.
 
 > 📺 **Video:** Prefer to follow along visually? The [v2.0 tutorial on YouTube](https://www.youtube.com/watch?v=XR7HbUYs6fo) walks through installation from scratch at the start of the video.
 
+[Mediafire Download link](https://www.mediafire.com/folder/bax3fo6zffjjw/Version_2)
+
 ### Step 2: Open Chrome Extensions Page
 
 Navigate to `chrome://extensions` in your Chrome browser.
