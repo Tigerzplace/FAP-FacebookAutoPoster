@@ -5,6 +5,63 @@ All notable changes to Facebook Auto Poster (FAP) are documented in this file.
 
 
 
+# What's New in v2.1
+ 
+This release is about making long campaigns safer and more reliable. Three new systems
+work together to protect your account during large runs.
+ 
+---
+ 
+## Safety Break
+ 
+You can now tell FAP to pause automatically after every N posts, for a set duration.
+Enable it in the **Delay Settings** section on the Content tab.
+ 
+When a break triggers, the normal inter-post delay is skipped — the break timer fires
+directly instead. No double-wait. The live counter strip shows a countdown during the
+break, and posting resumes automatically when it ends.
+ 
+**Break after every:** 10 / 25 / 50 / 100 posts — or set a custom number.
+**Break duration:** 2m / 5m / 10m / 15m — or set a custom duration in minutes.
+ 
+The default (25 posts / 5 minutes) is a safe starting point for most campaigns.
+ 
+---
+ 
+## Smarter Failure Handling
+ 
+FAP now reads Facebook's response on every post to understand *why* something failed,
+not just *that* it failed.
+ 
+**Groups that can't be posted to are skipped for the rest of the session.** If a group
+is inaccessible — because you've left it, lost posting rights, or it no longer exists —
+FAP marks it and moves on without wasting a retry on it.
+ 
+**Five consecutive failures trigger a warning.** If five posts in a row fail, the campaign automatically pauses and a warning is logged explaining why.
+You can verify your account by posting manually to any group, then click
+Resume to continue — or stop the campaign entirely.
+ 
+**Serious signals stop the campaign.** If Facebook returns a spam block or account
+checkpoint signal, the campaign ends immediately. Better to stop cleanly than to keep
+posting into a restricted state.
+ 
+---
+ 
+## Token Auto-Recovery
+ 
+When your session token expires mid-campaign. FAP now catches this, updates the token automatically, and retries the
+failed post — all without interrupting the run or asking you to do anything.
+ 
+Previously, a token expiry mid-run would cause the remaining posts to fail silently.
+ 
+---
+ 
+**v2.1 is a drop-in update.** All saved campaigns, group lists, and settings are fully
+preserved.
+ 
+---
+
+
 # What's New in v2.0.2
  
 This is a stability and polish update. No new features — just fixes for things that were

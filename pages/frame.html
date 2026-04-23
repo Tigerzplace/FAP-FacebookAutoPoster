@@ -533,8 +533,64 @@
 
               </div>
 
+              <!-- Safety Break Settings -->
+              <div class="card card--tight" id="safetyBreakCard">
 
+                <div class="card__head between">
+                  <div class="card__title">Safety Break</div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="safetyBreakEnabled" />
+                    <span class="toggle-switch__slider"></span>
+                  </label>
+                </div>
 
+                <div class="card__body" id="safetyBreakBody" style="display:none;">
+
+                  <div class="muted" style="margin-bottom:10px;">
+                    Pause automatically after every N posts — mimics natural human behavior.
+                  </div>
+
+                  <!-- Break after N posts -->
+                  <div style="margin-bottom:14px;">
+                    <label class="label-sm">Break after every</label>
+                    <div class="slider-presets" id="breakIntervalPresets" style="margin-top:6px;">
+                      <button class="preset-btn" data-val="10"  type="button">10</button>
+                      <button class="preset-btn active" data-val="25" type="button">25</button>
+                      <button class="preset-btn" data-val="50"  type="button">50</button>
+                      <button class="preset-btn" data-val="100" type="button">100</button>
+                      <button class="preset-btn preset-btn--custom" id="breakIntervalCustomBtn" type="button">Custom</button>
+                    </div>
+                    <div id="breakIntervalCustomBox" style="display:none; margin-top:8px;">
+                      <input type="number" id="breakIntervalCustomVal" min="1" max="999"
+                            class="input" placeholder="e.g. 30" style="width:120px;" />
+                      <span class="muted" style="margin-left:6px;">posts</span>
+                    </div>
+                    <input type="hidden" id="breakAfterPostsVal" value="25" />
+                  </div>
+
+                  <!-- Break duration -->
+                  <div>
+                    <label class="label-sm">Break duration</label>
+                    <div class="slider-presets" id="breakDurationPresets" style="margin-top:6px;">
+                      <button class="preset-btn" data-val="120"  type="button">2m</button>
+                      <button class="preset-btn active" data-val="300" type="button">5m</button>
+                      <button class="preset-btn" data-val="600"  type="button">10m</button>
+                      <button class="preset-btn" data-val="900"  type="button">15m</button>
+                      <button class="preset-btn preset-btn--custom" id="breakDurationCustomBtn" type="button">Custom</button>
+                    </div>
+                    <div id="breakDurationCustomBox" style="display:none; margin-top:8px;">
+                      <input type="number" id="breakDurationCustomVal" min="1" max="999"
+                            class="input" placeholder="e.g. 7" style="width:120px;" />
+                      <span class="muted" style="margin-left:6px;">minutes</span>
+                    </div>
+                    <input type="hidden" id="breakDurationVal" value="300" />
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Scheduling -->
               <div class="card card--tight" style="flex:1; display:flex; flex-direction:column;">
 
                 <div class="card__head">
