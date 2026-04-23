@@ -148,7 +148,7 @@ Instead of copy-paste spam or risky bots, FAP keeps you in control: you choose t
 
 **Progress Bar Percentage Label** — Label tracks the bar fill at all stages and clears on reset.
 
-See the full [Changelog](WHAT'S_NEW.md) for detailed notes on all changes.
+See the full [Changelog](Changelog.md) for detailed notes on all changes.
 
 ---
 

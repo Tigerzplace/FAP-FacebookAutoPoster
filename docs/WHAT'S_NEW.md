@@ -4,6 +4,53 @@
 All notable changes to Facebook Auto Poster (FAP) are documented in this file.
 
 
+# What's New in v2.1.1
+
+This is a fixes-only update. No new features — just things that were behaving
+incorrectly after v2.1.
+
+---
+
+## Groups Load Clean
+
+When you click **Load Groups**, your groups now load unchecked. Previously they were all
+auto-selected on load, which could lead to accidental campaigns. You now pick your groups
+deliberately before starting.
+
+Loading a **saved group list** still works exactly as before — your saved selection is
+auto-checked when you load a list.
+
+## Safety Break Countdown Fixed
+
+After a safety break ended, two overlapping countdowns could appear in the live counter
+strip at the same time — the break countdown and the next-post countdown both writing
+simultaneously. This is fixed. The counter strip now shows one clean message at a time.
+
+## Reset Button Now Clears All State
+
+The Reset button now fully clears the campaign state, including break status, failure
+counters, and any running countdown intervals. Previously, resetting mid-break or
+mid-failure-run could leave stale state that affected the next campaign.
+
+## Pause Status Card Fixed
+
+When the campaign auto-paused due to consecutive failures, the status card didn't always
+switch to the paused state correctly. This is fixed — the status card now updates
+reliably in all auto-pause scenarios.
+
+## Safer Delay Recommendations
+
+The smart delay recommendations and risky delay warnings have been recalibrated with
+tighter thresholds. If you're posting to a larger number of groups, FAP will now
+recommend a more conservative delay and warn you sooner if your current setting is too
+aggressive.
+
+---
+
+**v2.1.1 is a drop-in update.** All saved campaigns, group lists, and settings are
+fully preserved.
+
+---
 
 # What's New in v2.1
  
@@ -37,7 +84,8 @@ not just *that* it failed.
 is inaccessible — because you've left it, lost posting rights, or it no longer exists —
 FAP marks it and moves on without wasting a retry on it.
  
-**Five consecutive failures trigger a warning.** If five posts in a row fail, the campaign automatically pauses and a warning is logged explaining why.
+**Five consecutive failures trigger a warning.** If five posts in a row fail, 
+the campaign automatically pauses and a warning is logged explaining why.
 You can verify your account by posting manually to any group, then click
 Resume to continue — or stop the campaign entirely.
  
